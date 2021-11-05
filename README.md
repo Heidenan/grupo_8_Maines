@@ -7,4 +7,6 @@ También agregar una breve descripción del público al que apunta el sitio.
 
 Una breve descripción de los integrantes del equipo.
 
-5 referentes
+5 referentes:
+
+1: https://www.casavegana.com.ar/

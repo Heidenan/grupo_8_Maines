@@ -14,6 +14,9 @@ Integrantes:
 Julian Bradach:
 Emprendedor, polimata, curioso, observador y detallista. Aprovecho mi facilidad para aprender y busco ampliar mis conocimientos para entender mejor el mundo. Amante de los desafios, rendirse no es una opcion. Una mente saludable para un cuerpo saludable. Ingenieria me aburrio, la cocina me divirtio y la programacion me cautivo. De chico siempre dije "De grande quiero que me paguen por pensar".
 
+Agustin Garcia Maggi:
+Cansado un poco del "depende" tipico de la ciencia economica y de las ciencias sociales en general, ahora buscando nuevos horizontes en una disciplina de unos y ceros 
+
 
 5 referentes:
 
@@ -21,8 +24,4 @@ Emprendedor, polimata, curioso, observador y detallista. Aprovecho mi facilidad 
 2: https://www.pandanes.com.ar/
 3: https://beepure.com.ar/
 4: https://www.esquinadelasflores.com.ar/
-<<<<<<< HEAD
-5: PEPITO
-=======
 5: https://crudencio.com.ar/
->>>>>>> ba4a2bb535dd356709d4e7d70017d64ac0d4c5ff

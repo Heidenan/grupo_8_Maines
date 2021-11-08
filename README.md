@@ -1,11 +1,19 @@
 # grupo_8_Maines
 
-agregar Una breve descripción de la oferta de productos y/o servicios ofrecidos por su
-sitio. 
+El sitio:
 
-También agregar una breve descripción del público al que apunta el sitio.
+La oferta de Maines son productos saludables, sin quimicos ni aditivos artificiales, elaborados con las mejores materias primas, a un precio justo y buscando excelencia en todo lo que hacemos. Brindamos capacticacion y asesoramiento para acercar a todos a una vida mas saludable. Creemos que la salud y nuestro cuerpo son lo mas importante y debemos cuidarlo en todo sentido.
 
-Una breve descripción de los integrantes del equipo.
+El Publico:
+
+El sitio web apunta a quienes buscan una forma de vida saludable y entienden la importancia de cuidar nuestra salud para una mejor calidad de vida. Desde jovenes, familias o gente mayor que buscan comer rico y sano, sea de la mano de nuestros productos o en busqueda del conocimiento y herramientas para poder hacerlos ellos mismos.
+
+
+Integrantes:
+
+Julian Bradach:
+Emprendedor, polimata, curioso, observador y detallista. Aprovecho mi facilidad para aprender y busco ampliar mis conocimientos para entender mejor el mundo. Amante de los desafios, rendirse no es una opcion. Una mente saludable para un cuerpo saludable. Ingenieria me aburrio, la cocina me divirtio y la programacion me cautivo. De chico siempre dije "De grande quiero que me paguen por pensar".
+
 
 5 referentes:
 
@@ -13,4 +21,8 @@ Una breve descripción de los integrantes del equipo.
 2: https://www.pandanes.com.ar/
 3: https://beepure.com.ar/
 4: https://www.esquinadelasflores.com.ar/
+<<<<<<< HEAD
 5: PEPITO
+=======
+5: https://crudencio.com.ar/
+>>>>>>> ba4a2bb535dd356709d4e7d70017d64ac0d4c5ff

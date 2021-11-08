@@ -15,7 +15,10 @@ Julian Bradach:
 Emprendedor, polimata, curioso, observador y detallista. Aprovecho mi facilidad para aprender y busco ampliar mis conocimientos para entender mejor el mundo. Amante de los desafios, rendirse no es una opcion. Una mente saludable para un cuerpo saludable. Ingenieria me aburrio, la cocina me divirtio y la programacion me cautivo. De chico siempre dije "De grande quiero que me paguen por pensar".
 
 Agustin Garcia Maggi:
-Cansado un poco del "depende" tipico de la ciencia economica y de las ciencias sociales en general, ahora buscando nuevos horizontes en una disciplina de unos y ceros 
+Cansado un poco del "depende" tipico de la ciencia economica y de las ciencias sociales en general, ahora buscando nuevos horizontes en una disciplina de unos y ceros.
+
+Taiel Cabrera:
+Encontrando un rumbo en el camino de la vida. Me gusta superar obstaculos y aprender todo tipo de cosas nuevas. Soy completamente inexperto en el ambito de la programacion, pero ya le voy a ir agarrando la mano. 
 
 
 5 referentes:

@@ -13,18 +13,24 @@ Integrantes:
 
 Julian Bradach:
 Emprendedor, polimata, curioso, observador y detallista. Aprovecho mi facilidad para aprender y busco ampliar mis conocimientos para entender mejor el mundo. Amante de los desafios, rendirse no es una opcion. Una mente saludable para un cuerpo saludable. Ingenieria me aburrio, la cocina me divirtio y la programacion me cautivo. De chico siempre dije "De grande quiero que me paguen por pensar".
-
+<br>
+<br>
+<br>
 Agustin Garcia Maggi:
 Cansado un poco del "depende" tipico de la ciencia economica y de las ciencias sociales en general, ahora buscando nuevos horizontes en una disciplina de unos y ceros.
-
+<br>
+<br>
+<br>
 Taiel Cabrera:
 Encontrando un rumbo en el camino de la vida. Me gusta superar obstaculos y aprender todo tipo de cosas nuevas. Soy completamente inexperto en el ambito de la programacion, pero ya le voy a ir agarrando la mano. 
-
+<br>
+<br>
+<br>
 
 5 referentes:
 
-1: https://www.casavegana.com.ar/
-2: https://www.pandanes.com.ar/
-3: https://beepure.com.ar/
-4: https://www.esquinadelasflores.com.ar/
-5: https://crudencio.com.ar/
+1: https://www.casavegana.com.ar/   <br>
+2: https://www.pandanes.com.ar/ <br>
+3: https://beepure.com.ar/  <br>
+4: https://www.esquinadelasflores.com.ar/   <br>
+5: https://crudencio.com.ar/    <br>

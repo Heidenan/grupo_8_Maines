@@ -2,10 +2,10 @@
   "name": "grupo_8_maines",
   "version": "1.0.0",
   "description": "El sitio:",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "nodemon app.js -e js,mjs,json,html,css",
-    "start": "node src/app.js"
+    "test": "nodemon src/app.js -e mjs,js,html,json,css",
+    "start": "node sprint2/src/app.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Heidenan/grupo_8_Maines#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

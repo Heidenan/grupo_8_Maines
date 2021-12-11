@@ -1,0 +1,24 @@
+{
+  "name": "grupo_8_maines",
+  "version": "1.0.0",
+  "description": "El sitio:",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon app.js -e js,mjs,json,html,css",
+    "start": "node src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heidenan/grupo_8_Maines.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heidenan/grupo_8_Maines/issues"
+  },
+  "homepage": "https://github.com/Heidenan/grupo_8_Maines#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

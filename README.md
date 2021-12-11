@@ -34,3 +34,6 @@ Encontrando un rumbo en el camino de la vida. Me gusta superar obstaculos y apre
 3: https://beepure.com.ar/  <br>
 4: https://www.esquinadelasflores.com.ar/   <br>
 5: https://crudencio.com.ar/    <br>
+
+
+trello: https://trello.com/b/W1oyMOMe/maines

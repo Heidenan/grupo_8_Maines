@@ -7,16 +7,19 @@
     <title>Carrito de compras</title>
     <link rel="stylesheet" href="/css/carrito.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap" rel="stylesheet">
 </head>
 <body>
     
-    <section class="producto">
         
+    <section class="producto1">
+      
         
         <div class="imgInfo">
 
-            <img class="img" src="/images/bocaa.jpg" alt="producto">
+            <img class="img" src="/images/comida-saludable.png" alt="producto">
 
         <div class="infoProducto">
             <h2 class="nombreProducto">Producto</h2>
@@ -38,8 +41,140 @@
         <button name="cantidad" type="reset" class="botonEliminar"><i class="fas fa-times"></i></button>
         
     </section>
-    
 
+    <section class="producto">
+      
+        
+        <div class="imgInfo">
+
+            <img class="img" src="/images/comida-saludable.png" alt="producto">
+
+        <div class="infoProducto">
+            <h2 class="nombreProducto">Producto</h2>
+            <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> 
+                Etiam auctor pulvinar risus, in convallis nisi rhoncus vel.</p>
+        </div>
+
+        </div>
+
+        <fieldset class="fieldsetCantidad">
+            <label for="cantidad"></label>
+            <input class="inputCantidad" name="cantidad" id="cantidad" type="number" min="1" max="10" placeholder="Cantidad" required>
+        </fieldset>
+        
+        <div class="precio"> 
+            <p class="textoPrecio">$160</p>
+        </div>
+
+        <button name="cantidad" type="reset" class="botonEliminar"><i class="fas fa-times"></i></button>
+        
+    </section>
+
+    <section class="producto">
+      
+        
+        <div class="imgInfo">
+
+            <img class="img" src="/images/comida-saludable.png" alt="producto">
+
+        <div class="infoProducto">
+            <h2 class="nombreProducto">Producto</h2>
+            <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> 
+                Etiam auctor pulvinar risus, in convallis nisi rhoncus vel.</p>
+        </div>
+
+        </div>
+
+        <fieldset class="fieldsetCantidad">
+            <label for="cantidad"></label>
+            <input class="inputCantidad" name="cantidad" id="cantidad" type="number" min="1" max="10" placeholder="Cantidad" required>
+        </fieldset>
+        
+        <div class="precio"> 
+            <p class="textoPrecio">$160</p>
+        </div>
+
+        <button name="cantidad" type="reset" class="botonEliminar"><i class="fas fa-times"></i></button>
+        
+    </section>
+
+    <section class="producto">
+      
+        
+        <div class="imgInfo">
+
+            <img class="img" src="/images/comida-saludable.png" alt="producto">
+
+        <div class="infoProducto">
+            <h2 class="nombreProducto">Producto</h2>
+            <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> 
+                Etiam auctor pulvinar risus, in convallis nisi rhoncus vel.</p>
+        </div>
+
+        </div>
+
+        <fieldset class="fieldsetCantidad">
+            <label for="cantidad"></label>
+            <input class="inputCantidad" name="cantidad" id="cantidad" type="number" min="1" max="10" placeholder="Cantidad" required>
+        </fieldset>
+        
+        <div class="precio"> 
+            <p class="textoPrecio">$160</p>
+        </div>
+
+        <button name="cantidad" type="reset" class="botonEliminar"><i class="fas fa-times"></i></button>
+        
+    </section>
+
+    <!-- finalizar pedido -->
+
+    <section class="sectionFinal"> 
+
+    <div class="tituloFinal"><h2 class="tituloFinalTexto">Total del carrito</h2></div>
+
+    <article class="envio">
+    <p class="envioTotal">Envio:</p>
+
+    <form  action="/">
+    <fieldset class="fieldset">
+
+    <legend class="none"> Selecciona un Pais/Region </legend>
+        <label for="provincia"></label>
+        <select class="input" id="provincia" name="provincia" >
+            <option value="seleccion">Selecciona un Pais/Region</option>
+            <option value="buenosAires">Buenos Aires</option>
+            <option value="caba">Capital Federal</option>
+            <option value="mendoza">Mendoza</option>
+        </select>
+    
+    </fieldset>
+
+    <fieldset class="fieldset"> 
+        <label for="localidad/ciudad"></label>
+        <input class="input" name="localidad/ciudad" id="localidad/ciudad" type="text" placeholder="Localidad/Ciudad">
+    </fieldset>
+
+    <fieldset class="fieldset">
+        <label for="codigoPostal"></label>
+        <input class="input" name="codigoPostal" id="codigoPostal" type="text" placeholder="Codigo Postal">
+    </fieldset>
+
+    <fieldset class="fieldset">
+    <button class="botonActualizar" type="submit">Actualizar</button>
+    </fieldset>
+
+</form>
+    </article>
+
+<div class="total">
+    <p class="envioTotal">Total:</p>
+    <p class="precioTotal">$400</p>
+</div>
+
+<button class="botonFinal" type="submit">Seguir Comprando</button>
+<button class="botonFinal" type="submit">Finalizar Compra</button>
+
+</section>
     
 </body>
 </html>

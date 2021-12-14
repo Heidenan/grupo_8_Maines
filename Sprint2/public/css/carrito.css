@@ -2,11 +2,31 @@
     font-weight: bolder;
 }
 
+.producto1{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0px;
+    margin-left: 100px;
+    border: solid black 1px;
+    height: 150px;
+    width: 85%;
+   
+}
+
 .producto{
     display: flex;
     justify-content: space-around;
-    margin-top: 30px;
+    margin-top: 0px;
+    margin-left: 100px;
+    border-bottom: solid black 1px;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+    height: 150px;
+    width: 85%;
+   
 }
+
+
 
 .nombreProducto{
     position: relative;
@@ -19,13 +39,15 @@
 }
 
 .img  {
-    width:130px;
+    width:200px;
     height:130px;
 }
 
 .imgInfo {
     display: flex;
     gap: 25px;
+    position: relative;
+    top: 8px;
 }
 
 .infoPorducto {
@@ -62,10 +84,122 @@
 .botonEliminar{
     border: none;
     color: rgb(71, 70, 70);
-    background-color: white;
+    height: 30px;
     font-size: 30px;
+    background-color: white;
+    position: relative;
+    top: 50px;
 }
 
 .botonEliminar:hover{
     color: black;
+}
+
+/* -------  Finalizar pedido  -------*/
+
+.none{
+    display: none;
+}
+
+.fieldset {
+    border: 0;
+}
+
+.sectionFinal{
+    border-bottom: solid black 1px;
+    border-left: solid black 1px;
+    border-right: solid black 1px;
+    position: relative;
+    left: 100px;
+    bottom: 20px;
+    width: 85%;
+    height: 500px;
+    
+}
+
+.tituloFinal {
+    border-bottom: solid black 1px;
+    background-color: lightgrey;
+    height: 50px;
+}
+
+.tituloFinalTexto{
+    position: relative;
+    top: 9px;
+    margin-left: 10px;
+}
+
+.envioTotal{
+ margin-left: 20px;
+ font-size: 20px;
+ font-weight: bolder;
+}
+
+.envio{
+    margin-left: 10px;
+   
+}
+
+.input{
+    font-size: 16px;
+    box-sizing: border-box;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 10px;
+    border: 2px solid grey ;
+    width: 60%;
+    font-weight: 500;
+}
+
+.botonActualizar{
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 8px;
+    border: 2px solid grey ;
+    background-color: #f8edd6;
+}
+
+.botonActualizar:hover{
+    background-color: #fca998;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 555px;
+    margin-top: 10px ;
+    margin-bottom: 10px;
+    border: solid 1px black;
+    position: relative;
+    left: 20px;
+    
+}
+
+.precioTotal{
+    margin-right: 50px;
+    position: relative;
+    top: 7px;
+    
+}
+
+.botonFinal{
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 8px;
+    border: 2px solid grey ;
+    background-color: #f8edd6;
+    position: relative;
+    left: 500px;
+    top: 10px;
+    margin-left: 10px ;
+}
+
+.botonFinal:hover{
+    background-color: #fca998;
 }

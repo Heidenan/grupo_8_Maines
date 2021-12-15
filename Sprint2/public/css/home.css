@@ -60,30 +60,25 @@ header{
     flex-direction: column;
     background-color: #58DAB4;
     border-radius: 24px;   
+    justify-content: space-around;
+    position:relative
 }
 
 .video-conocenos{
-    grid-column-start: 1;
-    grid-column-end:2;
-    grid-row-start: 1;
-    grid-row-end: 4;
-    text-align: center;
+    margin:30px;
+    text-align: center
 }
 
 .frase-producto-regalo{
-    grid-column-start: 2;
-    grid-column-end:3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    justify-self: center;
-    align-self: start;
-    margin-top:60px
+    color:#FFF9ED;
+    text-align: center;
+    margin:30px;
 }
 
 .icono-regalo{
-    font-size:60px;
-    margin-right:30px;
-    color: #FFF9ED
+    font-size:45px;
+    color: #FFF9ED;
+   margin-right:30px
 }
 
 .icono-regalo:hover{
@@ -104,89 +99,91 @@ header{
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
+.probá-maines{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.pedí-acá{
+    color: #FFF9ED;
+    margin-left: 70px
+}
+
 .gratis{
-    font-weight:bold
-}
-
-.sumate-a-maines{
-    grid-column-start: 2;
-    grid-column-end:3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    justify-self: center;
-    align-self: start;
-    margin:50px;
-}
-
-.sumate-a-maines-texto{
-    margin-bottom: 20px;
+    font-weight:bold /* le pongo esto pero en realidad es para tener diferenciada la palabra 
+    por si queremos agregarle alguna animacion o algo distinto a "gratis"*/
 }
 
 .icono-puerta{
-    font-size:60px;
-    margin-right:30px;
-    color: #FFF9ED
+    font-size:45px;
+    color: #FFF9ED;
+    margin-right:30px
 }
 
-.dejar-cv{
+.sumate-a-maines{
+    color:#FFF9ED;
     text-align: center;
-    margin-bottom: 15px;
+    margin:30px
 }
 
-.vender-productos{
-    text-align: center;
+.sumate-a-maines-texto{
     margin-bottom: 15px;
 }
 
 .icono-cv{
     font-size:15px;
-    margin-right:10px;
+    margin-right:10px
+}
+
+.dejar-cv{
+    margin-bottom: 10px;
+    margin-left: 60px
+}
+
+.vender-productos{
+    margin-bottom: 30px;
+    margin-left: 60px
 }
 
 .icono-dinero{
     font-size:15px;
-    margin-right:10px;
-}
-
-.adquirí-nuestros-productos{
-    grid-column-start: 2;
-    grid-column-end:3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    justify-self: center;
-    align-self: start;
-    margin:20px;
+    margin-right:10px
 }
 
 .carrito{
-    font-size:60px;
-    margin-right:30px;
-    color: #FFF9ED
+    font-size:45px;
+    color: #FFF9ED;
+    margin-right:30px
+    
+}
+
+.adquirí-nuestros-productos{
+    color:#FFF9ED;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .adquirí-texto{
-    text-align: center;
     margin-bottom: 15px;
 }
 
 .local{
     font-size:15px;
-    margin-right:10px;
+    margin-right:10px
 }
 
 .buscá-tu-local{
-    text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    margin-left: 80px
 }
 
 .tarjeta{
     font-size:15px;
-    margin-right:10px;
+    margin-right: 10px;
 }
 
 .comprá-online{
-    text-align: center;
-    margin-bottom: 15px;
+    margin-left: 70px
 }
 
 .titulo {
@@ -245,10 +242,15 @@ header{
     transform: rotateZ(-90deg)
 }
 
+.preciosYdescuentos{
+    margin:10px;
+}
+
 .descripciones{
     max-width:350px;
     word-wrap: break-word;
     height: auto;
+    margin:20px
     
 }
 
@@ -259,33 +261,68 @@ footer{
     margin-top:100px
 }
 
-@media (min-width: 1199px){
-
+@media (min-width: 1200px){
+    
     .lamina{
         display:flex;
         flex-direction: row;
-        
     }
     
     .container{
         display:grid;
         grid-template-columns: 50% 50%;
-        grid-template-rows: 150px 150px 150px 150px;
+        grid-template-rows: 150px 150px 150px 30px;
+        row-gap: 50px;
         margin:100px 10px;
         background-color: #58DAB4;
-        border-radius: 24px;    
     }
 
+
+    .frase-producto-regalo{
+        grid-column-start: 2;
+        grid-column-end:3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .sumate-a-maines{
+        grid-column-start: 2;
+        grid-column-end:3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        justify-self: center;
+        align-self: center;
+        color:#FFF9ED;
+        margin-bottom:10px
+    }
+    
     .adquirí-nuestros-productos{
-        margin: 70px;
+        grid-column-start: 2;
+        grid-column-end:3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        justify-self: center;
+        align-self: start;
+        color:#FFF9ED;
+        margin-top: 20px;
     }
- 
+
+    
     .container-productos{
-    display:flex;
-    flex-direction:row;
-    justify-content: space-around;
-}
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+    }
+    
+    .titulo-producto{
+        font-weight: bold;
+        font-size:20px;
+        margin:20px
+    }
 
-
-
+    
+    
+    
 }

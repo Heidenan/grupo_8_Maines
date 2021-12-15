@@ -176,7 +176,7 @@
     border: solid 1px black;
     position: relative;
     left: 20px;
-    
+    border-radius: 8pxgit;
 }
 
 .precioTotal{
@@ -201,5 +201,34 @@
 }
 
 .botonFinal:hover{
+    background-color: #fca998;
+}
+
+.tituloRecomendado{
+    position: relative;
+    left: 1050px;
+    bottom: 465px;
+}
+
+.imgRecomendada{
+    position: relative;
+    left: 1090px;
+    bottom: 465px;
+}
+
+.botonAgregar{
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom:5px;
+    border-radius: 8px;
+    border: 2px solid grey ;
+    background-color: #f8edd6;
+    position: relative;
+    left: 965px;
+    bottom: 440px;
+}
+
+.botonAgregar:hover{
     background-color: #fca998;
 }

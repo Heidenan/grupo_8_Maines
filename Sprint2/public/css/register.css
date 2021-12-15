@@ -1,0 +1,195 @@
+img {
+    width: 60%;
+}
+
+.perfilDeUsuario {
+    display:flex;
+    flex-direction: row;
+}
+.checkboxAlign {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.botonInicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+form {
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px grey;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px grey;
+    background-color:white;
+    
+}
+
+fieldset{
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+}
+.registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+main {
+    padding: 150px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.categorias, .legend{
+    
+    margin-bottom: 15px;
+    margin-top:30px;
+    width: 100%;
+    text-align:left;
+    font-size: 18px;
+    font-weight:bold;
+}
+
+.categorias-interes{
+    display:flex;
+    flex-wrap: wrap;
+    border:none;
+    outline:none;
+    width: 100%;
+    position:relative;
+}
+
+.legend{
+    margin-left:14px
+}
+
+.seleccionarArchivo{
+    width:100%;
+    margin-left:14px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    border: none;
+    height: auto;
+}
+
+.botonGuardar {
+    background-color: #3483fa;
+    border-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    padding: 0 24px;
+    text-align: center;
+    border-radius: 6px;
+    width: 60%;
+}
+.botonBorrar{
+    background-color: transparent;
+    border-color: transparent;
+    color: #3483fa;
+    font-size: 16px;
+    font-weight: 600;
+    height: 48px;
+    padding: 0 24px;
+    text-align: center;
+    border-radius: 6px
+}
+.negrita {
+    font-weight: bold;
+}
+
+.width60{
+    width:20%;
+}
+
+@media (min-width: 769px) {
+    
+    form {
+        width: 30em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+    }
+    
+    
+    input {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    fieldset{
+        padding: 16px;
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+        border: none;
+    }
+    
+    
+    main {
+        padding: 150px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .botonInicio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    @media (min-width: 1200px) {
+        
+        
+        form {
+            width: 30em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        fieldset{
+            padding: 16px;
+            width: 30rem;
+            display: flex;
+            flex-direction: column;
+            border: none;
+        }
+        
+        main {
+            padding: 150px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .botonInicio{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+    }
+}
+

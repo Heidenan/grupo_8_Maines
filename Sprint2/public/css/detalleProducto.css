@@ -79,6 +79,10 @@ picture {
     width: 100%;
 }
 
+.logoPicture {
+    width: 50%
+}
+
 h2 {
     text-align: left;
     width: 70%;

@@ -1,5 +1,25 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+picture {
+    
+    display: flex;
+    justify-content: center;
+    width: 50%
+}
 img {
-    width: 60%;
+    width: 30%;
+    
+}
+
+form {
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .perfilDeUsuario {
@@ -19,18 +39,18 @@ img {
     justify-content: center;
 }
 
+label {
+    margin-bottom: 0.3em
+}
 
+a{
+    text-decoration: none;
+    color: black;
 
-form {
-    width: 30em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: solid 1px grey;
-    border-radius: 10px;
-    box-shadow: 10px 10px 10px grey;
-    background-color:white;
-    
+}
+
+a:hover {
+    font-size: 105%;
 }
 
 fieldset{
@@ -38,7 +58,7 @@ fieldset{
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     border: none;
 }
 .registerForm {
@@ -86,28 +106,34 @@ main {
     height: auto;
 }
 
-.botonGuardar {
-    background-color: #3483fa;
+.botones {
     border-color: transparent;
     color: #fff;
-    font-size: 16px;
+    font-size: 1.2em;
     font-weight: 600;
-    height: 48px;
-    padding: 0 24px;
+    padding: 0.4em;
     text-align: center;
     border-radius: 6px;
-    width: 60%;
+    width: 105%;
+    margin-top: 1.5em;
 }
-.botonBorrar{
-    background-color: transparent;
-    border-color: transparent;
-    color: #3483fa;
-    font-size: 16px;
-    font-weight: 600;
-    height: 48px;
-    padding: 0 24px;
-    text-align: center;
-    border-radius: 6px
+
+.botonCrearCuenta {
+    background-color: #58dab4;
+    
+}
+
+.botones:hover{
+    opacity: 50%;
+}
+
+.botonFacebook {
+    background-color: #3483fa;
+    
+}
+
+.botonGoogle{
+    background-color: #db4a39;
 }
 .negrita {
     font-weight: bold;
@@ -124,7 +150,6 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: white;
     }
     
     

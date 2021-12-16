@@ -8,18 +8,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     rel="stylesheet" />
     <link rel= "stylesheet" href= "/css/register.css">
-    <link rel= "stylesheet" href= "/css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">       
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <picture>   <a href="/"> <img src = '/images/LogoMaines.svg' altclass= "logo"/></a> 
-    </picture> 
-    
     <main>
+        <section>
+            <p>Registrate para guardar tus pedidos, preferencias y hacer un seguimiento!</p>
+        </section>
         <form action='/' method="post">
             <fieldset>
                 <label class= "negrita"> Nombre y apellido</label>
@@ -34,14 +34,12 @@
                 <label class= "negrita">Email</label>
                 <input type="mail" name="email">
             </fieldset>
-            <fieldset>
-                <label class= "negrita">Fecha de Nacimiento</label>
-                <input type="date" name='Nacimiento'>
-            </fieldset>
+            
             <fieldset>
                 <label class= "negrita">Domicilio</label>
                 <input type="text" name='Domicilio'>
             </fieldset>
+            
             <fieldset>
                 <label class= "negrita">Telefono (opcional)</label>
                 <input type="number" name="telefono">
@@ -49,9 +47,12 @@
            
                        
             
-            <button class="botonGuardar" type="submit">Guardar</button>
-            <button class="botonBorrar" type="reset">Borrar</button>
-            
+            <button class="botones botonCrearCuenta" type="submit">CREAR CUENTA</button>
+
+            <p></a>¿Ya tenés una cuenta? <a href="/login"><b>Iniciá sesión</b></a></p>
+            <button class="botones botonFacebook" type="submit">Registrarse con Google</button>
+            <button class="botones botonGoogle" type="submit">Registrarse con Facebook</button>
+
         </main>
         
     </body>

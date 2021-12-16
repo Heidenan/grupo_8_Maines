@@ -6,7 +6,7 @@
 .banner {
   width: 100%;
   height: 300px;
-  margin:10px
+  margin: 10px;
 }
 
 .lamina {
@@ -229,7 +229,6 @@ header {
 .producto {
   margin: 30px;
   transition: box-shadow 0.25s;
-  
 }
 
 .producto:hover {
@@ -239,7 +238,7 @@ header {
 .caja-texto-producto {
   position: relative;
   border: 7px solid rgba(100, 100, 100, 0.15);
-  background-color: rgba(255, 155, 135, 0.4)
+  background-color: rgba(255, 155, 135, 0.4);
 }
 
 .camion {
@@ -265,8 +264,7 @@ header {
 .preciosYdescuentos {
   margin: 10px;
   font-size: 18px;
-  font-weight:bold;
-  
+  font-weight: bold;
 }
 
 .descripciones {
@@ -274,7 +272,7 @@ header {
   word-wrap: break-word;
   height: auto;
   margin-top: 20px;
-  margin-bottom:5px
+  margin-bottom: 5px;
 }
 
 footer {
@@ -284,51 +282,75 @@ footer {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center stretch;
   flex-wrap: wrap;
   text-align: center;
 }
+.logo-slogan {
+  margin-bottom: 2em;
+}
+.slogan {
+  font-size: 1.5em;
+  color: #fff0ed;
+  font-weight: bold;
+}
 
 .mapa {
-  max-width: 0%;
+  margin-top: 1em;
+}
+.mapa img {
+  max-width: 100%;
+  margin-top: 0.5em;
 }
 
-.redes-sociales i {
-  text-decoration: none;
-}
 .servicios {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin: 1em 1em;
+  margin-top: 1.5em;
 }
 
 .servicios li {
-  margin: 0.5em 0.5em;
+  margin: 0.5em;
 }
 
 .contacto p {
-  font-weight: 900;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1em;
 }
 
 .contacto dt {
-  margin: 0.5em 0.5em;
+  margin: 0.3em 0.3em;
+  align-items: flex-end;
+}
+
+.contacto dt i {
+  margin-right: 0.4em;
 }
 
 .slogan {
   font-size: 20px;
   margin-bottom: 20px;
-  text-align: center;
+}
+
+.logo-slogan {
+  margin-bottom: 1em;
 }
 
 .redes-sociales {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  margin-bottom: 0.8em;
 }
-
+.redes-sociales i {
+  font-size: 30px;
+  color: #fff0ed;
+}
 @media (min-width: 1200px) {
   .lamina {
     display: flex;
@@ -385,5 +407,15 @@ footer {
     font-weight: bold;
     font-size: 20px;
     margin: 20px;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .mapa img {
+    max-width: 10%;
+    margin-top: 0.5em;
   }
 }

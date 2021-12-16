@@ -18,4 +18,5 @@ app.get('/entregas', (req,res) => res.sendFile(path.resolve(__dirname,'./views/e
 app.get('/compras', (req,res) => res.sendFile(path.resolve(__dirname,'./views/compras.html')))
 app.get('/ayuda', (req,res) => res.sendFile(path.resolve(__dirname,'./views/ayuda.html')))
 app.get('/suscripciones', (req,res) => res.sendFile(path.resolve(__dirname,'./views/suscripciones.html')))
+app.get('/detalleProducto', (req,res) => res.sendFile(path.resolve(__dirname,'./views/detalleProducto.html')))
 

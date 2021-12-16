@@ -1,3 +1,10 @@
+
+header {
+    padding-bottom: 200px;
+    background-color: #58dab4;
+    margin-bottom: 2em;
+}
+
 main{
     width: 70%;
     margin: auto;
@@ -49,6 +56,10 @@ div {
     justify-content: space-around;
     margin-top: 0.8em;
 }
+.logo {
+    width: 50%;
+    
+}
 
 div picture {
     margin: 0 0.5em;
@@ -62,6 +73,8 @@ section {
 picture {
     display: flex;
     justify-content: center;
+    margin: auto;
+    width: 50%;
 }
 
 h2 {

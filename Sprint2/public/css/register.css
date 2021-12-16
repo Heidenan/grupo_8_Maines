@@ -2,15 +2,30 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    background-color:#fff9ed ;
+}
+
+header {
+    padding-bottom: 200px;
+    background-color: #58dab4;
+    margin-bottom: 2em;
+}
+
+.logo {
+    width: 50%;
+    
+}
 
 picture {
     
     display: flex;
     justify-content: center;
-    width: 50%
+    width: 50%;
+    margin: auto;
 }
 img {
-    width: 30%;
+    width: 50%;
     
 }
 
@@ -170,12 +185,6 @@ main {
     }
     
     
-    main {
-        padding: 150px;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-    }
     .botonInicio{
         display: flex;
         flex-direction: column;
@@ -202,12 +211,6 @@ main {
             border: none;
         }
         
-        main {
-            padding: 150px;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-        }
         .botonInicio{
             display: flex;
             flex-direction: column;

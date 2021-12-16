@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel= "stylesheet" href= "/css/home.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <main>
+
+    <picture class="picture">   <a href="/"> <img src = '/images/LogoMaines.svg' altclass= "logo"/></a>  </picture> 
+   
+    <form class="formInicioSesion" action="/" method="post">
+
+        <fieldset>
+            <label class="labelLogin" for="nombreUsuario">Nombre de Usuario</label>
+            <input class="inputLogin" type="text" name="nombreUsuario" id="nombreUsuario" required>
+        </fieldset>
+
+        <fieldset>
+            <label class="labelLogin" for="nombreUsuario">Contraseña</label>
+            <input class="inputLogin" type="password" name="nombreUsuario" id="nombreUsuario" required>
+        </fieldset>
+
+        <div class="olvidasteContra"><a href="#" target="_blank">¿Olivdaste tu contraseña?</a></div>
+
+        <button class="botonLogin" type="submit">Iniciar Sesión</button>
+
+        <div class="crearCuenta"><p>¿No tenes cuenta?</p><a href="/register">Crea una cuenta</a></div>
+
+
+    </form>
+
+
+    </main>
+    
+</body>
+</html>

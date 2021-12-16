@@ -97,6 +97,7 @@
 
 /* -------  Finalizar pedido  -------*/
 
+
 .none{
     display: none;
 }
@@ -176,7 +177,7 @@
     border: solid 1px black;
     position: relative;
     left: 20px;
-    border-radius: 8pxgit;
+    border-radius: 8px;
 }
 
 .precioTotal{
@@ -210,11 +211,7 @@
     bottom: 465px;
 }
 
-.imgRecomendada{
-    position: relative;
-    left: 1090px;
-    bottom: 465px;
-}
+
 
 .botonAgregar{
     padding-left: 8px;
@@ -225,10 +222,75 @@
     border: 2px solid grey ;
     background-color: #f8edd6;
     position: relative;
-    left: 965px;
-    bottom: 440px;
+    left: 1192px;
+    bottom: 480px;
 }
 
 .botonAgregar:hover{
     background-color: #fca998;
+}
+
+
+
+
+
+
+.imgRecomendado {
+    position: relative;
+    left: 1090px;
+    bottom: 480px;
+}
+
+.infoRecomendado{
+    display: flex;
+    gap: 15px;
+    position: relative;
+    left: 1090px;
+    bottom: 485px;
+    font-size: 18px;
+    border: 1px solid lightgrey;
+    width: 223px;
+    height: 50px;
+    
+}
+
+.precioRecomendado{
+    margin-left: 8px;
+    position: relative;
+    bottom: 5px;
+}
+.descuento{
+
+    color: green;
+    position: relative;
+    bottom: 5px;
+}
+
+.iconoRecomendado{
+    color: green;
+    border: 1px green solid;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    transition: transform 0.5s
+} 
+
+.iconoRecomendado:hover{
+    transform: rotateZ(-90deg)
+
+}
+.camion{
+    position: relative;
+    top: 6px;
+}
+
+.nombreRecomendado{
+    font-size: 20px;
+    position: relative;
+    left: 1130px;
+    bottom: 465px;
 }

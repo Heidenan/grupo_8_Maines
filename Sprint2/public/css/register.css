@@ -17,6 +17,9 @@ header {
     
 }
 
+p{
+    margin: 3em;
+}
 picture {
     
     display: flex;
@@ -30,7 +33,6 @@ img {
 }
 
 form {
-    height: 40px;
     width: 100%;
     padding: 10px;
     margin: 0;
@@ -61,7 +63,7 @@ label {
 a{
     text-decoration: none;
     color: black;
-
+    
 }
 
 a:hover {
@@ -84,7 +86,6 @@ fieldset{
 }
 
 main {
-    padding: 150px;
     align-items: center;
     display: flex;
     flex-direction: column;

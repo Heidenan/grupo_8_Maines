@@ -304,10 +304,14 @@ footer {
 }
 
 .mapa {
-  margin-top: 1em;
+  max-width: 40%;
 }
-.mapa {
-  max-width: 50%;
+
+.direccion {
+  font-size: 1.5em;
+  color: #fff0ed;
+  font-weight: bold;
+  margin-top: 1em;
 }
 
 .servicios {

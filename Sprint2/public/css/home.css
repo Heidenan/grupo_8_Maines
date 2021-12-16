@@ -5,7 +5,8 @@
 }
 .banner {
   width: 100%;
-  height: 500px;
+  height: 300px;
+  margin:10px
 }
 
 .lamina {
@@ -228,6 +229,7 @@ header {
 .producto {
   margin: 30px;
   transition: box-shadow 0.25s;
+  
 }
 
 .producto:hover {
@@ -237,6 +239,7 @@ header {
 .caja-texto-producto {
   position: relative;
   border: 7px solid rgba(100, 100, 100, 0.15);
+  background-color: rgba(255, 155, 135, 0.4)
 }
 
 .camion {
@@ -261,13 +264,17 @@ header {
 
 .preciosYdescuentos {
   margin: 10px;
+  font-size: 18px;
+  font-weight:bold;
+  
 }
 
 .descripciones {
   max-width: 350px;
   word-wrap: break-word;
   height: auto;
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom:5px
 }
 
 footer {

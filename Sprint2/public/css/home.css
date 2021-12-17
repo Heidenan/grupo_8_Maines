@@ -6,7 +6,7 @@
 .banner {
   width: 100%;
   height: 300px;
-  margin:10px
+  margin: 10px;
 }
 
 .lamina {
@@ -162,6 +162,11 @@ header {
   margin-left: 60px;
 }
 
+.seleccionarArchivo {
+  color: #58dab4;
+  margin-left: 150px;
+}
+
 .vender-productos {
   margin-bottom: 30px;
   margin-left: 60px;
@@ -229,7 +234,6 @@ header {
 .producto {
   margin: 30px;
   transition: box-shadow 0.25s;
-  
 }
 
 .producto:hover {
@@ -239,7 +243,7 @@ header {
 .caja-texto-producto {
   position: relative;
   border: 7px solid rgba(100, 100, 100, 0.15);
-  background-color: rgba(255, 155, 135, 0.4)
+  background-color: rgba(255, 155, 135, 0.4);
 }
 
 .camion {
@@ -265,8 +269,7 @@ header {
 .preciosYdescuentos {
   margin: 10px;
   font-size: 18px;
-  font-weight:bold;
-  
+  font-weight: bold;
 }
 
 .descripciones {
@@ -274,61 +277,93 @@ header {
   word-wrap: break-word;
   height: auto;
   margin-top: 20px;
-  margin-bottom:5px
+  margin-bottom: 5px;
 }
-
+/* LG's changes - TODO FOOTER */
 footer {
   padding: 100px;
   background-color: #58dab4;
   border: 7px solid rgba(100, 100, 100, 0.15);
   margin-top: 100px;
+}
+
+.contenedor-footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center stretch;
   flex-wrap: wrap;
   text-align: center;
 }
+.logo-slogan {
+  margin-bottom: 2em;
+}
+.slogan {
+  font-size: 1.5em;
+  color: #fff0ed;
+  font-weight: bold;
+}
 
 .mapa {
-  max-width: 0%;
+  max-width: 40%;
 }
 
-.redes-sociales i {
-  text-decoration: none;
+.direccion {
+  font-size: 1.5em;
+  color: #fff0ed;
+  font-weight: bold;
+  margin-top: 1em;
 }
+
 .servicios {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  margin: 1em 1em;
+  margin-top: 1.5em;
 }
 
 .servicios li {
-  margin: 0.5em 0.5em;
+  margin: 0.5em;
 }
 
 .contacto p {
-  font-weight: 900;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1em;
 }
 
 .contacto dt {
-  margin: 0.5em 0.5em;
+  margin: 0.3em 0.3em;
+  align-items: flex-end;
+}
+
+.contacto dt i {
+  margin-right: 0.4em;
 }
 
 .slogan {
   font-size: 20px;
   margin-bottom: 20px;
-  text-align: center;
+}
+.logo-slogan {
+  margin-bottom: 1em;
+}
+.redes-sociales i {
+  font-size: 30px;
+  color: #fff0ed;
+  margin-right: 1em;
+}
+/* LG's changes */
+/* LG's changes */
+@media (min-width: 768px) {
+  .contacto {
+    margin-top: 1em;
+  }
 }
 
-.redes-sociales {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
+/* LG's changes */
 @media (min-width: 1200px) {
   .lamina {
     display: flex;
@@ -386,4 +421,20 @@ footer {
     font-size: 20px;
     margin: 20px;
   }
+  /* Cambios LG */
+  .contenedor-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+
+  .mapa {
+    max-width: 30%;
+  }
+  .servicios {
+    margin-right: 1.5em;
+  }
 }
+/* Cambios LG */

@@ -1,25 +1,34 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset = "utf-8">
-    <meta name= "viewport" content="width=device-width, initial-scale=1">
-    <title>Mercado Liebre</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    rel="stylesheet" />
-    <link rel= "stylesheet" href= "/css/register.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-
-</head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maines</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"></head>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/register.css" />
 
 <body>
+    <header>
 
+    </header>
+
+    
+
+    
     <main>
-        <section>
+        <picture>
+            <img src="/images/LogoMaines.svg" class="logo" />
+    
+        </picture>
+        
             <p>Registrate para guardar tus pedidos, preferencias y hacer un seguimiento!</p>
-        </section>
+       
         <form action='/' method="post">
             <fieldset>
                 <label class= "negrita"> Nombre y apellido</label>
@@ -34,17 +43,21 @@
                 <label class= "negrita">Email</label>
                 <input type="mail" name="email">
             </fieldset>
+            <fieldset>
+                <label class= "negrita">Confirmar Email</label>
+                <input type="mail" name="email">
+            </fieldset>
             
             <fieldset>
-                <label class= "negrita">Domicilio</label>
+                <label class= "negrita">Contraseña</label>
                 <input type="text" name='Domicilio'>
             </fieldset>
-            
+
             <fieldset>
-                <label class= "negrita">Telefono (opcional)</label>
-                <input type="text" name="telefono">
+                <label class= "negrita">Confirmar contraseña</label>
+                <input type="text" name='Domicilio'>
             </fieldset>
-           
+          
                        
             
             <button class="botones botonCrearCuenta" type="submit">CREAR CUENTA</button>
@@ -54,8 +67,49 @@
             <button class="botones botonGoogle" type="submit">Registrarse con Facebook</button>
 
         </main>
+
+        <footer>
+            <section class="logo-slogan">
+              <picture>
+                <img src="/images/maines.png" alt="logo" class="logo" />
+              </picture>
+              <article class="slogan">Somos lo que comemos</article>
+            </section>
+            <section class="redes-sociales">
+              <a href="https://www.facebook.com/Maines-105529098679983/">
+                <i class="fab fa-facebook"></i>
+              </a>
+              <a href="https://www.instagram.com/maines.com.ar/">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="https://www.youtube.com/channel/UC-_zZ-_zZ-_zZzQ-_XKZq5g">
+                <i class="fab fa-facebook-messenger"></i>
+              </a>
+            </section>
         
-    </body>
-    
-    </html>
-    
+            <section class="mapa">Mapa con ubicaciones
+              <picture>
+                <img src="images/googlemaps.jpg" alt="mapa" />
+              </picture>
+            </section>
+            <section class="servicios">
+              <ul>
+                <li>Terminos y condiciones</li>
+                <li>Envios y devoluciones</li>
+                <li>Política de privacidad</li>
+                <li>Quiero vender Maines</li>
+              </ul>
+            </section>
+            <section class="contacto">
+              <dl>
+                <p></i>Contacto</p>
+                <dt> <i class="fas fa-phone-alt"> </i>+ 11 1234 1234</dt>
+                <dt> <i class="fas fa-envelope"> </i>consultas@maines.com.ar</dt>
+                <dt> <i class="fas fa-clock"> </i>Lunes a viernes 09:00 a 18:00hs</dt>
+                <dt> <i class="fas fa-map-marker-alt"> </i>Calle falsa 123, CABA</dt>
+              </dl>
+            </section>
+          </footer>
+          
+</body>
+</html>

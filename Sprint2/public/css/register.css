@@ -2,20 +2,37 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    background-color:#fff9ed ;
+}
 
+header {
+    padding-bottom: 200px;
+    background-color: #58dab4;
+    margin-bottom: 2em;
+}
+
+.logo {
+    width: 50%;
+    
+}
+
+p{
+    margin: 3em;
+}
 picture {
     
     display: flex;
     justify-content: center;
-    width: 50%
+    width: 50%;
+    margin: auto;
 }
 img {
-    width: 30%;
+    width: 50%;
     
 }
 
 form {
-    height: 40px;
     width: 100%;
     padding: 10px;
     margin: 0;
@@ -46,7 +63,7 @@ label {
 a{
     text-decoration: none;
     color: black;
-
+    
 }
 
 a:hover {
@@ -69,7 +86,6 @@ fieldset{
 }
 
 main {
-    padding: 150px;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -170,12 +186,6 @@ main {
     }
     
     
-    main {
-        padding: 150px;
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-    }
     .botonInicio{
         display: flex;
         flex-direction: column;
@@ -202,12 +212,6 @@ main {
             border: none;
         }
         
-        main {
-            padding: 150px;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-        }
         .botonInicio{
             display: flex;
             flex-direction: column;

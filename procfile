@@ -1,2 +1,2 @@
 
-web: node .sprint/src/app.js
+web: node ./sprint/src/app.js

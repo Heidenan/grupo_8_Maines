@@ -558,3 +558,184 @@ bottom: 68px;
         background-color: #114ca3;
     }
 }
+
+
+
+
+/*Foooooter*/
+/* LG's changes - TODO FOOTER */
+footer {
+  padding: 100px;
+  background-color: #58dab4;
+  border: 7px solid rgba(100, 100, 100, 0.15);
+  position: relative;
+  bottom: 360px;
+  
+}
+
+.contenedor-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center stretch;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.logo-slogan {
+  margin-bottom: 2em;
+}
+.slogan {
+  font-size: 1.5em;
+  color: #fff0ed;
+  font-weight: bold;
+}
+
+.mapa {
+  max-width: 40%;
+}
+
+.direccion {
+  font-size: 1.5em;
+  color: #fff0ed;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+.servicios {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1.5em;
+}
+
+.servicios li {
+  margin: 0.5em;
+}
+
+.contacto p {
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.contacto dt {
+  margin: 0.3em 0.3em;
+  align-items: flex-end;
+}
+
+.contacto dt i {
+  margin-right: 0.4em;
+}
+
+.slogan {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.logo-slogan {
+  margin-bottom: 1em;
+}
+.redes-sociales i {
+  font-size: 30px;
+  color: #fff0ed;
+  margin-right: 1em;
+}
+/* LG's changes */
+/* LG's changes */
+
+@media (max-width: 400px) {
+    footer {
+        padding: 100px;
+        background-color: #58dab4;
+        border: 7px solid rgba(100, 100, 100, 0.15);
+        margin-top: 0px;
+        position: relative;
+        bottom: 300px;
+        width: 390px;
+    }
+}
+
+
+
+@media (min-width: 768px) {
+  .contacto {
+    margin-top: 1em;
+  }
+}
+
+/* LG's changes */
+@media (min-width: 1200px) {
+  .lamina {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 150px 150px 150px 30px;
+    row-gap: 50px;
+    margin: 100px 10px;
+    background-color: #58dab4;
+  }
+
+  .frase-producto-regalo {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .sumate-a-maines {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    align-self: center;
+    color: #fff9ed;
+    margin-bottom: 10px;
+  }
+
+  .adquirí-nuestros-productos {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: start;
+    color: #fff9ed;
+    margin-top: 20px;
+  }
+
+  .container-productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .titulo-producto {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 20px;
+  }
+  /* Cambios LG */
+  .contenedor-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+
+  .mapa {
+    max-width: 30%;
+  }
+  .servicios {
+    margin-right: 1.5em;
+  }
+}
+/* Cambios LG */

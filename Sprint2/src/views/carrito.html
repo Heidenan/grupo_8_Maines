@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de compras</title>
     <link rel="stylesheet" href="/css/carrito.css">
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +20,7 @@
         
         <div class="imgInfo">
 
-            <img class="img" src="/images/comida-saludable.png" alt="producto">
+            <img class="img" src="/images/tarta-verdura.jpeg" alt="producto">
 
         <div class="infoProducto">
             <h2 class="nombreProducto">Producto</h2>
@@ -47,7 +48,36 @@
         
         <div class="imgInfo">
 
-            <img class="img" src="/images/comida-saludable.png" alt="producto">
+            <img class="img" src="/images/tarta-verdura.jpeg" alt="producto">
+
+        <div class="infoProducto">
+            <h2 class="nombreProducto">Producto</h2>
+            <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> 
+                Etiam auctor pulvinar risus, in convallis nisi rhoncus vel.</p>
+        </div>
+
+        </div>
+        
+        <fieldset class="fieldsetCantidad">
+            <label for="cantidad"></label>
+            <input class="inputCantidad" name="cantidad" id="cantidad" type="number" min="1" max="10" placeholder="Cantidad" required>
+        </fieldset>
+        
+        <div class="precio"> 
+            <p class="textoPrecio">$160</p>
+        </div>
+        
+
+        <button name="cantidad" type="reset" class="botonEliminar"><i class="fas fa-times"></i></button>
+        
+    </section>
+
+    <section class="producto">
+      
+        
+        <div class="imgInfo">
+
+            <img class="img" src="/images/tarta-verdura.jpeg" alt="producto">
 
         <div class="infoProducto">
             <h2 class="nombreProducto">Producto</h2>
@@ -75,35 +105,7 @@
         
         <div class="imgInfo">
 
-            <img class="img" src="/images/comida-saludable.png" alt="producto">
-
-        <div class="infoProducto">
-            <h2 class="nombreProducto">Producto</h2>
-            <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br> 
-                Etiam auctor pulvinar risus, in convallis nisi rhoncus vel.</p>
-        </div>
-
-        </div>
-
-        <fieldset class="fieldsetCantidad">
-            <label for="cantidad"></label>
-            <input class="inputCantidad" name="cantidad" id="cantidad" type="number" min="1" max="10" placeholder="Cantidad" required>
-        </fieldset>
-        
-        <div class="precio"> 
-            <p class="textoPrecio">$160</p>
-        </div>
-
-        <button name="cantidad" type="reset" class="botonEliminar"><i class="fas fa-times"></i></button>
-        
-    </section>
-
-    <section class="producto">
-      
-        
-        <div class="imgInfo">
-
-            <img class="img" src="/images/comida-saludable.png" alt="producto">
+            <img class="img" src="/images/tarta-verdura.jpeg" alt="producto">
 
         <div class="infoProducto">
             <h2 class="nombreProducto">Producto</h2>
@@ -128,12 +130,13 @@
 
     <!-- finalizar pedido -->
 
+
     <section class="sectionFinal"> 
 
     <div class="tituloFinal"><h2 class="tituloFinalTexto">Total del carrito</h2></div>
 
     <article class="envio">
-    <p class="envioTotal">Envio:</p>
+    <p class="envioTitulo">Envio:</p>
 
     <form  action="/">
     <fieldset class="fieldset">
@@ -167,9 +170,11 @@
     </article>
 
 <div class="total">
-    <p class="envioTotal">Total:</p>
-    <p class="precioTotal">$400</p>
 </div>
+    
+    <p class="envioTotal">Total:</p>
+    <p class="preciodelTotal">$400</p>
+
 
 <button class="botonFinal" type="submit">Seguir Comprando</button>
 <button class="botonFinal" type="submit">Finalizar Compra</button>
@@ -177,7 +182,7 @@
 </section>
 
 <section class="recomendado">
-
+   
         <h2 class="tituloRecomendado">Tambien te puede interesar...</h2>
 
         <section class="productoRecomendado">
@@ -190,10 +195,11 @@
                     <div class="iconoRecomendado"><div class="camion"><i class="fas fa-truck"></i></div></div>
             </div>
             </section>
-
+        
         <button class="botonAgregar" type="submit">Agregar al Carrito</button>
 
 </section>
+
 
 
 

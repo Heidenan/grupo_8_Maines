@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+  .logo{
+      text-align: right;
+  }
+
+  .links{
+      display: none;
+  }
+  
+
+  .frase-header{
+    margin:15px
+  }
+
+  .hamburguer-button{
+    background-color: rgb(255, 155, 135);
+    color: #fff0ed;
+    display: block;
+    max-width: 40px;
+    padding: 15 px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto
+}

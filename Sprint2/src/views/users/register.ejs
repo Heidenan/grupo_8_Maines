@@ -8,15 +8,17 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/register.css"/>
+    <link rel="stylesheet" href="/css/header.css" />
+</head>
     
 
 <body>
     <header>
-
+        <%- include ('../modules/header') %>
     </header>
 
     
@@ -30,33 +32,33 @@
         
             <p>Registrate para guardar tus pedidos, preferencias y hacer un seguimiento!</p>
        
-        <form action='/' method="post">
+        <form action='/' method="post" class="formulario-registro">
             <fieldset>
                 <label class= "negrita"> Nombre y apellido</label>
-                <input type="text" name='nombreApellido'>
+                <input class ="input-formulario-registro" type="text" name='nombreApellido'>
                 
             </fieldset>
             <fieldset>
                 <label class= "negrita">Nombre de Usuario</label>
-                <input type="text" name='nombreApellido'>
+                <input class ="input-formulario-registro" type="text" name='nombreApellido'>
             </fieldset>
             <fieldset>
                 <label class= "negrita">Email</label>
-                <input type="mail" name="email">
+                <input class ="input-formulario-registro" type="mail" name="email">
             </fieldset>
             <fieldset>
                 <label class= "negrita">Confirmar Email</label>
-                <input type="mail" name="email">
+                <input class ="input-formulario-registro" type="mail" name="email">
             </fieldset>
             
             <fieldset>
                 <label class= "negrita">Contraseña</label>
-                <input type="text" name='Domicilio'>
+                <input class ="input-formulario-registro" type="text" name='Domicilio'>
             </fieldset>
 
             <fieldset>
                 <label class= "negrita">Confirmar contraseña</label>
-                <input type="text" name='Domicilio'>
+                <input class ="input-formulario-registro" type="text" name='Domicilio'>
             </fieldset>
           
                        

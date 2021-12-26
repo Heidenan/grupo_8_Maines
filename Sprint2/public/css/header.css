@@ -4,14 +4,31 @@
     box-sizing: border-box;
   }
 
-  .logo{
-      text-align: right;
+  header{
+    height: 350px;
+  }
+
+  .fila-1{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .logo-header{
+      margin:10px;
+      max-width:200px;
+      background-color:pink
   }
 
   .links{
       display: none;
   }
   
+  .input-barra{
+    border-radius: 8px;
+    height:30px;
+  }
 
   .frase-header{
     margin:15px
@@ -30,5 +47,24 @@
 }
 
 @media (min-width: 769px){
-    
+
+ 
+
+.frase-header{
+  text-align: center;
+}
+  .links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style:none; /* esto es para sacarle el bullet point*/
+    align-items: flex-start;
+    padding:15px;
+    background-color:#FF9B87
+}
+
+.hamburguer-button{
+  display:none
+}
+
 }

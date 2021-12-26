@@ -6,33 +6,27 @@ body {
   background-color: #fff9ed;
 }
 
-header {
-  padding-bottom: 200px;
-  background-color: #58dab4;
-  margin-bottom: 2em;
-}
-
 .logo {
   width: 50%;
+  margin-top:20px
 }
 
 p {
   margin: 3em;
 }
-picture {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  margin: auto;
-}
-img {
-  width: 50%;
-}
 
-form {
+.formulario-registro {
   width: 100%;
   padding: 10px;
   margin: 0;
+  box-sizing: border-box;
+}
+.input-formulario-registro{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
   box-sizing: border-box;
 }
 
@@ -43,7 +37,7 @@ form {
 .checkboxAlign {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 100%
 }
 
 .botonInicio {
@@ -237,14 +231,14 @@ footer {
 }
 
 @media (min-width: 769px) {
-  form {
+  .formulario-registro {
     width: 30em;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  input {
+  .input-formulario-registro {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -272,7 +266,7 @@ footer {
 }
 
 @media (min-width: 1200px) {
-  form {
+  .formulario-registro {
     width: 30em;
     display: flex;
     flex-direction: column;

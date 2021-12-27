@@ -216,6 +216,7 @@ header {
   font-size: 26px;
   text-align: center;
   margin: 50px;
+  background-color: blue
 }
 
 .container-productos {
@@ -233,6 +234,7 @@ header {
 
 .producto {
   margin: 30px;
+  font-weight: bold;
   transition: box-shadow 0.25s;
 }
 
@@ -355,16 +357,14 @@ footer {
   color: #fff0ed;
   margin-right: 1em;
 }
+
+
 /* LG's changes */
-/* LG's changes */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .contacto {
     margin-top: 1em;
   }
-}
-
-/* LG's changes */
-@media (min-width: 1200px) {
+  
   .lamina {
     display: flex;
     flex-direction: row;
@@ -409,7 +409,7 @@ footer {
     color: #fff9ed;
     margin-top: 20px;
   }
-
+ 
   .container-productos {
     display: flex;
     flex-direction: row;
@@ -417,7 +417,6 @@ footer {
   }
 
   .titulo-producto {
-    font-weight: bold;
     font-size: 20px;
     margin: 20px;
   }

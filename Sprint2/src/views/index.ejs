@@ -97,90 +97,39 @@
               </article>
             </article>
             
+            
+            
             <h2 class="titulo">Productos</h2>
             
             <article class="container-productos">
               <article class="producto">
+                
                 <ul class="titulo-producto">
-                  <b>Ensalada de Salmón</b>
-                </ul>
-                <ul class="caja-texto-producto" style="list-style: none">
-                  <img
-                  src="/images/ensalada-salmon.jpeg"
-                  width="350"
-                  height="350"
-                  alt="logo"
-                  />
-                  <i class="fas fa-truck camion"></i>
-                  <div class="preciosYdescuentos">
-                    <li class="precios">$449 por unidad</li>
-                  </div>
-                  <li class="descripciones">¡Producto Nuevo!</li>
-                  <li></li>
-                </ul>
+                  <% productos.forEach(element => { %>
+                   <%= element.nombre %>
+                  </ul>
+                  <ul class="caja-texto-producto" style="list-style: none"> 
+                    <img src="<%=element.img %>" width="350"
+                    height="350">
+                    <i class="fas fa-truck camion"></i>
+                    <div class="preciosYdescuentos">
+                      <li class="precios"><%=element.precio%></li>
+                    </div>
+                    <li class="descripciones"><%=element.descripcion%></li>
+                  </ul>
+                  <% }) %>
+                </article>
+                
               </article>
               
-              <article class="producto">
-                <ul class="titulo-producto">
-                  <b>Ensalada Primavera</b>
-                </ul>
-                <ul class="caja-texto-producto" style="list-style: none">
-                  <img
-                  src="/images/ensalada-primavera.jpeg"
-                  width="350"
-                  height="350"
-                  alt="logo"
-                  />
-                  <i class="fas fa-truck camion"></i>
-                  <div class="preciosYdescuentos">
-                    <li class="precios">$339 por unidad</li>
-                  </div>
-                  <li class="descripciones">
-                    ¡La mejor ensalada para la mejor temporada!
-                  </li>
-                </ul>
-              </article>
               
-              <article class="producto">
-                <ul class="titulo-producto">
-                  <b>Pan Negro</b>
-                </ul>
-                <ul class="caja-texto-producto" style="list-style: none">
-                  <img
-                  src="/images/pan-negro.jpeg"
-                  width="350"
-                  height="350"
-                  alt="logo"
-                  />
-                  <i class="fas fa-truck camion"></i>
-                  <div class="preciosYdescuentos">
-                    <li class="precios">$50 por unidad</li>
-                  </div>
-                  <li class="descripciones">100% salvado, 0% grasas trans</li>
-                </ul>
-              </article>
-              <article class="producto">
-                <ul class="titulo-producto">
-                  <b>Tarta de Verdura</b>
-                </ul>
-                <ul class="caja-texto-producto" style="list-style: none">
-                  <img
-                  src="/images/tarta-verdura.jpeg"
-                  width="350"
-                  height="350"
-                  alt="logo"
-                  />
-                  <i class="fas fa-truck camion"></i>
-                  <div class="preciosYdescuentos">
-                    <li class="precios">$449 por unidad</li>
-                  </div>
-                  <li class="descripciones">¡2x1 por tiempo limitado!</li>
-                </ul>
-              </article>
-            </article>
-          </main>
-          <footer>
-          <%- include ('./modules/footer') %>
-        </footer>
-        </body>
-        </html>
+              
+              
+              
+              
+            </main>
+            <footer>
+              <%- include ('./modules/footer') %>
+            </footer>
+          </body>
+          </html>

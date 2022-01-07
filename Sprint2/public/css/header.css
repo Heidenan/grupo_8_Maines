@@ -53,7 +53,7 @@
 .frase-header{
   text-align: center;
 }
-  .links{
+  .palabras-header{
     display: flex;
     flex-direction: row;
     justify-content: space-around;

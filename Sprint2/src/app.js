@@ -23,6 +23,5 @@ app.use(require('./routes/compras'))
 app.use(require('./routes/ayuda'))
 app.use(require('./routes/suscripciones'))
 app.use(require('./routes/productDetail'))
-
 app.use(require('./routes/users'))
 app.use(require('./routes/products'))

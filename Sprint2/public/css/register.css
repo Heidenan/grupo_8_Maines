@@ -6,33 +6,27 @@ body {
   background-color: #fff9ed;
 }
 
-header {
-  padding-bottom: 200px;
-  background-color: #58dab4;
-  margin-bottom: 2em;
-}
-
 .logo {
   width: 50%;
+  margin-top:20px
 }
 
 p {
   margin: 3em;
 }
-picture {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  margin: auto;
-}
-img {
-  width: 50%;
-}
 
-form {
+.formulario-registro {
   width: 100%;
   padding: 10px;
   margin: 0;
+  box-sizing: border-box;
+}
+.input-formulario-registro{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
   box-sizing: border-box;
 }
 
@@ -43,7 +37,7 @@ form {
 .checkboxAlign {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 100%
 }
 
 .botonInicio {
@@ -152,99 +146,16 @@ main {
 .width60 {
   width: 20%;
 }
-footer {
-  padding: 100px;
-  background-color: #58dab4;
-  border: 7px solid rgba(100, 100, 100, 0.15);
-  margin-top: 100px;
-}
-
-.contenedor-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center stretch;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.logo-slogan {
-  margin-bottom: 2em;
-}
-.slogan {
-  font-size: 1.5em;
-  color: #fff0ed;
-  font-weight: bold;
-}
-
-.direccion {
-  font-size: 1.5em;
-  color: #fff0ed;
-  font-weight: bold;
-  margin-top: 1em;
-}
-
-.servicios {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 1.5em;
-}
-
-.servicios li {
-  margin: 0.5em;
-}
-
-.contacto p {
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 1em;
-}
-
-.contacto dt {
-  margin: 0.3em 0.3em;
-  align-items: flex-end;
-}
-
-.contacto dt i {
-  margin-right: 0.4em;
-}
-
-.slogan {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-.logo-slogan {
-  margin-bottom: 1em;
-}
-.redes-sociales i {
-  font-size: 30px;
-  color: #fff0ed;
-  margin-right: 1em;
-}
-.caja-footer {
-  text-align: center;
-}
-@media (min-width: 600px) {
-  .logo-slogan-redes {
-    margin-bottom: 5em;
-  }
-  .direccion {
-    margin-top: 5em;
-  }
-}
 
 @media (min-width: 769px) {
-  form {
+  .formulario-registro {
     width: 30em;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  input {
+  .input-formulario-registro {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -272,7 +183,7 @@ footer {
 }
 
 @media (min-width: 1200px) {
-  form {
+  .formulario-registro {
     width: 30em;
     display: flex;
     flex-direction: column;

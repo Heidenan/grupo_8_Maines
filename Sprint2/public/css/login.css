@@ -1,8 +1,11 @@
+main{
+  display:flex;
+  flex-direction:column;
+  align-items:center
+}
+
 .logo {
-  width: 60%;
-  height: 250px;
-  position: relative;
-  left: 290px;
+  height: 150px;
   margin-top: 30px;
 }
 
@@ -15,8 +18,6 @@
   border-radius: 10px;
   padding: 10px;
   margin-top: 50px;
-  position: relative;
-  left: 525px;
   width: 30em;
   height: 25em;
 }
@@ -70,85 +71,7 @@ fieldset {
   color: black;
   margin-top: 10px;
 }
-footer {
-  padding: 100px;
-  background-color: #58dab4;
-  border: 7px solid rgba(100, 100, 100, 0.15);
-  margin-top: 100px;
-}
 
-.contenedor-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center stretch;
-  flex-wrap: wrap;
-  text-align: center;
-}
-.logo-slogan {
-  margin-bottom: 2em;
-}
-.slogan {
-  font-size: 1.5em;
-  color: #fff0ed;
-  font-weight: bold;
-}
-img.logo {
-  position: relative;
-  left: 10px;
-  max-width: 100%;
-}
-.mapa {
-  max-width: 40%;
-}
-
-.direccion {
-  font-size: 1.5em;
-  color: #fff0ed;
-  font-weight: bold;
-  margin-top: 1em;
-}
-
-.servicios {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 1.5em;
-}
-
-.servicios li {
-  margin: 0.5em;
-}
-
-.contacto p {
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 1em;
-}
-
-.contacto dt {
-  margin: 0.3em 0.3em;
-  align-items: flex-end;
-}
-
-.contacto dt i {
-  margin-right: 0.4em;
-}
-
-.slogan {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-.logo-slogan {
-  margin-bottom: 1em;
-}
-.redes-sociales i {
-  font-size: 30px;
-  color: #fff0ed;
-  margin-right: 1em;
-}
 @media (min-width: 768px) {
   .contacto {
     margin-top: 1em;
@@ -163,7 +86,7 @@ img.logo {
     justify-content: space-around;
     flex-wrap: nowrap;
   }
-
+  
   .mapa {
     max-width: 30%;
   }

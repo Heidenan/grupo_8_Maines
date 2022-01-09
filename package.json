@@ -4,7 +4,7 @@
   "description": "El sitio:",
   "main": "sprint2/src/app.js",
   "scripts": {
-    "test": "nodemon src/app.js -e mjs,js,html,json,css",
+    "test": "clear & nodemon src/app.js -e mjs,js,ejs,json,css",
     "start": "node Sprint2/src/app.js"
   },
   "repository": {
@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/Heidenan/grupo_8_Maines#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

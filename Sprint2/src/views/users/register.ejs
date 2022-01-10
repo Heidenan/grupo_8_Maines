@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maines</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/register.css"/>
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+</head>
+    
+
+<body>
+    <header>
+        <%- include ('../partials/header') %>
+    </header>
+
+    
+
+    
+    <main>
+        <picture>
+            <img src="/images/LogoMaines.svg" class="logo" />
+    
+        </picture>
+        
+            <p>Registrate para guardar tus pedidos, preferencias y hacer un seguimiento!</p>
+       
+        <form action='/' method="post" class="formulario-registro">
+            <fieldset>
+                <label class= "negrita"> Nombre y apellido</label>
+                <input class ="input-formulario-registro" type="text" name='nombreApellido'>
+                
+            </fieldset>
+            <fieldset>
+                <label class= "negrita">Nombre de Usuario</label>
+                <input class ="input-formulario-registro" type="text" name='nombreApellido'>
+            </fieldset>
+            <fieldset>
+                <label class= "negrita">Email</label>
+                <input class ="input-formulario-registro" type="mail" name="email">
+            </fieldset>
+            <fieldset>
+                <label class= "negrita">Confirmar Email</label>
+                <input class ="input-formulario-registro" type="mail" name="email">
+            </fieldset>
+            
+            <fieldset>
+                <label class= "negrita">Contraseña</label>
+                <input class ="input-formulario-registro" type="text" name='Domicilio'>
+            </fieldset>
+
+            <fieldset>
+                <label class= "negrita">Confirmar contraseña</label>
+                <input class ="input-formulario-registro" type="text" name='Domicilio'>
+            </fieldset>
+          
+                       
+            
+            <button class="botones botonCrearCuenta" type="submit">CREAR CUENTA</button>
+
+            <p></a>¿Ya tenés una cuenta? <a href="/login"><b>Iniciá sesión</b></a></p>
+            <button class="botones botonFacebook" type="submit">Registrarse con Google</button>
+            <button class="botones botonGoogle" type="submit">Registrarse con Facebook</button>
+
+        </main>
+<footer>
+        <%- include ('../partials/footer') %>
+      </footer>
+</body>
+</html>

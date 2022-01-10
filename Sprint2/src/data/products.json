@@ -1,0 +1,60 @@
+[
+  {
+    "name": "Ensalada de Salmón",
+    "img": "/images/ensalada-salmon.jpeg",
+    "price": "$449 por unidad",
+    "descripcion": "¡Producto Nuevo!",
+    "promo": true,
+    "descuento": 15
+  },
+  {
+    "name": "Ensalada Primavera",
+    "img": "/images/ensalada-primavera.jpeg",
+    "price": "$339 por unidad",
+    "descripcion": "¡La mejor ensalada para la mejor temporada!",
+    "promo": "false",
+    "descuento": 0
+  },
+  {
+    "name": "Pan Negro",
+    "img": "/images/pan-negro.jpeg",
+    "price": "$50 por unidad",
+    "descripcion": "100% salvado, 0% grasas trans",
+    "promo": "false",
+    "descuento": 0,
+    "id": 3
+  },
+  {
+    "name": "Tarta de Verdura",
+    "img": "/images/tarta-verdura.jpeg",
+    "price": "$449 por unidad",
+    "descripcion": "¡2x1 por tiempo limitado!",
+    "promo": false,
+    "descuento": 0
+  },
+  {
+    "id": null,
+    "name": "ciruela",
+    "price": "1247"
+  },
+  {
+    "id": 1,
+    "name": "mango",
+    "price": "12"
+  },
+  {
+    "id": 2,
+    "name": "pera",
+    "price": "15"
+  },
+  {
+    "id": 3,
+    "name": "frutilla",
+    "price": "16"
+  },
+  {
+    "id": 4,
+    "name": "Pan de arroz",
+    "price": "200"
+  }
+]

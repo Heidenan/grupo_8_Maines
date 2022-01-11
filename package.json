@@ -5,7 +5,7 @@
   "main": "sprint2/src/app.js",
   "scripts": {
     "test": "clear & nodemon src/app.js -e mjs,js,ejs,json,css",
-    "start": "node src/app.js"
+    "start": "node Sprint2/src/app.js"
   },
   "repository": {
     "type": "git",

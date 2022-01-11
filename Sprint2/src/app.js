@@ -24,6 +24,7 @@ app.use(require('./routes/ayuda'))
 app.use(require('./routes/suscripciones'))
 app.use(require('./routes/productDetail'))
 
+
 const mainRoutes = require('./routes/main')
 app.use(mainRoutes)
 
@@ -31,3 +32,6 @@ const productRoutes = require('./routes/products')
 app.use('/products', productRoutes)
 
 //mostrando cambiosx2
+app.use(require('./routes/users'))
+
+

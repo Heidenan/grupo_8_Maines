@@ -1,60 +1,40 @@
 [
   {
-    "name": "Ensalada de Salmón",
+    "id": 1,
+    "name": "Ensalada de Salmón MODIFICADO ",
     "img": "/images/ensalada-salmon.jpeg",
-    "price": "$449 por unidad",
     "descripcion": "¡Producto Nuevo!",
     "promo": true,
-    "descuento": 15
+    "descuento": 15,
+    "offert": false,
+    "price": "11"
   },
   {
-    "name": "Ensalada Primavera",
+    "id": 2,
+    "name": "Ensalada Primavera Modificada",
     "img": "/images/ensalada-primavera.jpeg",
-    "price": "$339 por unidad",
     "descripcion": "¡La mejor ensalada para la mejor temporada!",
     "promo": "false",
-    "descuento": 0
+    "descuento": 0,
+    "offert": false,
+    "price": "2222222"
   },
   {
-    "name": "Pan Negro",
+    "id": 3,
+    "name": "Pan Negro MODI",
     "img": "/images/pan-negro.jpeg",
-    "price": "$50 por unidad",
     "descripcion": "100% salvado, 0% grasas trans",
     "promo": "false",
     "descuento": 0,
-    "id": 3
+    "offert": false
   },
   {
+    "id": 4,
     "name": "Tarta de Verdura",
     "img": "/images/tarta-verdura.jpeg",
     "price": "$449 por unidad",
     "descripcion": "¡2x1 por tiempo limitado!",
     "promo": false,
     "descuento": 0
-  },
-  {
-    "id": null,
-    "name": "ciruela",
-    "price": "1247"
-  },
-  {
-    "id": 1,
-    "name": "mango",
-    "price": "12"
-  },
-  {
-    "id": 2,
-    "name": "pera",
-    "price": "15"
-  },
-  {
-    "id": 3,
-    "name": "frutilla",
-    "price": "16"
-  },
-  {
-    "id": 4,
-    "name": "mesa",
-    "price": "14"
   }
 ]

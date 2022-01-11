@@ -8,9 +8,14 @@
 </head>
 <body>
     <h1> Nuevo Producto</h1>
-    <form action="/productos/guardar" method="post">
+    <form action="/products/" method="post">
         <input type="text" name="name" id="name" placeholder="Nombre de Producto">
+        <input type="text" name="descripción" id="descripción" placeholder="Descripción de Producto">
+        <input type="file" name="foto" id="img" class="seleccionarArchivo">
+        <input type="text" name="categoría" id="categoría" placeholder="Categoría">
+        <input type="text" name="detalles" id="detalles" placeholder="Detalles de Producto">
         <input type="number" name="price" id="price" placeholder="Precio de Producto">
+
         <button type="submit">Guardar</button>
     </form>
 </body>

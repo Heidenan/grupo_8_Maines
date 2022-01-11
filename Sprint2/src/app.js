@@ -31,7 +31,8 @@ app.use(mainRoutes)
 const productRoutes = require('./routes/products')
 app.use('/products', productRoutes)
 
-//mostrando cambiosx2
 app.use(require('./routes/users'))
+
+//mostrando cambiosx2
 
 

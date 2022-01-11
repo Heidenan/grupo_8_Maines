@@ -4,7 +4,7 @@
   "description": "El sitio:",
   "main": "app.js",
   "scripts": {
-    "test": "clear & nodemon src/app.js -e mjs,js,ejs,json,css",
+    "test": "nodemon src/app.js -e mjs,js,ejs,json,css",
     "start": "node sprint2/src/app.js"
   },
   "repository": {

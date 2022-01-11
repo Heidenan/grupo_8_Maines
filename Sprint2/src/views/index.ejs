@@ -16,9 +16,10 @@
 </head>
 
 <body>
-  <header>
+  
     <%- include ('./partials/header') %>
-  </header>
+  
+
   <main>
     <img src="/images/LogoMaines.svg" class="banner" />
     
@@ -103,12 +104,14 @@
             <h2 class="titulo">Productos</h2>
             
             <article class="container-productos">
+              <% productos.forEach(element => { %>
+              
               <article class="producto">
                 
                 <ul class="titulo-producto">
-                  <% productos.forEach(element => { %>
+
                    <%= element.nombre %>
-                  </ul>
+                  
                   <ul class="caja-texto-producto" style="list-style: none"> 
                     <img src="<%=element.img %>" width="350"
                     height="350">
@@ -118,8 +121,10 @@
                     </div>
                     <li class="descripciones"><%=element.descripcion%></li>
                   </ul>
-                  <% }) %>
-                </article>
+                
+                </ul>
+              </article>
+              <% }) %>
                 
               </article>
               

@@ -1,5 +1,51 @@
 const product = require('../models/product')
+
 const controller = {
+    index: (req,res) => res.render('products/list',{
+    styles: ['products/list'],
+    title: 'Productos',
+    products: product.all()
+    }),
+    create: (req,res) => res.render('products/create',{
+        styles:['products/create'],
+        title: 'Nuevo Producto',
+        
+    }),
+    save: (req,res) => {
+        let created = product.create(req.body);
+        return res.send(created)
+    },
+    show: (req,res) => {
+        let result = product.search('id', req.params.id)
+        return result ? res.render('products/detail',{
+            styles: ['products/detail'],
+            title: 'Producto | '+result.name,
+            product: result
+        } ) :res.render('error',{
+            msg: 'Producto no encontrado'
+        })
+    },
+    update: (req,res) => res.render('products/update',{
+        styles: ['products/create'],
+        title: 'Actualizar',
+        product: product.search('id', req.params.id)
+    }),
+    modify: (req, res) => {
+        let updated = product.update(req.params.id,req.body)
+        return res.send(updated)
+    },
+}
+
+module.exports = controller
+
+
+
+
+
+
+
+
+/*const controller = {
     index: (req,res) => res.render ('products/list',{list: product.list()}),
     create: (req, res) => res.render('products/create'),
     save:(req, res) => {
@@ -8,3 +54,4 @@ const controller = {
 }
 }
 module.exports = controller
+*/

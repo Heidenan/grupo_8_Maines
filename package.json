@@ -2,7 +2,7 @@
   "name": "grupo_8_maines",
   "version": "1.0.0",
   "description": "El sitio:",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "nodemon src/app.js -e mjs,js,ejs,json,css",
     "start": "node src/app.js"

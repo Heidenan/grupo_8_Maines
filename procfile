@@ -1,2 +1,0 @@
-
-web: node ./sprint/src/app.js

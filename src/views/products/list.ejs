@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maines</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&amp;display=swap"rel="stylesheet"/>
+  </head>
+<body>
+    <main>
+    <h1>Lista de productos</h1>
+    <% products.forEach(element => { %>
+        <%= element.name %>
+       
+       <ul class="caja-texto-producto" style="list-style: none"> 
+         <img src="<%=element.img %>" width="350"
+         height="350">
+         <i class="fas fa-truck camion"></i>
+         <div class="preciosYdescuentos">
+           <li class="precios">$ <%=element.price%></li>
+         </div>
+         <li class="descripciones"><%=element.descripcion%>
+         <a href="/products/update/<%= element.id %>">
+        <i class="fas fa-pen"></i> </a>
+       </ul>
+     
+       <% }) %>
+
+    
+    </main>
+                            
+</body>
+</html>

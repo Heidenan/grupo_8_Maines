@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "name": "Ensalada de Salmón MODIFICADO ",
+    "img": "/images/ensalada-salmon.jpeg",
+    "descripcion": "¡Producto Nuevo!",
+    "promo": true,
+    "descuento": 15,
+    "offert": false,
+    "price": "11"
+  },
+  {
+    "id": 2,
+    "name": "Ensalada Primavera Modificada",
+    "img": "/images/ensalada-primavera.jpeg",
+    "descripcion": "¡La mejor ensalada para la mejor temporada!",
+    "promo": "false",
+    "descuento": 0,
+    "offert": false,
+    "price": "2222222"
+  },
+  {
+    "id": 3,
+    "name": "Pan Negro MODI",
+    "img": "/images/pan-negro.jpeg",
+    "descripcion": "100% salvado, 0% grasas trans",
+    "promo": "false",
+    "descuento": 0,
+    "offert": false
+  },
+  {
+    "id": 4,
+    "name": "Tarta de Verdura",
+    "img": "/images/tarta-verdura.jpeg",
+    "price": "$449 por unidad",
+    "descripcion": "¡2x1 por tiempo limitado!",
+    "promo": false,
+    "descuento": 0 
+  }
+]

@@ -1,0 +1,2 @@
+Creemos que al implementar una llamada semanal (weekly) nos permitirá trabajar de manera más organizada. Si bien nos comunicamos diariamente a través de un grupo propio, creemos que teniendo una weekly podremos definir los objetivos y responsabilidades de forma más eficiente. 
+Con respecto a las daily, si bien no estamos en contra de las mismas, en este momento, debido a diferentes actividades de los participantes del grupo, no creemos que sean convenientes ya que no mejorarían el flujo de trabajo.

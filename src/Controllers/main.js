@@ -1,3 +1,4 @@
+
 const listaProductos = require('../data/products')
 
 module.exports = {

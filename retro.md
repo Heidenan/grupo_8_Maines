@@ -12,3 +12,13 @@ Stop doing: Eliminar cualquier tipo de falta de organización respecto de la div
 
 
 Retrospectiva Sprint 3:
+
+Start doing: Comenzar a implementar una weekly para mejorar nuestra organización
+
+More of: División de tareas. Ayuda entre los miembros del grupo. Estar al día con la práctica y el estudio.
+
+Keep Doing: Comunicación constante de los avances del proyecto
+
+Less of: Intentar resolver todo por separado en vez de buscar ayuda en el grupo
+
+Stop doing: Eliminar la procrastinación de división e implementación de tareas

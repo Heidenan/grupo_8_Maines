@@ -1,8 +1,11 @@
 const product = require('../models/product')
 
 const controller = {
-    index: (req,res) => res.render('products/list',{
-    styles: ['products/list'],
+    index: (req,res) => res.render('products/list',{ // Este metodo es para renderizar el archivo (o la vista) list. Tambien podemos agregar en este mismo metodo
+                                                     // archivos css para que le den forma a la vista list. Podemos agregar todos los css que querramos aunque
+                                                     // por ejemplo para css que vayan a estar en todas las vistas como el header y el footer
+                                                     // tiene mas sentido incluirlos directamente en los archivos html o css que ponerlos en cada metodo de cada controlador
+    styles: ['main'],
     title: 'Productos',
     products: product.all()
     }),
@@ -34,6 +37,11 @@ const controller = {
         let updated = product.update(req.params.id,req.body)
         return res.send(updated)
     },
+    delete: (req,res) => {
+        product.delete(req.body.id)
+        return res.redirect('/products/')
+    }
+
 }
 
 module.exports = controller

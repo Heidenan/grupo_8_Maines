@@ -19,7 +19,8 @@
   },
   "homepage": "https://github.com/Heidenan/grupo_8_Maines#readme",
   "dependencies": {
-    "ejs": "^3.1.6"
+    "ejs": "^3.1.6",
+    "multer": "^1.4.4"
   },
   "devDependencies": {
     "express": "^4.17.2",

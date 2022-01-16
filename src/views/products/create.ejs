@@ -8,14 +8,27 @@
 </head>
 <body>
     <h1> Nuevo Producto</h1>
-    <form action="/products/" method="post">
+    <form action="/products/" method="post" enctype="multipart/form-data">
+        <p>
+            <label for="name">
         <input type="text" name="name" id="name" placeholder="Nombre de Producto">
+        </label>    
+            </p>
+    
+        <input type="file" name="img" id="img" class="elegir foto">
+        <p>
         <input type="text" name="descripción" id="descripción" placeholder="Descripción de Producto">
-        <input type="file" name="foto" id="img" class="seleccionarArchivo">
-        <input type="text" name="categoría" id="categoría" placeholder="Categoría">
-        <input type="text" name="detalles" id="detalles" placeholder="Detalles de Producto">
-        <input type="number" name="price" id="price" placeholder="Precio de Producto">
-
+        </p>
+        <input type="text" name="descuento" id="descuento" placeholder="% de descuento">
+        <p>
+        <label for="offert">
+        <input type="text" name="offert" id="offert" placeholder="está en oferta?">
+        </label>    
+        </p>
+        <label for="price">
+        <input type="number" name="price" id="price" placeholder="Precio del Producto">
+        </label>
+        <p>
         <button type="submit">Guardar</button>
     </form>
 </body>

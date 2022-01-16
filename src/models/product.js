@@ -1,7 +1,7 @@
 const path =require('path'); //nos ayuda a decir donde está el archivo (creo que el json de data)
 const fs = require('fs')    // nos ayuda a interactuar, leerlo, escribir, etc etc al archivo user de data
 const model = {
-    file: path.resolve(__dirname, '../data/products.json'),
+    file: path.resolve(__dirname, '../data','products.json'),
     read: () => fs.readFileSync(model.file),
     write: data => fs.writeFileSync(model.file,JSON.stringify(data,null,2)),
     all: () => JSON.parse(model.read()),
@@ -35,7 +35,8 @@ const model = {
         model.write(updated)
         let product = model.search('id',id);
         return product
-    }
+    },
+    delete: id => model.write(model.all().filter(e => e.id != id))
 }
 
 module.exports = model

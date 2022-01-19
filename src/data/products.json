@@ -35,6 +35,24 @@
     "price": "$449 por unidad",
     "descripcion": "¡2x1 por tiempo limitado!",
     "promo": false,
-    "descuento": 0 
+    "descuento": 0
+  },
+  {
+    "id": 5,
+    "name": "asdasd",
+    "price": 125,
+    "offert": false
+  },
+  {
+    "id": 6,
+    "name": "Palta",
+    "price": 120,
+    "offert": false
+  },
+  {
+    "id": 7,
+    "name": "asd",
+    "price": 150,
+    "offert": true
   }
 ]

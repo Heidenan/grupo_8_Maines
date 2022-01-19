@@ -1,7 +1,13 @@
 const {Router} = require('express');
 const router = Router();
-const multer = require('multer');
 const product = require('../Controllers/products');
+const path = require('path')
+const multer = require('multer');
+const upload = multer({storage: multer.diskStorage({
+    destination: (req, file, cb) => cb(null, path.resolve(__dirname,'../../uploads')) ,
+    filename: (req, file, cb) =>cb(null, file.fieldname+'-' + Date.now() + path.extname(file.originalname))
+})})
+
 
 // Acá no ejecutamos express pq las rutas no ejecutan express. 
 // En las rutas ejecutamos un router.
@@ -13,9 +19,9 @@ router.get('/update/:id', product.update) // 4 de 7 del listado del Sprint4 O se
 
 router.put('/:id',product.modify) // 6 de 7 del listado del Sprint4
 
-router.post('/', product.save) // 5 de 7 del listado del Sprint4
+router.post('/',[upload.any()],product.save) // 5 de 7 del listado del Sprint4
 
-router.delete('/',product.delete)
+router.delete('/',product.delete) // 7 de 7 del listado del Sprint4
 
 module.exports = router
 

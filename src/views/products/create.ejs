@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
 <body>
     <h1> Nuevo Producto</h1>
     <form action="/products/" method="post" enctype="multipart/form-data">
@@ -14,8 +8,9 @@
         <input type="text" name="name" id="name" placeholder="Nombre de Producto">
         </label>    
             </p>
-    
-        <input type="file" name="img" id="img" class="elegir foto">
+            <label for="file">
+        <input type="file" name="file" id="file" multiple>
+    </label>
         <p>
         <input type="text" name="descripción" id="descripción" placeholder="Descripción de Producto">
         </p>

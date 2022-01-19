@@ -11,6 +11,7 @@ app.set('views', path.resolve(__dirname, 'views'))
 //Configuración
 app.set('view engine', 'ejs')
 app.use(express.static(path.resolve(__dirname,'../public')))
+app.use('/uploads',express.static(path.resolve(__dirname,'../uploads')))
 app.use(express.urlencoded({extended:true}))
 
 //Servidor
@@ -41,5 +42,7 @@ app.use('/products', productRoutes)
 
 app.use(require('./routes/users'))
 
+const filesRoutes = require('./routes/files')
+app.use('/files', filesRoutes)
 
 

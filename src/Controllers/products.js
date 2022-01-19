@@ -1,4 +1,5 @@
 const product = require('../models/product')
+const file = require('../models/file')
 
 const controller = {
     index: (req,res) => res.render('products/list',{ // Este metodo es para renderizar el archivo (o la vista) list. Tambien podemos agregar en este mismo metodo
@@ -7,7 +8,7 @@ const controller = {
                                                      // tiene mas sentido incluirlos directamente en los archivos html o css que ponerlos en cada metodo de cada controlador
     styles: ['main'],
     title: 'Productos',
-    products: product.all()
+    products: product.all().map(p => Object({...p, image: file.search('id',p.image)}) )
     }),
     create: (req,res) => res.render('products/create',{
         styles:['products/create'],
@@ -15,8 +16,9 @@ const controller = {
         
     }),
     save: (req,res) => {
+        req.body.file = req.files
         let created = product.create(req.body);
-        return res.send(created)
+        return res.redirect('/products/'+created.id)
     },
     show: (req,res) => {
         let result = product.search('id', req.params.id)
@@ -35,7 +37,7 @@ const controller = {
     }),
     modify: (req, res) => {
         let updated = product.update(req.params.id,req.body)
-        return res.send(updated)
+        return res.redirect('/products/'+created.id)
     },
     delete: (req,res) => {
         product.delete(req.body.id)

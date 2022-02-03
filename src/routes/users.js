@@ -5,5 +5,6 @@ const router = express.Router();
 router.get("/usuarios", controller.index);
 router.get("/usuarios/:id", controller.show);
 router.get("/register", controller.register);
+router.post("/", controller.create);
 
 module.exports = router;

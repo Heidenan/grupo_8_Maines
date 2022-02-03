@@ -9,5 +9,14 @@ const controller = {
     let result = user.show(req.params.id);
     return result ? res.send(result) : res.send("User not found");
   },
+  create: (req, res) => {
+    console.log("asd", req.body);
+    let userRegistered = user.create(req.body);
+    return res.send({
+      data: req.body,
+      user: userRegistered,
+      msg: "LLego del register",
+    });
+  },
 };
 module.exports = controller;

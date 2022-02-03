@@ -1,6 +1,7 @@
 [
-    {
-        "id": 1,
-        "email": "agustingmaggi@gmail.com. A cada accion, una ruta, a cada ruta, un controlador, a cada controlador, si necesita, un metodo del modelo"
-    }
+  {
+    "id": 1,
+    "email": "lucas.rgoni@gmail.com",
+    "password": "12345"
+  }
 ]

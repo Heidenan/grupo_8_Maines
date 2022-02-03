@@ -34,14 +34,5 @@
     "descuento": 0,
     "offert": false,
     "price": "11"
-  },
-  {
-    "id": 5,
-    "name": "aaa",
-    "price": 343,
-    "offert": true,
-    "image": [
-      2
-    ]
   }
 ]

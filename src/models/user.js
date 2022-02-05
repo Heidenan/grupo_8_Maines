@@ -1,13 +1,11 @@
 const path = require("path"); //nos ayuda a decir donde está el archivo (creo que el json de data)
 const fs = require("fs"); // nos ayuda a interactuar, leerlo, escribir, etc etc al archivo user de data
 const model = {
-  /* list: () =>
-    JSON.parse(fs.readFileSync(path.resolve(__dirname, "../data/users.json"))), */
   file: path.resolve(__dirname, "../data", "users.json"),
   read: () => fs.readFileSync(model.file, "utf8"),
   write: (data) => fs.writeFileSync(model.file, JSON.stringify(data, null, 2)),
   // Los últimos parámetros son para que formato del texto se vea mejor
-  all: () => JSON.parse(model.read()),
+  listAllUsers: () => JSON.parse(model.read()),
   show: (id) => model.list().find((e) => e.id == id),
   generated: (data) =>
     // Here we generate a new user

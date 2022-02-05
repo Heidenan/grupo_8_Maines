@@ -23,14 +23,12 @@ app.listen(
 
 app.use(method("m")); // ?_m=PUT || ?_m=DELETE
 
-//Rutas
+//Routes
 
-app.use(require("./routes/login"));
 app.use(require("./routes/carrito"));
 app.use(require("./routes/entregas"));
 app.use(require("./routes/compras"));
 app.use(require("./routes/ayuda"));
-app.use(require("./routes/suscripciones"));
 app.use(require("./routes/productDetail"));
 
 const mainRoutes = require("./routes/main");
@@ -39,7 +37,8 @@ app.use(mainRoutes);
 const productRoutes = require("./routes/products");
 app.use("/products", productRoutes);
 
-app.use("/users", require("./routes/users"));
+const userRoutes = require("./routes/users");
+app.use("/users", userRoutes);
 
 const filesRoutes = require("./routes/files");
 app.use("/files", filesRoutes);

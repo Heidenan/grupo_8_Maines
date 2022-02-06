@@ -1,3 +1,5 @@
+const validator = require("express-validator");
+const bcrypt = require("bcrypt");
 const user = require("../models/user");
 const controller = {
   index: (req, res) => res.send(user.listAllUsers()),
@@ -10,8 +12,59 @@ const controller = {
     let result = user.show(req.params.id);
     return result ? res.send(result) : res.send("User not found");
   },
+  access: (req, res) => {
+    let errors = validator.validationResult(req);
+    // Here we store the errors in a variable
+
+    if (!errors.isEmpty()) {
+      return res.render("users/register", {
+        errors: errors.mapped(),
+      });
+    }
+    let exist = user.search("email", req.body.email);
+    if (!exist) {
+      return res.render("users/login", {
+        errors: {
+          email: {
+            msg: "Email is not registered",
+          },
+        },
+      });
+    }
+    if (!bcrypt.compareSync(req.body.password, exist.password)) {
+      return res.render("users/login", {
+        errors: {
+          password: {
+            msg: "Password is not valid",
+          },
+        },
+      });
+    }
+    if (req.body.remember) {
+      res.cookie("email", req.body.email, { maxAge: 1000 * 60 * 60 * 24 * 30 });
+      // This cookie expires in 1 month --> Every cookie is calculated in milliseconds
+    }
+    req.session.user = exist;
+    return res.redirect("/");
+    // This is to verify that there is a user in session
+  },
   create: (req, res) => {
-    console.log("asd", req.body);
+    let errors = validator.validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.render("users/register", {
+        errors: errors.mapped(),
+      });
+    }
+    let exist = user.search("email", req.body.email);
+    if (exist) {
+      return res.render("users/register", {
+        errors: {
+          email: {
+            msg: "Email is registered",
+          },
+        },
+      });
+    }
     let userRegistered = user.create(req.body);
     return res.send({
       data: req.body,

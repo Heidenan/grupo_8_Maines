@@ -1,27 +1,24 @@
 const express = require("express");
 const path = require("path");
 const method = require("method-override");
-const app = express(); // requerimos express en la variable app porque lo vamos a
-// ejecutar para la configuracion que viene debajo.
-// ver comentarios en /routes/products para mas info
+const app = express();
+const cookie = require("cookie-parser");
+const session = require("express-session");
 
 app.set("views", path.resolve(__dirname, "views"));
-
-//Configuración
 app.set("view engine", "ejs");
 app.use(express.static(path.resolve(__dirname, "../public")));
 app.use("/uploads", express.static(path.resolve(__dirname, "../uploads")));
 app.use(express.urlencoded({ extended: true }));
+app.use(cookie());
+app.use(session({ secret: "secret", saveUninitialized: true, resave: false }));
 
-//Servidor
+//Server
 app.set("port", process.env.PORT || 3000);
-app.listen(
-  app.get("port"),
-  /*de aca para la derecha es opcional*/ () =>
-    console.log("listening on http://localhost:" + app.get("port"))
+app.listen(app.get("port"), () =>
+  console.log("listening on http://localhost:" + app.get("port"))
 );
-
-app.use(method("m")); // ?_m=PUT || ?_m=DELETE
+app.use(method("m")); // ?_m=PUT || ?_m=DELETE --> Forms
 
 //Routes
 

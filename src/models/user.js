@@ -7,7 +7,7 @@ const model = {
   file: path.resolve(__dirname, "../data", "users.json"),
   read: () => fs.readFileSync(model.file, "utf8"),
   write: (data) => fs.writeFileSync(model.file, JSON.stringify(data, null, 2)),
-  listAllUsers: () => JSON.parse(model.read()),
+  all: () => JSON.parse(model.read()),
   show: (id) => model.list().find((e) => e.id == id),
   search: (prop, value) =>
     model.all().find((element) => element[prop] == value),

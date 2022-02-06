@@ -3,5 +3,11 @@
     "id": 1,
     "email": "lucas.rgoni@gmail.com",
     "password": "12345"
+  },
+  {
+    "id": 2,
+    "email": "asd@asd.com",
+    "password": "$2b$10$ouDjqS1y.pCEJPUKOlKLReaVPqZb3g4omNYZsn5LnEaJq9NtpzpWS",
+    "isAdmin": false
   }
 ]

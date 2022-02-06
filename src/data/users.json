@@ -9,5 +9,11 @@
     "email": "asd@asd.com",
     "password": "$2b$10$ouDjqS1y.pCEJPUKOlKLReaVPqZb3g4omNYZsn5LnEaJq9NtpzpWS",
     "isAdmin": false
+  },
+  {
+    "id": 3,
+    "email": "maines@maines.com",
+    "password": "$2b$10$SVRos8R.aZvhM0a255fmVeBrT6UnlrK1M3s1TofDn9I8NSIEvXROW",
+    "isAdmin": true
   }
 ]

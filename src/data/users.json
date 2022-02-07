@@ -15,5 +15,11 @@
     "email": "maines@maines.com",
     "password": "$2b$10$SVRos8R.aZvhM0a255fmVeBrT6UnlrK1M3s1TofDn9I8NSIEvXROW",
     "isAdmin": true
+  },
+  {
+    "id": 4,
+    "email": "asd@asdasd.com",
+    "password": "$2b$10$8S3zw.2hU4pgDl63iY/Vb.8G9puLQwLu/DI8Ekkom4G7Zr/JIuKn2",
+    "isAdmin": false
   }
 ]

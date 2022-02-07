@@ -16,7 +16,6 @@ const controller = {
   access: (req, res) => {
     let errors = validator.validationResult(req);
     // Here we store the errors in a variable
-
     if (!errors.isEmpty()) {
       return res.render("users/register", {
         errors: errors.mapped(),
@@ -46,7 +45,7 @@ const controller = {
       // This cookie expires in 1 month --> Every cookie is calculated in milliseconds
     }
     req.session.user = exist;
-    return res.redirect("/");
+    return res.redirect("/users/profile");
     // This is to verify that there is a user in session
   },
   create: (req, res) => {

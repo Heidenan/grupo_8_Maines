@@ -12,6 +12,8 @@ router.get("/suscripciones", controller.suscripciones);
 router.post("/", [validate], controller.create);
 router.get("/profile", [access], controller.profile);
 router.get("/usuarios/:id", controller.show);
+router.post("/access", [validate], controller.access);
+
 
 
 module.exports = router;

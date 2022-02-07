@@ -73,5 +73,10 @@ const controller = {
     });
   },
   suscripciones: (req, res) => res.render("users/suscripciones"),
+  logout: (req, res) => {
+    delete req.session.user;
+    res.cookie("email", null, { maxAge: -1 });
+    return res.redirect("/");
+  },
 };
 module.exports = controller;

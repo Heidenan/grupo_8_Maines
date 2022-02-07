@@ -8,6 +8,7 @@ const { validate } = require("../models/user");
 router.get("/usuarios", [auth], controller.index);
 router.get("/register", controller.register);
 router.get("/login", controller.login);
+router.post("/logout", controller.logout);
 router.get("/suscripciones", controller.suscripciones);
 router.post("/", [validate], controller.create);
 router.get("/profile", [access], controller.profile);

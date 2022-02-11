@@ -2,24 +2,7 @@
   {
     "id": 1,
     "email": "lucas.rgoni@gmail.com",
-    "password": "12345"
-  },
-  {
-    "id": 2,
-    "email": "asd@asd.com",
-    "password": "$2b$10$ouDjqS1y.pCEJPUKOlKLReaVPqZb3g4omNYZsn5LnEaJq9NtpzpWS",
-    "isAdmin": false
-  },
-  {
-    "id": 3,
-    "email": "maines@maines.com",
-    "password": "$2b$10$SVRos8R.aZvhM0a255fmVeBrT6UnlrK1M3s1TofDn9I8NSIEvXROW",
-    "isAdmin": true
-  },
-  {
-    "id": 4,
-    "email": "asd@asdasd.com",
-    "password": "$2b$10$8S3zw.2hU4pgDl63iY/Vb.8G9puLQwLu/DI8Ekkom4G7Zr/JIuKn2",
+    "password": "$2b$10$cHaxCwCu/lHy3Z7BZiq6nuTHUTnwr1d1c5rM9z3ojG6w17gCzVGFO",
     "isAdmin": false
   }
 ]

@@ -1,19 +1,18 @@
 const express = require("express");
-const controller = require("../controllers/users");
+const userController = require("../controllers/users");
 const router = express.Router();
 const access = require("../middlewares/access");
 const auth = require("../middlewares/access");
 const { validate } = require("../models/user");
 
-router.get("/usuarios", [auth], controller.index);
-router.get("/register", controller.register);
-router.get("/login", controller.login);
-router.get("/suscripciones", controller.suscripciones);
-router.post("/", [validate], controller.create);
-router.get("/profile", [access], controller.profile);
-router.get("/usuarios/:id", controller.show);
-router.post("/access", [validate], controller.access);
-
-
+router.get("/usuarios", [auth], userController.index);
+router.get("/register", userController.register);
+router.get("/login", userController.login);
+router.get("/logout", [], userController.logout);
+router.get("/suscripciones", userController.suscripciones);
+router.post("/", [validate], userController.create);
+router.get("/profile", [access], userController.profile);
+router.get("/usuarios/:id", userController.show);
+router.post("/access", [validate], userController.access);
 
 module.exports = router;

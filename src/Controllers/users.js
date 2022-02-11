@@ -1,7 +1,7 @@
 const validator = require("express-validator");
 const bcrypt = require("bcrypt");
 const user = require("../models/user");
-const controller = {
+const userController = {
   index: (req, res) => res.send(user.all()),
   register: (req, res) =>
     res.render("users/register", {
@@ -72,6 +72,11 @@ const controller = {
       msg: "LLego del register",
     });
   },
+  logout: (req, res) => {
+    delete req.session.user;
+    res.cookie("user", null, { maxAge: -1 });
+    return res.redirect("/users/login");
+  },
   suscripciones: (req, res) => res.render("users/suscripciones"),
 };
-module.exports = controller;
+module.exports = userController;

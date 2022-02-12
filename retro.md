@@ -1,5 +1,5 @@
-Retrospectiva Sprint 2:
 
+Retrospectiva Sprint 2:
 Start doing: Comenzar a implementar mejores prácticas a la hora de organizar nuestro código y poder escalar nuestro desarrollo.
 
 More of: Continuar trabajando en equipo de manera colaborativa.
@@ -22,3 +22,17 @@ Keep Doing: Comunicación constante de los avances del proyecto
 Less of: Intentar resolver todo por separado en vez de buscar ayuda en el grupo
 
 Stop doing: Eliminar la procrastinación de división e implementación de tareas
+
+
+Retrospectiva Sprint 4:
+
+Start doing: Comenzar a trabajar en el sprint desde el día 0
+
+More of: Tener más reuniones en grupo donde podamos revisar dudas y repasar código juntos
+
+Keep Doing: Las charlas diarias nos vienen funcionando para poder organizar nuestras tareas individuales
+
+Less of: En algunas ocasiones es mejor idea pedir ayuda a un compañero/docente para resolver una cuestión en particular
+
+Stop doing: No dejar más de lado la estética del sitio
+

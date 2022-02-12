@@ -10,9 +10,9 @@ router.get("/register", userController.register);
 router.get("/login", userController.login);
 router.get("/logout", [], userController.logout);
 router.get("/suscripciones", userController.suscripciones);
-router.post("/", [validate], userController.create);
 router.get("/profile", [access], userController.profile);
 router.get("/usuarios/:id", userController.show);
+router.post("/", [validate], userController.create);
 router.post("/access", [validate], userController.access);
 
 module.exports = router;

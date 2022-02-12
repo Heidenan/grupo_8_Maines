@@ -32,14 +32,17 @@
                 <input class ="input-formulario-registro" type="password" name='password'>
             </fieldset>
       
-                       
-            
             <button class="botones botonCrearCuenta" type="submit">CREAR CUENTA</button>
-
+   </form>
+   <% if(locals.errors) {%> <% if (errors.email) {%>
+    <p><%- errors.email.msg %></p>
+    <% } %> <% if (errors.password) { %>
+    <p><%- errors.password.msg %></p>
+    <% } %> <% } %>
             <p></a>¿Ya tenés una cuenta? <a href="/users/login/"><b>Iniciá sesión</b></a></p>
             <button class="botones botonFacebook" type="submit">Registrarse con Google</button>
             <button class="botones botonGoogle" type="submit">Registrarse con Facebook</button>
-
+  
         </main>
 <footer>
         <%- include ('../partials/footer') %>

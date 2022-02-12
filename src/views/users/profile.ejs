@@ -3,7 +3,10 @@
     <header>
         <%- include ('../partials/header') %>
     </header>
-        <h1>Profile</h1>
+        <h1>Perfil del usuario</h1>
+        <ul>Información del usuario
+            <li>Email:  </li>
+        </ul>
         <p><a href="/users/logout">Logout</a></p>
     <% if (locals.errors && errors.email) { %>
     <p><%= errors.email.msg %> </p>

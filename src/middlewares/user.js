@@ -2,7 +2,7 @@ const userModel = require("../models/user");
 const user = (req, res, next) => {
   let user = null;
   if (req.cookie && req.cookie.email) {
-    user = userModel.search("email", req.cookie.email);
+    user = userModel.search("email", req.cookie.user);
     req.session.user = user;
     // Here we check is there is a cookie with an email. If there is one, we reasing the user from the cookie.
   }

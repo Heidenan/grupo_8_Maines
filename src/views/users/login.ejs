@@ -33,11 +33,11 @@
             required
           />
         </fieldset>
-
-        <div class="olvidasteContra">
+<p><input type="checkbox" name="remember" id="remember" />Recordar usuario</p>
+        <!--<div class="olvidasteContra">
           <a href="#" target="_blank">¿Olivdaste tu contraseña?</a>
         </div>
-
+      -->
         <button class="botonLogin" type="submit">Iniciar Sesión</button>
 
         <div class="crearCuenta">
@@ -45,6 +45,12 @@
           <a href="/users/register">Crea una cuenta</a>
         </div>
       </form>
+        <% if (locals.errors && errors.email) { %>
+    <p><%= errors.email.msg %> </p>
+    <% } %>
+    <% if (locals.errors && errors.password) { %>
+    <p><%= errors.password.msg %> </p>
+    <% } %>
     </main>
     <footer>
     <%- include ('../partials/footer') %>

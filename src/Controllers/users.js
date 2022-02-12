@@ -17,7 +17,7 @@ const userController = {
     let errors = validator.validationResult(req);
     // Here we store the errors in a variable
     if (!errors.isEmpty()) {
-      return res.render("users/register", {
+      return res.render("users/login", {
         errors: errors.mapped(),
       });
     }
@@ -66,11 +66,12 @@ const userController = {
       });
     }
     let userRegistered = user.create(req.body);
-    return res.send({
+    /* return res.send({
       data: req.body,
       user: userRegistered,
       msg: "LLego del register",
-    });
+    }); */
+    return res.redirect("/users/login");
   },
   logout: (req, res) => {
     delete req.session.user;

@@ -29,11 +29,15 @@ const model = {
     return user;
     // Here we create the user and we add it to the current list of users
   },
-  validate: [
-    body("email").isEmail().withMessage("Email is not valid"),
-    body("password").isLength({ min: 5 }).withMessage("Password is too short"),
-    // Through express-validator, we validate the email and password
-  ],
+  /* update: (id, data) => {
+    const users = model.getAll();
+    const user = model.search("id", id);
+    const updates = users.map((user) =>
+      user.id === id ? { ...user, ...data } : user
+    );
+    model.save(updates);
+    return updates.find((user) => user.id === id);
+  }, */
 };
 
 module.exports = model;

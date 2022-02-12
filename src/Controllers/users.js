@@ -26,7 +26,7 @@ const userController = {
       return res.render("users/login", {
         errors: {
           email: {
-            msg: "Email is not registered",
+            msg: "El email no esta registrado",
           },
         },
       });
@@ -35,7 +35,7 @@ const userController = {
       return res.render("users/login", {
         errors: {
           password: {
-            msg: "Password is not valid",
+            msg: "Contraseña invalida",
           },
         },
       });
@@ -60,7 +60,7 @@ const userController = {
       return res.render("users/register", {
         errors: {
           email: {
-            msg: "Email is registered",
+            msg: "El email ya se encuentra registrado",
           },
         },
       });

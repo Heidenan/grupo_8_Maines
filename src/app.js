@@ -4,6 +4,7 @@ const method = require("method-override");
 const app = express();
 const cookie = require("cookie-parser");
 const session = require("express-session");
+const user = require("./middlewares/user");
 
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -12,6 +13,7 @@ app.use("/uploads", express.static(path.resolve(__dirname, "../uploads")));
 app.use(express.urlencoded({ extended: true }));
 app.use(cookie());
 app.use(session({ secret: "secret", saveUninitialized: true, resave: false }));
+app.use(user);
 
 //Server
 app.set("port", process.env.PORT || 3000);

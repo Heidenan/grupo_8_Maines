@@ -4,5 +4,11 @@
     "email": "lucas.rgoni@gmail.com",
     "password": "$2b$10$fPVt6NokrQzoOmRWT0TXD.z8klvvBQ5.IOogrF0PSHlfmctmXrHAW",
     "isAdmin": false
+  },
+  {
+    "id": 2,
+    "email": "lucas.rg@outlook.es",
+    "password": "$2b$10$0Y0Mis7LYlmckkyBQiRtQuo/cBYOKaODrXu1Z0rPp4j6oRroU/qmm",
+    "isAdmin": false
   }
 ]

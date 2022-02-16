@@ -17,7 +17,7 @@
         
             <p>Registrate para guardar tus pedidos, preferencias y hacer un seguimiento!</p>
        
-        <form action="/users/" method="post" enctype="multipart/form-data" class="formulario-registro">
+        <form action="/users/" method="post" class="formulario-registro" enctype="multipart/form-data" >
             <fieldset>
                 <label class= "negrita"> Nombre y apellido</label>
                 <input class ="input-formulario-registro" type="text" name='name'>                
@@ -38,8 +38,7 @@
                      <fieldset>
                 <label for="terminos y condiciones">
                     <input type="checkbox" name="TyC"required> He leido y acepto los terminos y condiciones del sitio </label>
-                    </fieldset>
-      
+            </fieldset>
             <button class="botones botonCrearCuenta" type="submit">CREAR CUENTA</button>
    </form>
    <% if(locals.errors) {%> <% if (errors.email) {%>

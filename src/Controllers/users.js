@@ -8,7 +8,9 @@ const userController = {
       styles: ["/register"],
     }),
   login: (req, res) => res.render("users/login"),
-  profile: (req, res) => res.render("users/profile"),
+  profile: (req, res) => {
+    res.render("users/profile", {});
+  },
   show: (req, res) => {
     let result = user.show(req.params.id);
     return result ? res.send(result) : res.send("User not found");
@@ -41,7 +43,7 @@ const userController = {
       });
     }
     if (req.body.remember) {
-      res.cookie("email", req.body.email, { maxAge: 1000 * 60 * 60 * 24 * 30 });
+      res.cookie("user", req.body.email, { maxAge: 1000 * 60 * 60 * 24 * 30 });
       // This cookie expires in 1 month --> Every cookie is calculated in milliseconds
     }
     req.session.user = exist;

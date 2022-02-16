@@ -19,6 +19,7 @@ const model = {
       password: bcrypt.hashSync(data.password, 10),
       // bcrypt takes the password, calculates a hash verification and encripts it
       isAdmin: String(data.email).includes("@maines.com"),
+      /* image: file.create(data.file).id, */
     }),
   create: (data) => {
     let allUsers = model.all();

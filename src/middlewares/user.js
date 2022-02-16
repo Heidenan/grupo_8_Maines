@@ -1,3 +1,5 @@
+// This is an app's middleware, not a route's middleware. To use this one we have to require it in the entry point of the app.
+
 const user = require("../models/user");
 const middleware = (req, res, next) => {
   let logged = null;

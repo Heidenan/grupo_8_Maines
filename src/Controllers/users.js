@@ -67,6 +67,7 @@ const userController = {
         },
       });
     }
+    req.body.file = req.files;
     let userRegistered = user.create(req.body);
     /* return res.send({
       data: req.body,

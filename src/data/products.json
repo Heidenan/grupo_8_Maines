@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "name": "Ensalada de salmon ahumado",
+    "name": "Ensalada de salmon ahumado  ",
     "img": "/images/ensalada-salmon.jpeg",
     "descripción": "¡Producto Nuevo!",
     "descuento": 15,
     "offert": false,
-    "price": "345345"
+    "price": "345"
   },
   {
     "id": 2,

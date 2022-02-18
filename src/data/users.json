@@ -1,8 +1,10 @@
 [
   {
     "id": 1,
-    "email": "lucas.rgoni@gmail.com",
-    "password": "$2b$10$fPVt6NokrQzoOmRWT0TXD.z8klvvBQ5.IOogrF0PSHlfmctmXrHAW",
-    "isAdmin": false
+    "email": "lucas.rg@outlook.es",
+    "password": "$2b$10$xHXMNZbjaVvDor2bkZvQGOAI9fFaQ4Vl.7fMJJpjiRrDWhTKK2pui",
+    "isAdmin": false,
+    "isActive": true,
+    "avatar": "avatar-1645223316892.jpg"
   }
 ]

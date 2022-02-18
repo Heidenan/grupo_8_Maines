@@ -17,7 +17,7 @@
         
             <p>Registrate para guardar tus pedidos, preferencias y hacer un seguimiento!</p>
        
-        <form action="/users/" method="post" class="formulario-registro"  >
+        <form action="/users/create" method="post" class="formulario-registro"  >
             <fieldset>
                 <label class= "negrita"> Nombre y apellido</label>
                 <input class ="input-formulario-registro" type="text" name='name'>                
@@ -53,8 +53,7 @@
             <button class="botones botonGoogle" type="submit">Registrarse con Facebook</button>
   
         </main>
-<footer>
         <%- include ('../partials/footer') %>
-      </footer>
+      
 </body>
 </html>

@@ -8,11 +8,23 @@
             <li>Email:  <%= user.email  %> </li>
         </ul>
         <p><a href="/users/logout">Logout</a></p>
-    <% if (locals.errors && errors.email) { %>
-    <p><%= errors.email.msg %> </p>
-    <% } %>
-    <% if (locals.errors && errors.password) { %>
-    <p><%= errors.password.msg %> </p>
-    <% } %>
+        <h2>Profile's picture</h2>
+      <% if (user.avatar != null) { %>
+      <figure>
+        <img src="/avatars/<%= user.avatar %>" alt="photo<%= user.email %>" />
+      </figure>
+      <% } else { %>
+      <figure>
+        <img src="/assets/avatar.png" alt="photo <%= user.email %>" />
+      </figure>
+      <% } %>
+      <form
+        action="/users/upload/avatar"
+        enctype="multipart/form-data"
+        method="post"
+      >
+        <input type="file" name="avatar" id="avatar" />
+        <button type="submit">Update Avatar</button>
+      </form>
 </body>
 </html>

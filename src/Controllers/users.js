@@ -7,9 +7,12 @@ const userController = {
     res.render("users/register", {
       styles: ["/register"],
     }),
-  login: (req, res) => res.render("users/login"),
+  login: (req, res) =>
+    res.render("users/login", {
+      styles: ["/login"],
+    }),
   profile: (req, res) => {
-    res.render("users/profile", {});
+    res.render("users/profile");
   },
   show: (req, res) => {
     let result = user.show(req.params.id);
@@ -67,7 +70,7 @@ const userController = {
         },
       });
     }
-    req.body.file = req.files;
+    req.body.files = req.files;
     let userRegistered = user.create(req.body);
     /* return res.send({
       data: req.body,
@@ -79,8 +82,16 @@ const userController = {
   logout: (req, res) => {
     delete req.session.user;
     res.cookie("user", null, { maxAge: -1 });
-    return res.redirect("/users/login");
+    return res.redirect("/");
   },
   suscripciones: (req, res) => res.render("users/suscripciones"),
+  uploadAvatar: (req, res) => {
+    let update = user.update(req.session.user.id, {
+      avatar: req.files ? req.files[0].filename : null,
+    });
+    req.session.user = update;
+    return res.redirect("/users/profile");
+  },
 };
+
 module.exports = userController;

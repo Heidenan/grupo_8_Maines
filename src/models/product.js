@@ -15,8 +15,6 @@ const model = {
       image: data.file.map((f) => file.create(f).id),
       discount: data.discount ? parseInt(data.discount) : 0,
       description: data.description,
-      /*aca hay que agregar todas las categorias que queremos que tenga cada objeto
-        O sea cada producto que vendemos por ejemplo */
     }),
   create: (data) => {
     let newProduct = model.generate(data);

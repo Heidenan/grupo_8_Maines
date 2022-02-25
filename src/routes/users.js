@@ -23,7 +23,7 @@ router.get("/register", userController.register);
 router.get("/login", userController.login);
 router.get("/logout", [access], userController.logout);
 router.get("/suscripciones", userController.suscripciones);
-router.get("/profile", userController.profile);
+router.get("/profile", [access] ,userController.profile);
 router.get("/usuarios/:id", userController.show);
 router.post("/create", [create], userController.create);
 router.post("/access", userController.access);

@@ -12,7 +12,7 @@ const userController = {
       styles: ["/login"],
     }),
   profile: (req, res) => {
-    res.render("users/profile");
+    res.render("users/profile", {user: user});
   },
   show: (req, res) => {
     let result = user.show(req.params.id);

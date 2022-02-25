@@ -85,7 +85,7 @@
             
             
             
-            <h2 class="titulo">Productos</h2>
+            <h2 class="titulo">Algunos de nuestros productos</h2>
             
             <article class="container-productos">
               <% productos.forEach(element => { %>
@@ -97,11 +97,10 @@
                    <%= element.nombre %>
                   
                   <ul class="caja-texto-producto" style="list-style: none"> 
-                    <img src="<%=element.img %>" width="350"
-                    height="350">
+                    <img src="<%=element.img %>">
                     <i class="fas fa-truck camion"></i>
                     <div class="preciosYdescuentos">
-                      <li class="precios"><%=element.precio%></li>
+                      <li class="precios"><%=element.price%>$</li>
                     </div>
                     <li class="descripciones"><%=element.descripcion%></li>
                   </ul>

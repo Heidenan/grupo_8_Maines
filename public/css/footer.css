@@ -1,8 +1,6 @@
 footer {
-  padding: 100px;
-  background-color: #58dab4;
+  background-color: #A5A1F3;
   border: 7px solid rgba(100, 100, 100, 0.15);
-  margin-top: 100px;
 }
 
 .contenedor-footer {
@@ -42,6 +40,7 @@ footer {
 }
 
 .servicios li {
+  list-style: none;
   margin: 0.5em;
 }
 
@@ -79,6 +78,7 @@ footer {
     margin-top: 1em;
   }
   .contenedor-footer {
+    width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -89,7 +89,14 @@ footer {
   .mapa {
     max-width: 30%;
   }
-  .servicios {
-    margin-right: 1.5em;
+  .servicios ul {
+    list-style: none;
+    margin: 10px;
+    padding: 0px;
+    text-align: left;
+  }
+
+  .servicios ul li{
+    width: 200px;
   }
 }

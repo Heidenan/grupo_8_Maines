@@ -1,5 +1,8 @@
- <%- include ('../partials/head') %>
-    
+<head>
+
+<%- include ('../partials/head') %>
+<link rel="stylesheet" href="/css/register.css">
+</head>
 
 <body>
     <header>
@@ -31,11 +34,10 @@
                 <label class= "negrita">Contraseña</label>
                 <input class ="input-formulario-registro" type="password" name='password'>
             </fieldset>
-          <!--   <fieldset>
+             <!-- <fieldset>
                 <label for="">Foto de usuario</label> 
                     <input type="file" id="file" name="image" required>
-                    </fieldset>
-                    -->
+                    </fieldset> -->
                      <fieldset>
                 <label for="terminos y condiciones">
                     <input type="checkbox" name="TyC"required> He leido y acepto los terminos y condiciones del sitio </label>
@@ -44,9 +46,9 @@
             <button class="botones botonCrearCuenta" type="submit">CREAR CUENTA</button>
    </form>
    <% if(locals.errors) {%> <% if (errors.email) {%>
-    <p><%- errors.email.msg %></p>
+    <p class="error-msg">*<%- errors.email.msg %></p>
     <% } %> <% if (errors.password) { %>
-    <p><%- errors.password.msg %></p>
+    <p class="error-msg">*<%- errors.password.msg %></p>
     <% } %> <% } %>
             <p></a>¿Ya tenés una cuenta? <a href="/users/login/"><b>Iniciá sesión</b></a></p>
             <button class="botones botonFacebook" type="submit">Registrarse con Google</button>

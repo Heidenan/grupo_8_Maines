@@ -15,6 +15,12 @@ p {
   margin: 3em;
 }
 
+.error-msg{
+  color: #FF9B87;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .formulario-registro {
   width: 100%;
   padding: 10px;

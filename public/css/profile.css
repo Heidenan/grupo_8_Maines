@@ -9,6 +9,8 @@ main{
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background-color: #fff9ed;
+    font-family: "Roboto", sans-serif;
 }
 
 main h1{

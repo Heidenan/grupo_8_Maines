@@ -1,99 +1,83 @@
-* {font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
+* {
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
 }
 
 body{
     background-color: #FFF9ED;
+    font-family: 'Roboto', sans-serif;
 }
 
-.producto1{
+@media (min-width: 320px) and (max-width: 768px){
+    
+
+ main .producto{
+    width: 300px;
     display: flex;
-    justify-content: space-around;
-    margin-top: 0px;
-    margin-left: 100px;
-    border: solid black 1px;
-    height: 150px;
-    width: 85%;
-    background-color: white;
-}
-
-.producto{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 0px;
-    margin-left: 100px;
-    border-bottom: solid black 1px;
-    border-left: solid black 1px;
-    border-right: solid black 1px;
-    height: 150px;
-    width: 85%;
-    background-color: white;
-}
-
-
-
-.nombreProducto{
-    position: relative;
-    bottom: 20px;
-}
-
-.descripcion{
-    position: relative;
-    bottom: 20px;
-}
-
-.img  {
-    width:200px;
-    height:130px;
-}
-
-.imgInfo {
-    display: flex;
-    gap: 25px;
-    position: relative;
-    top: 8px;
-}
-
-.infoPorducto {
-    display: flex;
+    margin-top: 100px;
+    padding: 15px;
     flex-direction: column;
-    justify-content: center;
+    border: 5px solid #3483fa;
+    border-radius: 10px;
+    background-color: white;
+    text-align: left;
+}
+
+main .img  {
+    width: 210px;
+    margin-bottom: 15px;
+    border: 1px solid #444444;
     
 }
 
-.fieldsetCantidad {
-    border: none;
-    position: relative;
-    top: 35px;
-}
 
-.inputCantidad {
-    width:100px;
-    height:40px;
-}
-
-.precio{
-    border: 2px lightgrey double;
-    width:110px;
-    height:50px;
-    text-align: center;
-    position: relative;
-    top: 40px;
-}
-.textoPrecio{
-    position: relative;
-    right: 2px;
-}
-
-.botonEliminar{
-    border: none;
-    color: rgb(71, 70, 70);
-    height: 30px;
+main .infoProducto .nombreProducto{
+    font-weight: bolder;
     font-size: 30px;
-    background-color: white;
-    position: relative;
-    top: 50px;
+    margin-bottom: 10px;
 }
+
+main .infoProducto{
+    text-align: left;
+    font-weight: bolder;
+}
+
+main .fieldsetCantidad{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+main .fieldsetCantidad input{
+    width: 70px;
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+main .precio{
+    font-size: 25px;
+    color: green;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+main .botonEliminar{
+    border: none;
+    background-color: white;
+    font-size: 30px;
+    color: #444444
+}
+
+main .producto:hover{
+    border: #114ca3 5px solid;
+}
+
+
 
 .botonEliminar:hover{
     color: black;
@@ -101,52 +85,34 @@ body{
 
 /* -------  Finalizar pedido  -------*/
 
-
-.none{
-    display: none;
-}
-
-.fieldset {
-    border: 0;
-}
+ main .fieldset{
+     border: none;
+ }
 
 .sectionFinal{
-    border-bottom: solid black 1px;
-    border-left: solid black 1px;
-    border-right: solid black 1px;
-    position: relative;
-    left: 100px;
-    bottom: 20px;
-    width: 85%;
-    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    width: 300px ;
+    padding: 10px;
+    border: 5px solid black;
     background-color: white;
     
 }
 
 .tituloFinal {
-    border-bottom: solid black 1px;
+    border: 2px solid black;
     background-color: lightgrey;
-    height: 50px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
 }
 
-.tituloFinalTexto{
-    position: relative;
-    top: 9px;
-    margin-left: 10px;
-}
 
-.envioTotal{
- 
- font-size: 20px;
- font-weight: bolder;
-position: relative;
-left: 40px;
-bottom: 68px;
-}
 
 .preciodelTotal{
-    position: relative;
-    left: 700px;
     bottom: 108px;
 }
 
@@ -155,56 +121,33 @@ bottom: 68px;
    
 }
 
-.input{
-    font-size: 16px;
-    box-sizing: border-box;
-    padding-left: 14px;
-    padding-right: 14px;
-    padding-top: 9px;
-    padding-bottom: 9px;
-    border-radius: 10px;
-    border: 2px solid grey ;
-    width: 60%;
-    font-weight: 500;
-    position: relative;
-    bottom: 10px;
+main .sectionFinal .input{
+    padding: 10px;
 }
 
 .botonActualizar{
     font-size: 16px;
     font-weight: bold;
+    border: none;
+    padding: 15px;
     background-color: #3483fa;
-    border-color: transparent;
     border-radius: 8px;
-    color: #fff;
-    width: 150px;
-    height: 45px;  
+    color: #fff; 
     transition: all 200ms;
-    position: relative;
-    bottom: 10px;
 }
 
 .botonActualizar:hover{
     background-color: #114ca3;
 }
 
-.total{
-    display: flex;
-    justify-content: space-between;
-    margin-right: 555px;
-    margin-top: 10px ;
-    margin-bottom: 10px;
-    border: solid 1px black;
-    height: 70px;
-    position: relative;
-    left: 20px;
-    border-radius: 8px;
+main .total .envioTotal{
+    margin-top: 20px;
+    font-weight: bolder;
+    font-size: 30px;
 }
 
 .precioTotal{
     margin-right: 50px;
-    position: relative;
-    top: 7px;
     
 }
 
@@ -217,10 +160,7 @@ bottom: 68px;
     border-radius: 8px;
     color: #fff;
     width: 150px;
-    height: 45px;  
-    position: relative;
-    left: 510px;
-    bottom: 120px;  
+    height: 45px;   
     transition: all 200ms;
 }
 
@@ -228,32 +168,43 @@ bottom: 68px;
     background-color:#114ca3;
 }
 
-.tituloRecomendado{
-    position: relative;
-    left: 1050px;
-    bottom: 465px;
-}
 
 
 /* Public Recomendada -----*/
 
-.recomendado{
-    position: relative;
-    left: 1100px;
-    bottom: 520px;
-    box-sizing: border-box;
+main .recomendado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    font-weight: bolder;
     
-} 
+}
+
+main .recomendado .imgRecomendado{
+    width: 150px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+main .recomendado .productoRecomendado{
+    border: 5px solid #114ca3;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 10px;
+}
 
 .infoRecomendado{
     display: flex;
     gap: 15px;
     font-size: 18px;
-    border: 1px solid lightgrey;
-    width: 222px;
-    height: 50px;
-    position: relative;
-    bottom: 4px;
+    margin-bottom: 15px;
+    
     
 }
 
@@ -263,479 +214,244 @@ bottom: 68px;
     bottom: 5px;
 }
 .descuento{
-
     color: green;
     position: relative;
     bottom: 5px;
 }
 
-.iconoRecomendado{
-    color: green;
-    border: 1px green solid;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    position: relative;
-    left: 10px;
-    top: 5px;
-    transition: transform 0.5s
-} 
-
-.iconoRecomendado:hover{
-    transform: rotateZ(-90deg)
-
-}
-.camion{
-    position: relative;
-    top: 6px; 
-}
-
-.nombreRecomendado{
-    font-size: 20px;
-    position: relative;
-    top: 10px;
-    left: 40px ;
-} 
-
-.botonAgregar{
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 5px;
-    padding-bottom:5px;
-    border-radius: 8px;
-    border: 1px solid grey ;
-    background-color: #f8edd6;
-    margin-left: 100px ;
-    
-}
 
 .botonAgregar:hover{
     background-color: #114ca3;
 }
 
+}
 
 
 
 
-
-/*---------Mobile---------*/
-
-
+@media (min-width: 769px){
+    
 
 
-
-
-
-@media (max-width: 400px) {
-    
-    
-    body{
-        background-color: #FFF9ED;
-    }
-    
-    .producto1{
-        display: flex;
-        justify-content: space-around;
-        margin-top: 0px;
-        margin-left: 10px;
-        border: solid black 1px;
-        height: 160px;
-        width:580px;
-        background-color: white;
-    }
-    
-    .producto{
-        display: flex;
-        justify-content: space-around;
-        margin-top: 0px;
-        margin-left: 10px;
-        border-bottom: solid black 1px;
-        border-left: solid black 1px;
-        border-right: solid black 1px;
-        height: 160px;
-        width:580px;
-        background-color: white;
-    }
-    
-    
-    
-    .nombreProducto{
-        font-size: 30px;
-        position: relative;
-        top: 20px;
-
-    }
-    
-    .descripcion{
-        display: none;
-    }
-    
-    .img  {
-        width:100px;
-        height:100px;
-        position: relative;
-        top: 15px;
-    }
-    
-    .imgInfo {
-        display: flex;
-        gap: 8px;
-    }
-    
-    .infoPorducto {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;     
-    }
-    
-    .fieldsetCantidad {
-        border: none;
-        height: 40px;
-    }
-    
-    .inputCantidad {
-        width:100px;
-        height:40px;
-        position: relative;
-        top: 10px;
-        right: 10px;
-    }
-    
-    .precio{
-        border: 2px lightgrey double;
-        width:100px;
-        height:40px;
-        position: relative;
-        right: 25px;
-        top: 45px;
-        padding: 5px;
-        
-    }
-    .textoPrecio{
-        position: relative;
-        bottom: 5px;
-        right: 2px;
-    }
-    
-    .botonEliminar{
-        border: none;
-        color: rgb(71, 70, 70);
-        height: 30px;
-        font-size: 30px;
-        background-color: white;
-        position: relative;
-        right: 15px;
-        top: 53px;
-    }
-    
-    .botonEliminar:hover{
-        color: black;
-    }
-    
-    /* -------  Finalizar pedido  -------*/
-    
-    
-    .none{
-        display: none;
-    }
-    
-    .fieldset {
-        border: 0;
-    }
-    
-    .sectionFinal{
-        border-bottom: solid black 1px;
-        border-left: solid black 1px;
-        border-right: solid black 1px;
-        margin-top: 50px;
-        position: relative;
-        left: 10px;
-        width: 580px;
-        height: 630px;
-        background-color: white;
-        
-    }
-    
-    .tituloFinal {
-        border-top: solid black 1px;
-        border-bottom: solid black 1px;
-        background-color: lightgrey;
-        height: 50px;
-        padding: 5px;
-        
-        
-    }
-    
-    .tituloFinalTexto{
-        font-size: 20px;
-        position: relative;
-        right: 5px;
-        bottom: 25px;
-       
-
-    }
-    
-    .input{
-        
-        font-size: 24px;
-        box-sizing: border-box;
-        padding-left: 14px;
-        padding-right: 14px;
-        padding-top: 9px;
-        padding-bottom: 9px;
-        border-radius: 10px;
-        border: 2px solid grey ;
-        width: 90%;
-        font-weight: 500;
-        position: relative;
-        bottom: 10px;
-    }
-    
-    .botonActualizar{
-        font-size: 24px;
-        font-weight: bold;
-        background-color: #3483fa;
-        border-color: transparent;
-        border-radius: 8px;
-        color: #fff;
-        width: 170px;
-        height: 55px;  
-        transition: all 200ms;
-        position: relative;
-        bottom: 10px;
-    }
-    
-    .botonActualizar:hover{
-        background-color: #114ca3;
-    }
-    
-    .total{
-        border: solid 1px black;
-        border-radius: 8px;
-        width: 485px;
-        height: 80px;
-    }
-
-    .envioTitulo{
-        font-size: 30px;
-        margin-left: 20px;
-    }
-
-    .envioTotal{
-        font-size: 30px;
-        position: relative;
-        bottom: 88px;
-        left: 20px;
-    }
-    
-    .preciodelTotal{
-        font-size: 24px;
+    main .producto{
+       width: 400px;
+       display: flex;
+       margin-top: 100px;
+       padding: 15px;
+       flex-direction: column;
+       border: 5px solid #3483fa;
+       border-radius: 10px;
+       background-color: white;
+       text-align: left;
        position: relative;
-       left: 400px;
-       bottom: 150px;
-         
+       left: -20%;
+   }
+   
+   main .img  {
+       width: 360px;
+       height: 200px;
+       margin-bottom: 15px;
+       border: 1px solid #444444;
+       
+   }
+   
+   
+   main .infoProducto .nombreProducto{
+       font-weight: bolder;
+       font-size: 30px;
+       margin-bottom: 10px;
+   }
+   
+   main .infoProducto{
+       text-align: left;
+       font-weight: bolder;
+   }
+   
+   main .fieldsetCantidad{
+       padding: 0px;
+       margin: 0px;
+       border: none;
+   }
+   
+   main .fieldsetCantidad input{
+       width: 70px;
+       margin: 0px;
+       margin-top: 10px;
+       margin-bottom: 10px;
+       border: 1px solid black;
+       border-radius: 10px;
+       padding: 5px;
+   }
+   
+   main .precio{
+       font-size: 25px;
+       color: green;
+       font-weight: bolder;
+       margin-bottom: 20px;
+   }
+   
+   main .botonEliminar{
+       border: none;
+       background-color: white;
+       font-size: 30px;
+       color: #444444
+   }
+   
+   main .producto:hover{
+       border: #114ca3 5px solid;
+   }
+   
+   
+   
+   .botonEliminar:hover{
+       color: black;
+   }
+   
+   /* -------  Finalizar pedido  -------*/
+   
+    main .fieldset{
+        border: none;
     }
+   
+   .sectionFinal{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       text-align: center;
+       margin-top: 20px;
+       width: 300px ;
+       padding: 10px;
+       border: 5px solid black;
+       border-radius: 10px;
+       background-color: white;
+       position: absolute;
+       top: 50%;
+       left: 60%;
+       
+   }
+   
+   .tituloFinal {
+       border: 2px solid black;
+       background-color: lightgrey;
+       text-align: center;
+       padding: 5px;
+       margin-bottom: 5px;
+   }
+   
+   
+   
+   .preciodelTotal{
+       bottom: 108px;
+   }
+   
+   .envio{
+       margin-left: 10px;
+      
+   }
+   
+   main .sectionFinal .input{
+       padding: 10px;
+   }
+   
+   .botonActualizar{
+       font-size: 16px;
+       font-weight: bold;
+       border: none;
+       padding: 15px;
+       background-color: #3483fa;
+       border-radius: 8px;
+       color: #fff; 
+       transition: all 200ms;
+   }
+   
+   .botonActualizar:hover{
+       background-color: #114ca3;
+   }
+   
+   main .total .envioTotal{
+       margin-top: 20px;
+       font-weight: bolder;
+       font-size: 30px;
+   }
+   
+   .precioTotal{
+       margin-right: 50px;
+       
+   }
+   
+   .botonFinal{
+       font-size: 16px;
+       font-weight: bold;
+       margin-top: 40px;
+       margin-bottom: 40px;
+       background-color: #3483fa;
+       border: none;
+       border-radius: 8px;
+       color: #fff;
+       width: 150px;
+       height: 45px;   
+       transition: all 200ms;
+   }
+   
+   .botonFinal:hover{
+       background-color:#114ca3;
+   }
+   
+   
+   
+   /* Public Recomendada -----*/
+   
+   main .recomendado{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       margin-top: 50px;
+       font-weight: bolder;
+       
+   }
+   
+   main .recomendado .imgRecomendado{
+       width: 150px;
+       height: 100px;
+       margin-bottom: 10px;
+   }
+   
+   main .recomendado .productoRecomendado{
+       border: 5px solid #114ca3;
+       border-radius: 10px;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       margin-top: 30px;
+       margin-bottom: 30px;
+       text-align: center;
+       padding: 10px;
+   }
+   
+   .infoRecomendado{
+       display: flex;
+       gap: 15px;
+       font-size: 18px;
+       margin-bottom: 15px;
+       
+       
+   }
+   
+   .precioRecomendado{
+       margin-left: 8px;
+       position: relative;
+       bottom: 5px;
+   }
+   .descuento{
+       color: green;
+       position: relative;
+       bottom: 5px;
+   }
+   
+   
+   .botonAgregar:hover{
+       background-color: #114ca3;
+   }
+   
+   }
 
-    
-    .botonFinal{
-        font-size: 20px;
-        font-weight: bold;
-        margin-top: 40px;
-        background-color: #3483fa;
-        border-color: transparent;
-        border-radius: 8px;
-        color: #fff;
-        width: 190px;
-        height: 55px; 
-        position: relative;
-        left: 20px;
-        bottom: 160px;  
-        transition: all 200ms;
-    }
-    
-    .botonFinal:hover{
-        background-color: #114ca3;
-    }
-}
-
-
-
-
-/*Foooooter*/
-/* LG's changes - TODO FOOTER */
-footer {
-  padding: 100px;
-  background-color: #58dab4;
-  border: 7px solid rgba(100, 100, 100, 0.15);
-  position: relative;
-  bottom: 360px;
-  
-}
-
-.contenedor-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center stretch;
-  flex-wrap: wrap;
-  text-align: center;
-}
-.logo-slogan {
-  margin-bottom: 2em;
-}
-.slogan {
-  font-size: 1.5em;
-  color: #fff0ed;
-  font-weight: bold;
-}
-
-.mapa {
-  max-width: 40%;
-}
-
-.direccion {
-  font-size: 1.5em;
-  color: #fff0ed;
-  font-weight: bold;
-  margin-top: 1em;
-}
-
-.servicios {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 1.5em;
-}
-
-.servicios li {
-  margin: 0.5em;
-}
-
-.contacto p {
-  color: #fff;
-  font-size: 1.2em;
-  font-weight: bold;
-  margin-bottom: 1em;
-}
-
-.contacto dt {
-  margin: 0.3em 0.3em;
-  align-items: flex-end;
-}
-
-.contacto dt i {
-  margin-right: 0.4em;
-}
-
-.slogan {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-.logo-slogan {
-  margin-bottom: 1em;
-}
-.redes-sociales i {
-  font-size: 30px;
-  color: #fff0ed;
-  margin-right: 1em;
-}
-/* LG's changes */
-/* LG's changes */
-
-@media (max-width: 400px) {
-    footer {
-        padding: 100px;
-        background-color: #58dab4;
-        border: 7px solid rgba(100, 100, 100, 0.15);
-        margin-top: 0px;
-        position: relative;
-        bottom: 300px;
-        width: 390px;
-    }
-}
-
-
-
-@media (min-width: 768px) {
-  .contacto {
-    margin-top: 1em;
-  }
-}
-
-/* LG's changes */
-@media (min-width: 1200px) {
-  .lamina {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .container {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 150px 150px 150px 30px;
-    row-gap: 50px;
-    margin: 100px 10px;
-    background-color: #58dab4;
-  }
-
-  .frase-producto-regalo {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    justify-self: center;
-    align-self: center;
-  }
-
-  .sumate-a-maines {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    justify-self: center;
-    align-self: center;
-    color: #fff9ed;
-    margin-bottom: 10px;
-  }
-
-  .adquirí-nuestros-productos {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 4;
-    justify-self: center;
-    align-self: start;
-    color: #fff9ed;
-    margin-top: 20px;
-  }
-
-  .container-productos {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .titulo-producto {
-    font-weight: bold;
-    font-size: 20px;
-    margin: 20px;
-  }
-  /* Cambios LG */
-  .contenedor-footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-  }
-
-  .mapa {
-    max-width: 30%;
-  }
-  .servicios {
-    margin-right: 1.5em;
-  }
-}
-/* Cambios LG */

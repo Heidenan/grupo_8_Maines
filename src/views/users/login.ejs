@@ -1,4 +1,7 @@
+ <head>
  <%- include ('../partials/head') %>
+ <link rel="stylesheet" href="/css/login.css">
+</head>
   <body>
     <header>
     <%- include ('../partials/header') %>
@@ -6,7 +9,7 @@
 
     <main class="main">
       <picture class="picture">
-        <a href="/"> <img src="/images/LogoMaines.svg" altclass="logo" class="logo"/></a>
+        <a href="/"> <img src="/images/LogoMaines.svg" altclass="logo" class="logo-maines"/></a>
       </picture>
 
       <form class="formInicioSesion" action="/users/access" method="post">
@@ -33,7 +36,7 @@
             required
           />
         </fieldset>
-<p><input type="checkbox" name="remember" id="remember" />Recordar usuario</p>
+<p class="remember-box"><input type="checkbox" name="remember" id="remember" />Recordar usuario</p>
         <!--<div class="olvidasteContra">
           <a href="#" target="_blank">¿Olivdaste tu contraseña?</a>
         </div>
@@ -46,15 +49,15 @@
         </div>
       </form>
         <% if (locals.errors && errors.email) { %>
-    <p><%= errors.email.msg %> </p>
+    <p class="error-msg">*<%= errors.email.msg %> </p>
     <% } %>
     <% if (locals.errors && errors.password) { %>
-    <p><%= errors.password.msg %> </p>
+    <p class="error-msg">*<%= errors.password.msg %> </p>
     <% } %>
     
     </main>
-    <footer>
+
     <%- include ('../partials/footer') %>
-  </footer>
+
   </body>
 </html>

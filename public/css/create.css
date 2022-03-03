@@ -1,0 +1,146 @@
+*{
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #fff9ed;
+  }
+
+@media (min-width: 320px) and (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+     h1{
+        font-weight: bold;
+        font-size: 22px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .new-product fieldset {
+        border: none;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .new-product{
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 20px;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
+    .new-product label{
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .new-product input{
+        margin-top:10px;
+        margin-bottom: 10px;
+        border: 2px solid #FF9B87;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: white;
+    }
+
+    .new-product .input-img{
+        width: 112px;
+        border: none;
+        background-color: white;
+    }
+
+    .new-product button{
+        width: 120px;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        color: white;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #3483fa;
+        border: none;
+        border-radius: 5px;
+    }
+
+
+
+}
+
+@media (min-width: 769px) {
+
+
+     h1{
+         text-align: center;
+        font-weight: bold;
+        font-size: 22px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .new-product fieldset {
+        border: none;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .new-product{
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 20px;
+        padding: 10px;
+        margin-bottom: 30px;
+    }
+
+    .new-product label{
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .new-product input{
+        margin-top:10px;
+        margin-bottom: 10px;
+        border: 2px solid #FF9B87;
+        border-radius: 5px;
+        padding: 5px;
+        background-color: white;
+    }
+
+    .new-product .input-img{
+        width: 112px;
+        border: none;
+        background-color: white;
+    }
+
+    .new-product button{
+        width: 120px;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        color: white;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #3483fa;
+        border: none;
+        border-radius: 5px;
+    }
+
+
+
+}
+

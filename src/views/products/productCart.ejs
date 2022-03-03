@@ -1,28 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrito de compras</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rubik&display=swap"rel="stylesheet"/>
-    <link rel="stylesheet" href="/css/productCart.css" />
-    <link rel="stylesheet" href="/css/home.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
-  </head>
+<head>
+<%- include ("../partials/head") %> 
+<link rel="stylesheet" href="/css/productCart.css">
+</head>
   <body>
-    <section class="producto1">
+    <%-include ("../partials/header") %>
+    <main>
+    <section class="producto">
       <div class="imgInfo">
-        <img class="img" src="/images/comida-saludable.png" alt="producto" />
+        <img class="img" src="/images/comida-saludable.png" />
 
         <div class="infoProducto">
           <h2 class="nombreProducto">Producto</h2>
           <p class="descripcion">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-            Etiam auctor pulvinar risus, in convallis nisi rhoncus vel.
+            
+          </p>
+        </div>
+      </div>
+
+      <fieldset class="fieldsetCantidad">
+        <label for="cantidad"></label>
+        <input
+          class="inputCantidad"
+          name="cantidad"
+          id="cantidad"
+          type="number"
+          min="1"
+          max="10"
+          placeholder="Cantidad"
+          required
+        />
+      </fieldset>
+
+      <div class="precio">
+        <p class="textoPrecio">$160</p>
+      </div>
+
+      <button name="cantidad" type="reset" class="botonEliminar">
+        <i class="fas fa-times"></i>
+      </button>
+      </section>
+      <section class="producto">
+      <div class="imgInfo">
+        <img class="img" src="/images/comida-saludable.png" />
+
+        <div class="infoProducto">
+          <h2 class="nombreProducto">Producto</h2>
+          <p class="descripcion">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
           </p>
         </div>
       </div>
@@ -49,16 +74,14 @@
         <i class="fas fa-times"></i>
       </button>
     </section>
-
     <section class="producto">
       <div class="imgInfo">
-        <img class="img" src="/images/comida-saludable.png" alt="producto" />
+        <img class="img" src="/images/comida-saludable.png"/>
 
         <div class="infoProducto">
           <h2 class="nombreProducto">Producto</h2>
           <p class="descripcion">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-            Etiam auctor pulvinar risus, in convallis nisi rhoncus vel.
           </p>
         </div>
       </div>
@@ -85,52 +108,14 @@
         <i class="fas fa-times"></i>
       </button>
     </section>
-
     <section class="producto">
       <div class="imgInfo">
-        <img class="img" src="/images/comida-saludable.png" alt="producto" />
+        <img class="img" src="/images/comida-saludable.png"/>
 
         <div class="infoProducto">
           <h2 class="nombreProducto">Producto</h2>
           <p class="descripcion">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-            Etiam auctor pulvinar risus, in convallis nisi rhoncus vel.
-          </p>
-        </div>
-      </div>
-
-      <fieldset class="fieldsetCantidad">
-        <label for="cantidad"></label>
-        <input
-          class="inputCantidad"
-          name="cantidad"
-          id="cantidad"
-          type="number"
-          min="1"
-          max="10"
-          placeholder="Cantidad"
-          required
-        />
-      </fieldset>
-
-      <div class="precio">
-        <p class="textoPrecio">$160</p>
-      </div>
-
-      <button name="cantidad" type="reset" class="botonEliminar">
-        <i class="fas fa-times"></i>
-      </button>
-    </section>
-
-    <section class="producto">
-      <div class="imgInfo">
-        <img class="img" src="/images/comida-saludable.png" alt="producto" />
-
-        <div class="infoProducto">
-          <h2 class="nombreProducto">Producto</h2>
-          <p class="descripcion">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-            Etiam auctor pulvinar risus, in convallis nisi rhoncus vel.
           </p>
         </div>
       </div>
@@ -168,9 +153,8 @@
       <article class="envio">
         <p class="envioTotal">Envio:</p>
 
-        <form action="/">
+        <form action="/" class="envio-detail">
           <fieldset class="fieldset">
-            <legend class="none">Selecciona un Pais/Region</legend>
             <label for="provincia"></label>
             <select class="input" id="provincia" name="provincia">
               <option value="seleccion">Selecciona un Pais/Region</option>
@@ -209,8 +193,7 @@
       </article>
 
       <div class="total">
-        <p class="envioTotal">Total:</p>
-        <p class="precioTotal">$400</p>
+        <p class="envioTotal">Total: 400 $</p>
       </div>
 
       <button class="botonFinal" type="submit">Seguir Comprando</button>
@@ -222,21 +205,20 @@
 
       <section class="productoRecomendado">
         <p class="nombreRecomendado"><strong>Pan de salvado</strong></p>
-        <img class="imgRecomendado" src=".\images\maines.png" />
+        <img class="imgRecomendado" src="./images/pan-negro.jpeg" />
         <div class="infoRecomendado">
           <p class="precioRecomendado">$6.770</p>
           <p class="descuento">20% off</p>
-          <div class="iconoRecomendado">
-            <div class="camion"><i class="fas fa-truck"></i></div>
-          </div>
         </div>
+        <button class="botonAgregar" type="submit">Agregar al Carrito</button>
       </section>
 
-      <button class="botonAgregar" type="submit">Agregar al Carrito</button>
+      
     </section>
-<footer>
+  </main>
+
     <%- include ('../partials/footer') %>
-  </footer>
+
   </body>
 </html>
 

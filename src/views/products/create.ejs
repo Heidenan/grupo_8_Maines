@@ -1,37 +1,40 @@
+<head>
 <%- include('../partials/head') %>
+<link rel="stylesheet" href="/css/create.css">
+</head>
 <%- include('../partials/header') %>
 <body>
     <h1> Nuevo Producto</h1>
-    <form action="/products/" method="post" enctype="multipart/form-data">
+    <form action="/products/" method="post" enctype="multipart/form-data" class="new-product">
         <fieldset>
-            <label for="name">
-            <input type="text" name="name" id="name" placeholder="Nombre de Producto">
-            </label>    
+            <label for="name">Nombre del producto:</label> <br>
+            <input type="text" name="name" id="name">
+               
         </fieldset>
         <fieldset>
-            <label for="description">
-             <input type="text" name="description" id="description" placeholder="Descripción de Producto">
-             </label>
+            <label for="description">Descripción:</label><br>
+             <input type="text" name="description" id="description">
         </fieldset>
         <fieldset>
-            <label for="price">
-            <input type="number" name="price" id="price" placeholder="Precio del Producto">
-            </label>
+            <label for="price">Precio:</label><br>
+            <input type="number" name="price" id="price">
+            
         </fieldset>
         <fieldset>
-            <label for="offert">
-            <input type="text" name="offert" id="offert" placeholder="¿Está en oferta?">
-            </label> 
-            <label for="discount">   
-            <input type="text" name="discount" id="discount" max="100" step="10" value="0" placeholder="% de descuento">
-            </label>
+            <label for="offert">¿Está en oferta?</label><br>
+            <input type="text" name="offert" id="offert">
+            <br>
+            <label for="discount">Descuento:</label> <br>  
+            <input type="text" name="discount" id="discount" max="100" step="10" value="0">
+            
         </fieldset>
         <fieldset>
-            <label for="file">
-            <input type="file" name="file" id="file" multiple>
-            </label>
+            <label for="file">Subir imagen del producto</label><br>
+            <input type="file" name="file" id="file" multiple class="input-img">
+            
         </fieldset>
         <button type="submit">Guardar</button>
     </form>
+        <%- include ('../partials/footer') %>
 </body>
 </html>

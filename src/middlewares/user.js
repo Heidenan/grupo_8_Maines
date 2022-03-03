@@ -1,19 +1,18 @@
-const userModel = require("../models/user");
-const user = (req, res, next) => {
-  let user = null;
-  if (req.cookie && req.cookie.email) {
-    user = userModel.search("email", req.cookie.email);
-    req.session.user = user;
-    // Here we check is there is a cookie with an email. If there is one, we reasing the user from the cookie.
+// This is an app's middleware, not a route's middleware. To use this one we have to require it in the entry point of the app.
+
+const user = require("../models/user");
+const middleware = (req, res, next) => {
+  let logged = null;
+  if (req.cookies && req.cookies.user) {
+    logged = user.search("email", req.cookies.user);
+    req.session.user = logged;
   }
   if (req.session && req.session.user) {
-    user = req.session.user;
-    // Then we check if there is a session with a user. If there is one, we reasing the user from the session.
+    logged = req.session.user;
   }
-  res.locals.user = user;
-  // This allows us to work whit the user in the views
-  return next();
-
-  // Next allows to continue the execution of the code
+  res.locals.user = logged;
+  // Locals is a variable that lives in (res) and it can be used everywhere in the views
+  next();
 };
-module.exports = user;
+
+module.exports = middleware;

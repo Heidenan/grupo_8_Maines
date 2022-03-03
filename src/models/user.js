@@ -1,6 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 // fs allows us to read and write files
+const file = require("../models/file");
 const bcrypt = require("bcrypt");
 const { body } = require("express-validator");
 const model = {
@@ -9,8 +10,7 @@ const model = {
   write: (data) => fs.writeFileSync(model.file, JSON.stringify(data, null, 2)),
   all: () => JSON.parse(model.read()),
   show: (id) => model.list().find((e) => e.id == id),
-  search: (prop, value) =>
-    model.all().find((element) => element[prop] == value),
+  search: (prop, value) => model.all().find((user) => user[prop] === value),
   generated: (data) =>
     // Here we generate a new user
     Object({
@@ -19,6 +19,9 @@ const model = {
       password: bcrypt.hashSync(data.password, 10),
       // bcrypt takes the password, calculates a hash verification and encripts it
       isAdmin: String(data.email).includes("@maines.com"),
+      /* image: file.create(data.file).id, */
+      isActive: true,
+      avatar: data.avatar ? data.avatar : null,
     }),
   create: (data) => {
     let allUsers = model.all();
@@ -29,11 +32,15 @@ const model = {
     return user;
     // Here we create the user and we add it to the current list of users
   },
-  validate: [
-    body("email").isEmail().withMessage("Email is not valid"),
-    body("password").isLength({ min: 5 }).withMessage("Password is too short"),
-    // Through express-validator, we validate the email and password
-  ],
+  update: (id, data) => {
+    const users = model.all();
+    const user = model.search("id", id);
+    const updates = users.map((user) =>
+      user.id === id ? { ...user, ...data } : user
+    );
+    model.write(updates);
+    return updates.find((user) => user.id === id);
+  },
 };
 
 module.exports = model;

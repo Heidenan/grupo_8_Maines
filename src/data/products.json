@@ -1,18 +1,18 @@
 [
   {
     "id": 1,
-    "name": "Ensalada de salmon ahumado",
+    "name": "Ensalada de salmon ahumado  ",
     "img": "/images/ensalada-salmon.jpeg",
-    "descripción": "¡Producto Nuevo!",
+    "descripcion": "¡Producto Nuevo!",
     "descuento": 15,
     "offert": false,
-    "price": "345345"
+    "price": "345"
   },
   {
     "id": 2,
     "name": "Ensalada Primavera Modificada",
     "img": "/images/ensalada-primavera.jpeg",
-    "descripción": "¡La mejor ensalada para la mejor temporada!",
+    "descripcion": "¡La mejor ensalada para la mejor temporada!",
     "descuento": 0,
     "offert": false,
     "price": "2222222"
@@ -21,7 +21,7 @@
     "id": 3,
     "name": "Pan Negro MODI",
     "img": "/images/pan-negro.jpeg",
-    "descripción": "100% salvado, 0% grasas trans",
+    "descripcion": "100% salvado, 0% grasas trans",
     "descuento": 0,
     "offert": false,
     "price": "11"
@@ -30,7 +30,7 @@
     "id": 4,
     "name": "Tarta de Verdura",
     "img": "/images/tarta-verdura.jpeg",
-    "descripción": "¡2x1 por tiempo limitado!",
+    "descripcion": "¡2x1 por tiempo limitado!",
     "descuento": 0,
     "offert": false,
     "price": "11"

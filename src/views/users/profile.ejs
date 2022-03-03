@@ -1,15 +1,37 @@
+  <%- include ('../partials/head') %>
 <body>
-    <h1>Profile</h1>
-    <body>
-        <h1>Profile</h1>
-        <form action="/users/logout" method="post">
-            <button type="submit">Logout</button>
-        </form>
-    <% if (locals.errors && errors.email) { %>
-    <p><%= errors.email.msg %> </p>
-    <% } %>
-    <% if (locals.errors && errors.password) { %>
-    <p><%= errors.password.msg %> </p>
-    <% } %>
+    <header>
+        <%- include ('../partials/header') %>
+        <link rel="stylesheet" href="/css/profile.css">
+    </header>
+    <main>
+        <h1>Perfil del usuario</h1>
+        <ul class ="user-detail">
+            <li>Email: <%= user.email  %> </li>
+        </ul>
+        <p><a href="/users/logout">Logout</a></p>
+        <h2>Profile's picture</h2>
+      <% if (user.avatar != null) { %>
+      <figure>
+        <img src="/avatars/<%= user.avatar %>" alt="photo<%= user.email %>" />
+      </figure>
+      <% } else { %>
+      <figure>
+        <img src="/assets/avatar.png" alt="photo <%= user.email %>" />
+      </figure>
+      <% } %>
+      <form
+        action="/users/upload/avatar"
+        enctype="multipart/form-data"
+        method="post"
+      >
+        <label for="avatar">Cambiar imagen de perfil</label><br>
+        <input type="file" name="avatar" id="avatar"><br>
+        <button type="submit">Update Avatar</button>
+      </form>
+    </main>
+    <footer>
+      <%- include ('../partials/footer') %>
+    </footer>
 </body>
 </html>

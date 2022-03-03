@@ -1,25 +1,71 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: auto;
+    padding: auto;
     box-sizing: border-box;
   }
 
+  @media (min-width: 320px) and (max-width: 768px) {
+    
+  }
+
   header{
-    height: 350px;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    background-color: #58DAB4;
   }
 
-  .fila-1{
-    display:flex;
-    flex-direction: row;
-    justify-content:center;
-    align-items:center;
+  header .fila-1{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
   }
 
-  .logo-header{
-      margin:10px;
-      max-width:200px;
-      background-color:pink
+  header .fila-1 #burger{
+    font-size: 22px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
   }
+
+  header .fila-1 .logo-header{
+    width:50px;
+    height: 50px;
+    margin: auto;
+    align-content: center;
+}
+
+
+  header .formulario{
+    display: none;
+    position: relative;
+    margin: auto;
+    padding: auto;
+    width: fit-content;
+    background-color: white; 
+    border: 2px solid #FF9B87;
+    border-radius: 10px;
+
+  }
+
+
+  header .fila-1 .formulario input{
+    display: none;
+    border: none;
+    padding: 5px;
+    width: 190px;
+  }
+
+  header .fila-1 .formulario button{
+    display: none;
+  }
+
+  header .fila-1 .login{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
 
   .links{
       display: none;
@@ -34,37 +80,111 @@
     margin:15px
   }
 
-  .hamburguer-button{
-    background-color: rgb(255, 155, 135);
-    color: #fff0ed;
-    display: block;
-    max-width: 40px;
-    padding: 15 px 0;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 18px;
-    margin: auto
-}
-
-@media (min-width: 769px){
-
- 
-
-.frase-header{
-  text-align: center;
-}
   .palabras-header{
+    width: 100%;
+    margin: auto;
+    padding: 0px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    list-style:none; /* esto es para sacarle el bullet point*/
-    align-items: flex-start;
-    padding:15px;
-    background-color:#FF9B87
+    list-style: none;
+    justify-content: space-around;    
+  }
+
+
+  .palabras-header li{
+    font-weight: bold;
+    border: 1px solid #444444;
+    border-left: none;
+    width: 100%;
+    background-color: #FF9B87;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .palabras-header li a{
+    text-decoration: none;
+    color: #444444;
+  }
+
+
+@media (min-width: 769px) and (max-width:1023px){
+
+  header .fila-1 #burger{
+    margin: 0 200px 0 0;
+
+  }
+
+  header .formulario{
+    display: flex;
+    position: relative;
+    margin-right: 20px;
+    padding: auto;
+    width: fit-content;
+    background-color: white; 
+    border: 2px solid #FF9B87;
+    border-radius: 10px;
+
+  }
+
+  header .fila-1 .formulario input{
+    display: flex;
+  }
+
+  header .fila-1 .formulario button {
+    display: flex;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    border: none;
+    color:#444444;
+    padding: 5px;
+  }
+
+  header .fila-1  .login{
+    margin: 20px 3px 10px 0;
+    padding: 0px;
+  }
+
+
+
 }
 
-.hamburguer-button{
-  display:none
-}
+@media (min-width:1024px) {
+  
+  header .fila-1 #burger{
+    margin: 0 200px 0 0;
 
+  }
+
+  header .formulario{
+    display: flex;
+    position: relative;
+    margin-right: 20px;
+    padding: auto;
+    width: fit-content;
+    background-color: white; 
+    border: 2px solid #FF9B87;
+    border-radius: 10px;
+
+  }
+
+  header .fila-1 .formulario input{
+    display: flex;
+    width: 250px;
+  }
+
+  header .fila-1 .formulario button {
+    display: flex;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    border: none;
+    color:#444444;
+    padding: 5px;
+  }
+
+  header .fila-1  .login{
+    margin: 20px 3px 10px 0;
+    padding: 0px;
+  }
 }

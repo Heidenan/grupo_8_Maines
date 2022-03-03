@@ -17,7 +17,7 @@
         
             <p>Registrate para guardar tus pedidos, preferencias y hacer un seguimiento!</p>
        
-        <form action="/users/" method="post" class="formulario-registro">
+        <form action="/users/create" method="post" class="formulario-registro"  >
             <fieldset>
                 <label class= "negrita"> Nombre y apellido</label>
                 <input class ="input-formulario-registro" type="text" name='name'>                
@@ -31,18 +31,29 @@
                 <label class= "negrita">Contraseña</label>
                 <input class ="input-formulario-registro" type="password" name='password'>
             </fieldset>
+          <!--   <fieldset>
+                <label for="">Foto de usuario</label> 
+                    <input type="file" id="file" name="image" required>
+                    </fieldset>
+                    -->
+                     <fieldset>
+                <label for="terminos y condiciones">
+                    <input type="checkbox" name="TyC"required> He leido y acepto los terminos y condiciones del sitio </label>
+                    </fieldset>
       
-                       
-            
             <button class="botones botonCrearCuenta" type="submit">CREAR CUENTA</button>
-
+   </form>
+   <% if(locals.errors) {%> <% if (errors.email) {%>
+    <p><%- errors.email.msg %></p>
+    <% } %> <% if (errors.password) { %>
+    <p><%- errors.password.msg %></p>
+    <% } %> <% } %>
             <p></a>¿Ya tenés una cuenta? <a href="/users/login/"><b>Iniciá sesión</b></a></p>
             <button class="botones botonFacebook" type="submit">Registrarse con Google</button>
             <button class="botones botonGoogle" type="submit">Registrarse con Facebook</button>
-
+  
         </main>
-<footer>
         <%- include ('../partials/footer') %>
-      </footer>
+      
 </body>
 </html>

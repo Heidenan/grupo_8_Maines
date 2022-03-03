@@ -3,35 +3,34 @@
 <body>
     <h1> Nuevo Producto</h1>
     <form action="/products/" method="post" enctype="multipart/form-data">
-        <p>
+        <fieldset>
             <label for="name">
-        <input type="text" name="name" id="name" placeholder="Nombre de Producto">
-        </label>    
-            </p>
+            <input type="text" name="name" id="name" placeholder="Nombre de Producto">
+            </label>    
+        </fieldset>
+        <fieldset>
+            <label for="description">
+             <input type="text" name="description" id="description" placeholder="Descripción de Producto">
+             </label>
+        </fieldset>
+        <fieldset>
+            <label for="price">
+            <input type="number" name="price" id="price" placeholder="Precio del Producto">
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="offert">
+            <input type="text" name="offert" id="offert" placeholder="¿Está en oferta?">
+            </label> 
+            <label for="discount">   
+            <input type="text" name="discount" id="discount" max="100" step="10" value="0" placeholder="% de descuento">
+            </label>
+        </fieldset>
+        <fieldset>
             <label for="file">
-        <input type="file" name="file" id="file" multiple>
-    </label>
-        <p>
-        <input type="text" name="descripción" id="descripción" placeholder="Descripción de Producto">
-<<<<<<< HEAD
-        </p>
-        <input type="text" name="descuento" id="descuento" placeholder="% de descuento">
-        <p>
-        <label for="offert">
-        <input type="text" name="offert" id="offert" placeholder="está en oferta?">
-        </label>    
-        </p>
-        <label for="price">
-        <input type="number" name="price" id="price" placeholder="Precio del Producto">
-        </label>
-        <p>
-=======
-        <input type="number" id="offert" name="offert" min="0" max="100" step="10" value="0">
-        <input type="text" name="categoría" id="categoría" placeholder="Categoría">
-        <input type="text" name="detalles" id="detalles" placeholder="Detalles de Producto">
-        <input type="number" name="price" id="price" placeholder="Precio de Producto">
-
->>>>>>> bf9c085c3a8964adafcdb9c78d3cdcfe9e8f5e4a
+            <input type="file" name="file" id="file" multiple>
+            </label>
+        </fieldset>
         <button type="submit">Guardar</button>
     </form>
 </body>

@@ -34,14 +34,24 @@
                 <label class= "negrita">Contraseña</label>
                 <input class ="input-formulario-registro" type="password" name='password'>
             </fieldset>
-             <!-- <fieldset>
-                <label for="">Foto de usuario</label> 
-                    <input type="file" id="file" name="image" required>
-                    </fieldset> -->
+             <fieldset>
+                <label for="image">Seleccione su imagen de perfil</label> 
+                    <input type="file" id="file" name="image" class="foto-perfil">
+                    </fieldset>
+
+                    <fieldset class="categoria">
+                        <label for="category">Seleccione una: <br>
+                        <input type="checkbox" name="category" id="category"> Comprador <br>
+                        <input type="checkbox" name="category" id="category"> Vendedor <br></label>
+                        
+                    </fieldset>
+
                      <fieldset>
                 <label for="terminos y condiciones">
                     <input type="checkbox" name="TyC"required> He leido y acepto los terminos y condiciones del sitio </label>
                     </fieldset>
+
+                    
       
             <button class="botones botonCrearCuenta" type="submit">CREAR CUENTA</button>
    </form>
@@ -51,8 +61,8 @@
     <p class="error-msg">*<%- errors.password.msg %></p>
     <% } %> <% } %>
             <p></a>¿Ya tenés una cuenta? <a href="/users/login/"><b>Iniciá sesión</b></a></p>
-            <button class="botones botonFacebook" type="submit">Registrarse con Google</button>
-            <button class="botones botonGoogle" type="submit">Registrarse con Facebook</button>
+            <button class="botones botonGoogle" type="submit">Registrarse con Google</button>
+            <button class="botones botonFacebook" type="submit">Registrarse con Facebook</button>
   
         </main>
         <%- include ('../partials/footer') %>

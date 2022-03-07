@@ -1,6 +1,7 @@
 const validator = require("express-validator");
 const bcrypt = require("bcrypt");
 const user = require("../models/user");
+
 const userController = {
   index: (req, res) => res.send(user.all()),
   register: (req, res) =>
@@ -70,13 +71,11 @@ const userController = {
         },
       });
     }
-    req.body.files = req.files;
+
+    req.body.avatar = req.file ? req.file.filename : null;
     let userRegistered = user.create(req.body);
-    /* return res.send({
-      data: req.body,
-      user: userRegistered,
-      msg: "LLego del register",
-    }); */
+    console.log(userRegistered);
+
     return res.redirect("/users/login");
   },
   logout: (req, res) => {

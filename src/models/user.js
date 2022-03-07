@@ -15,7 +15,10 @@ const model = {
     // Here we generate a new user
     Object({
       id: model.all().length == 0 ? 1 : model.all().pop().id + 1,
+      name: data.name,
+      last_name: data.last_name,
       email: String(data.email),
+      userName: data.userName,
       password: bcrypt.hashSync(data.password, 10),
       // bcrypt takes the password, calculates a hash verification and encripts it
       isAdmin: String(data.email).includes("@maines.com"),

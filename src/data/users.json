@@ -14,5 +14,16 @@
     "isAdmin": false,
     "isActive": true,
     "avatar": null
+  },
+  {
+    "id": 3,
+    "name": "Test",
+    "last_name": "Test",
+    "email": "lucas.rgoni@gmail.com",
+    "userName": "LucasRG",
+    "password": "$2b$10$rcph/vnNXeCp4FwzKZw7o.Yccg5GgmjjQiloV3OTuFxCT5byAeSkm",
+    "isAdmin": false,
+    "isActive": true,
+    "avatar": null
   }
 ]

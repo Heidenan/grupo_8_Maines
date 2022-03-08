@@ -10,14 +10,25 @@ const Products = db.Product;
 const Categories = db.categorie;
 
 const controller = {
-  index: (req, res) =>
+  index: (req, res) => {
+    Products.findAll({
+      include: [{ association: "category" }],
+    })
+      .then((products) => {
+        res.render("products/list", { products });
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  },
+  /*(req, res) =>
     res.render("products/list", {
       styles: ["main"],
       title: "Productos",
       products: product
         .all()
         .map((p) => Object({ ...p, image: file.search("id", p.image) })),
-    }),
+    }), */
   create: (req, res) =>
     res.render("products/create", {
       styles: ["products/create"],
@@ -94,7 +105,7 @@ const controller = {
 
   //     discountValue: req.body.discountValue,
 
-  //     categoryId: req.body.categoryId,
+  //     category_id: req.body.category_id,
 
   //   }).then(() => {
   //     res.redirect("/")

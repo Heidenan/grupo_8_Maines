@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
   let alias = "Category";
   let cols = {
     id: {
-      type: dataTypes.INTEGER(11).UNSIGNED,
+      type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
   Category.associate = (models) => {
     Category.hasMany(models.Product, {
       as: "products",
-      foreignKey: "categoryId",
+      foreignKey: "category_id",
     });
   };
 

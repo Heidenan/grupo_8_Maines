@@ -1,7 +1,6 @@
 const validator = require("express-validator");
 const bcrypt = require("bcrypt");
 const user = require("../models/user");
-
 const userController = {
   index: (req, res) => res.send(user.all()),
   register: (req, res) =>

@@ -1,5 +1,14 @@
 const product = require("../models/product");
 const file = require("../models/file");
+const db = require("../database/models");
+const sequelize = db.sequelize
+const {Op} = require("sequelize");
+
+// Tablas ///
+
+const Products = db.Product;
+const Categories = db.categorie;
+
 
 const controller = {
   index: (req, res) =>
@@ -46,6 +55,96 @@ const controller = {
     product.delete(req.body.id);
     return res.redirect("/products/");
   },
+
+  // Codigo para la base de datos ///
+
+  // 'list': (req, res) => {
+  //   Products.findAll({
+  //     include: [{association: "categorie"}]
+  //   })
+  //   .then(products => {
+  //     res.render("products/list", {products})
+  //   })
+  // },
+
+  // 'detail': (req, res) => {
+  //   Products.findByPk(req.params.id)
+  //   .then(product => {
+  //     res.render("/:id", {product})
+  //   })
+  // },
+
+  // add: (req, res) => {
+  //   res.render("/create")
+  // },
+
+  // create: (req, res) => {
+  //   Products.create({
+
+  //     name: req.body.name,
+
+  //     description: req.body.description,
+
+  //     price: req.body.price,
+
+  //     offer: req.body.offer,
+
+  //     image: req.body.image,
+
+  //     discount: req.body.discount,
+
+  //     discountValue: req.body.discountValue,
+
+  //     categoryId: req.body.categoryId,
+
+  //   }).then(() => {
+  //     res.redirect("/")
+  //   })
+  //   .catch(error => {
+  //     res.send(error)
+  //   })
+  // },
+  // edit: (req, res) => {
+
+  // },
+
+  // update: (req, res) => {
+  //   Products.update({
+  //     ...req.body,
+  //   },{
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(() => {
+  //     res.redirect("/")
+  //   })
+  // },
+
+  // delete: (req, res) => {
+
+  //   let productId = req.params.id
+  //   Products.findByPk(productId).then(product => {
+
+  //   })
+  //   .catch(error => {
+  //     res.send(error)
+  //   })
+
+  // },
+
+  // destroy: (req, res) => {
+  //   Products.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   })
+  //   .then(() => {
+  //     res.redirect("/")
+  //   })
+  //   .catch(error => res.send(error))
+  // }
+
+
 };
 
 module.exports = controller;

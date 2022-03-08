@@ -1,6 +1,7 @@
 const path = require("path"); //nos ayuda a decir donde está el archivo (creo que el json de data)
 const fs = require("fs"); // nos ayuda a interactuar, leerlo, escribir, etc etc al archivo user de data
 const file = require("./file");
+
 const model = {
   file: path.resolve(__dirname, "../data", "products.json"),
   read: () => fs.readFileSync(model.file),

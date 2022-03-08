@@ -40,7 +40,7 @@ module.exports = (sequelize, dataTypes) => {
     tableName: "users",
     timestamps: false,
   };
-  const Product = sequelize.define(alias, cols, config);
+  const User = sequelize.define(alias, cols, config);
 
   return User;
 };

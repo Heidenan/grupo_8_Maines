@@ -30,7 +30,7 @@
     "sequelize": "^6.17.0"
   },
   "devDependencies": {
-    "express": "^4.17.2",
+    "express": "^4.17.3",
     "method-override": "^3.0.0",
     "nodemon": "^2.0.15",
     "sequelize-cli": "^6.4.1"

@@ -1,14 +1,13 @@
 const product = require("../models/product");
 const file = require("../models/file");
 const db = require("../database/models");
-const sequelize = db.sequelize
-const {Op} = require("sequelize");
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
-// Tablas ///
+// Tables ///
 
 const Products = db.Product;
 const Categories = db.categorie;
-
 
 const controller = {
   index: (req, res) =>
@@ -60,7 +59,7 @@ const controller = {
 
   // 'list': (req, res) => {
   //   Products.findAll({
-  //     include: [{association: "categorie"}]
+  //     include: [{association: "category"}]
   //   })
   //   .then(products => {
   //     res.render("products/list", {products})
@@ -143,8 +142,6 @@ const controller = {
   //   })
   //   .catch(error => res.send(error))
   // }
-
-
 };
 
 module.exports = controller;

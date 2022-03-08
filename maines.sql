@@ -10,7 +10,7 @@
 
 DROP DATABASE IF EXISTS `maines`;
 CREATE DATABASE  `maines`;
-USE DATABASE `maines`;
+USE `maines`;
 
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";

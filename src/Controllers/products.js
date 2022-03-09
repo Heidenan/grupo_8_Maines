@@ -54,7 +54,7 @@ const controller = {
       category_id: parseInt(req.body.category_id),
     })
       .then(() => {
-        res.redirect("/products/" + req.params.id);
+        res.redirect("/products");
       })
       .catch((err) => {
         res.send(err);
@@ -66,82 +66,51 @@ const controller = {
     return res.redirect("/products/" + created.id); */
   },
   show: (req, res) => {
-    let result = product.search("id", req.params.id);
-    return result
-      ? res.render("products/detail", {
-          styles: ["products/detail"],
-          title: "Producto | " + result.name,
-          product: result,
-        })
-      : res.render("error", {
-          msg: "Producto no encontrado",
-        });
+    Products.findByPk(req.params.id)
+    .then(product => {
+      res.render("products/detail", {product: product});
+    })
   },
-  update: (req, res) =>
-    res.render("products/update", {
-      styles: ["products/create"],
-      title: "Actualizar",
-      product: product.search("id", req.params.id),
-    }),
-  modify: (req, res) => {
-    let updated = product.update(req.params.id, req.body);
-    return res.redirect("/products/" + updated.id);
+    update: (req, res) => {
+    Products.update({
+      ...req.body,
+    },{
+      where: {
+        id: req.params.id
+      }
+    }).then(() => {
+      res.redirect("/products/" + req.params.id);
+    })
   },
-  delete: (req, res) => {
-    product.delete(req.body.id);
-    return res.redirect("/products/");
-  },
+  destroy: (req, res) => {
+    Products.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+    .then(() => {
+      res.redirect("/products/")
+    })
+    .catch(error => res.send(error))
+  
 
+  },
+  edit : (req, res) => {
+    Products.findByPk(req.params.id)
+    .then(product => {
+      res.render("products/update", {product: product});
+    })
+  }
   // Codigo para la base de datos ///
 
-  // 'detail': (req, res) => {
+  // detail: (req, res) => {
   //   Products.findByPk(req.params.id)
   //   .then(product => {
   //     res.render("/:id", {product})
   //   })
   // },
 
-  // create: (req, res) => {
-  //   Products.create({
 
-  //     name: req.body.name,
-
-  //     description: req.body.description,
-
-  //     price: req.body.price,
-
-  //     offert: req.body.offert,
-
-  //     image: req.body.image,
-
-  //     discount: req.body.discount,
-
-  //     discountValue: req.body.discountValue,
-
-  //     category_id: req.body.category_id,
-
-  //   }).then(() => {
-  //     res.redirect("/")
-  //   })
-  //   .catch(error => {
-  //     res.send(error)
-  //   })
-  // },
-  // edit: (req, res) => {
-
-  // },
-
-  // update: (req, res) => {
-  //   Products.update({
-  //     ...req.body,
-  //   },{
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   }).then(() => {
-  //     res.redirect("/")
-  //   })
-  // },
 
   // delete: (req, res) => {
 

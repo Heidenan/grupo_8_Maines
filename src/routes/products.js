@@ -15,13 +15,14 @@ const upload = multer({storage: multer.diskStorage({
 router.get('/', product.index) // 1 de 7 del listado del Sprint4
 router.get('/create', product.create) // 2 de 7 del listado del Sprint4
 router.get('/:id',product.show) // 3 de 7 del listado del Sprint4
-router.get('/update/:id', product.update) // 4 de 7 del listado del Sprint4 O sea este es /edit en ese formulario
+router.get('/update/:id', product.edit) // 4 de 7 del listado del Sprint4 O sea este es /edit en ese formulario
 
-router.put('/:id',product.modify) // 6 de 7 del listado del Sprint4
 
 router.post('/',[upload.any()],product.save) // 5 de 7 del listado del Sprint4
 
-router.delete('/',product.delete) // 7 de 7 del listado del Sprint4
+router.put('/:id',product.update) // 6 de 7 del listado del Sprint4
+
+router.delete('/:id',product.destroy) // 7 de 7 del listado del Sprint4
 
 module.exports = router
 

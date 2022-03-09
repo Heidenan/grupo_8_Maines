@@ -17,13 +17,7 @@
          <li class="descripciones"><%=products[i].description%>
          <a href="/products/update/<%= products[i].id %>">
         <i class="fas fa-pen"></i> </a>
-       
-     <form action="/products/?m=DELETE" method="post">
-       <input type="hidden" name="id" value="<%= products.id %>">
-       <button type="submit">
-        <i class="fas fa-trash tacho"></i>
-       </button>
-     </form>
+
     </ul>
       <% } %>    
     </main>

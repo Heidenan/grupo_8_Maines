@@ -17,7 +17,12 @@
         offert:<%= product.offert%>
 
     <% } %>
-    
+    <form action="/products/detail/?m=DELETE" method="post">
+        <button type="submit">
+         <i class="fas fa-trash tacho"></i>
+        </button>
     </form>
+    <a href="/products/update/<%= product.id %>">Modificar producto</a>
+    
 </body>
 </html>

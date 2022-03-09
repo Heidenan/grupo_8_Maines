@@ -32,7 +32,7 @@
         </fieldset>
         <fieldset>
             <label for="category">Seleccione la categoria del producto</label>
-            <select name="category">
+            <select name="category_id">
             <% for (let i = 0; i < categories.length; i++) { %>
                  <option value="<%= categories[i].id %>"><%= categories[i].name %></option>
              <% } %>

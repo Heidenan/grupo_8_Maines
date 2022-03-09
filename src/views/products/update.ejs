@@ -6,16 +6,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Editar Producto</title>
 </head>
 <body>
     <h1> Update Product</h1>
     <form action="/products/<%= product.id %>?m=PUT" method="post">
+        <label for="name">Nombre</label>
         <input type="text" name="name" id="name" placeholder="Nombre de Producto" value="<%= product.name %> ">
+        <label for="description">Descripción</label>
+        <input type="text" name="description" id="description" placeholder="Descripción" value="<%= product.description %> ">
         <input type="text" name="price" id="price" placeholder="Price" value="<%=product.price %>">
         
 
         <button type="submit">Update</button>
+        <form action="/products/<%= product.id %>?m=DELETE" method="post">
+            <button type="submit">
+             <i class="fas fa-trash tacho"></i>
+            </button>
     </form>
 </body>
 </html>

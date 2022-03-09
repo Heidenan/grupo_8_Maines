@@ -7,7 +7,7 @@ const { Op } = require("sequelize");
 // Tables ///
 
 const Products = db.Product;
-const Categories = db.categorie;
+const Categories = db.Category;
 
 const controller = {
   index: (req, res) => {
@@ -20,8 +20,7 @@ const controller = {
       .catch((err) => {
         res.send(err);
       });
-  },
-  /*(req, res) =>
+    /*(req, res) =>
     res.render("products/list", {
       styles: ["main"],
       title: "Productos",
@@ -29,15 +28,42 @@ const controller = {
         .all()
         .map((p) => Object({ ...p, image: file.search("id", p.image) })),
     }), */
+  },
+
   create: (req, res) =>
-    res.render("products/create", {
-      styles: ["products/create"],
-      title: "Nuevo Producto",
-    }),
+    Categories.findAll()
+      .then(function (categories) {
+        return res.render("products/create", {
+          categories: categories,
+          styles: ["products/create"],
+          title: "Nuevo Producto",
+        });
+      })
+      .catch((err) => {
+        res.send(err);
+      }),
   save: (req, res) => {
+    Products.create({
+      name: req.body.name,
+      description: req.body.description,
+      price: req.body.price,
+      offert: req.body.offert,
+      image: req.body.image,
+      discount: req.body.discount,
+      discountValue: req.body.discountValue,
+      category_id: parseInt(req.body.category_id),
+    })
+      .then(() => {
+        res.redirect("/products/" + req.params.id);
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+
+    /* (req, res) => {
     req.body.file = req.files;
     let created = product.create(req.body);
-    return res.redirect("/products/" + created.id);
+    return res.redirect("/products/" + created.id); */
   },
   show: (req, res) => {
     let result = product.search("id", req.params.id);
@@ -68,24 +94,11 @@ const controller = {
 
   // Codigo para la base de datos ///
 
-  // 'list': (req, res) => {
-  //   Products.findAll({
-  //     include: [{association: "category"}]
-  //   })
-  //   .then(products => {
-  //     res.render("products/list", {products})
-  //   })
-  // },
-
   // 'detail': (req, res) => {
   //   Products.findByPk(req.params.id)
   //   .then(product => {
   //     res.render("/:id", {product})
   //   })
-  // },
-
-  // add: (req, res) => {
-  //   res.render("/create")
   // },
 
   // create: (req, res) => {
@@ -97,7 +110,7 @@ const controller = {
 
   //     price: req.body.price,
 
-  //     offer: req.body.offer,
+  //     offert: req.body.offert,
 
   //     image: req.body.image,
 

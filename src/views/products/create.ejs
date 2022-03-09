@@ -7,31 +7,36 @@
     <h1> Nuevo Producto</h1>
     <form action="/products/" method="post" enctype="multipart/form-data" class="new-product">
         <fieldset>
-            <label for="name">Nombre del producto:</label> <br>
+            <label for="name">Nombre del producto:</label> 
             <input type="text" name="name" id="name">
-               
         </fieldset>
         <fieldset>
-            <label for="description">Descripción:</label><br>
+            <label for="description">Descripción:</label>
              <input type="text" name="description" id="description">
         </fieldset>
         <fieldset>
             <label for="price">Precio:</label><br>
             <input type="number" name="price" id="price">
-            
         </fieldset>
         <fieldset>
-            <label for="offert">¿Está en oferta?</label><br>
+            <label for="offert">¿Está en oferta?</label>
             <input type="text" name="offert" id="offert">
-            <br>
-            <label for="discount">Descuento:</label> <br>  
+            <label for="discount">Descuento:</label>   
             <input type="text" name="discount" id="discount" max="100" step="10" value="0">
-            
+            <label for="discount">Valor con descuento:</label>  
+            <input type="text" name="discountValue" id="discountValue" value="0">
         </fieldset>
         <fieldset>
-            <label for="file">Subir imagen del producto</label><br>
+            <label for="file">Subir imagen del producto</label>
             <input type="file" name="file" id="file" multiple class="input-img">
-            
+        </fieldset>
+        <fieldset>
+            <label for="category">Seleccione la categoria del producto</label>
+            <select name="category">
+            <% for (let i = 0; i < categories.length; i++) { %>
+                 <option value="<%= categories[i].id %>"><%= categories[i].name %></option>
+             <% } %>
+            </select>
         </fieldset>
         <button type="submit">Guardar</button>
     </form>

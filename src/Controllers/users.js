@@ -1,6 +1,9 @@
 const validator = require("express-validator");
 const bcrypt = require("bcrypt");
 const user = require("../models/user");
+const db = require("../database/models");
+
+const Users = db.User;
 const userController = {
   index: (req, res) => res.send(user.all()),
   register: (req, res) =>
@@ -14,10 +17,10 @@ const userController = {
   profile: (req, res) => {
     res.render("users/profile");
   },
-  show: (req, res) => {
-    let result = user.show(req.params.id);
-    return result ? res.send(result) : res.send("User not found");
-  },
+  // show: (req, res) => {
+  //   let result = user.show(req.params.id);
+  //   return result ? res.send(result) : res.send("User not found");
+  // },
   access: (req, res) => {
     let errors = validator.validationResult(req);
     // Here we store the errors in a variable
@@ -90,6 +93,71 @@ const userController = {
     req.session.user = update;
     return res.redirect("/users/profile");
   },
+
+  // CRUD
+
+  create: (req, res) => {// Create
+    let errors = validator.validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.render("users/register", {
+        errors: errors.mapped(),
+      })
+    }
+    
+    // let emailExist = Users.findOne({
+    //   where: {
+    //     email: req.body.email
+    //   }
+    // });
+    // if (emailExist) {
+    //   return res.render("users/register", {
+    //     errors: {
+    //       email: {
+    //         msg: "El email ya se encuentra registrado",
+    //       },
+    //     },
+    //   });
+    // }
+
+    Users.create({
+      name: req.body.name,
+      last_name: req.body.last_name,
+      email: String(req.body.email),
+      userName: req.body.userName,
+      password: bcrypt.hashSync(req.body.password, 10),
+      isAdmin: String(req.body.email).includes("@maines.com"),
+      isActive: true,
+      avatar: req.body.avatar ? req.body.avatar : null,
+    })
+    .then(() => res.render("users/login"))
+      .catch(error => res.send(error))
+    
+  },
+  show: (req, res) => { // Read
+     Users.findByPk(req.params.id)
+     .then((user) => {
+        res.render("users/profile", {user: user})
+      }).catch(error => res.send(error))
+
+  
+  },
+  
+  update: (req, res) => { //Update
+    Users.update({
+      avatar: req.file,
+    },{
+      where: {
+        id: req.session.user.id
+      }
+    }).then(() => {
+      res.send(req.body);
+    })
+  },
+
+  // delete: (req, res) => { // delete
+
+  // }
+
 };
 
 module.exports = userController;

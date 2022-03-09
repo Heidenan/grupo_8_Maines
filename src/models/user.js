@@ -9,7 +9,7 @@ const model = {
   read: () => fs.readFileSync(model.file, "utf8"),
   write: (data) => fs.writeFileSync(model.file, JSON.stringify(data, null, 2)),
   all: () => JSON.parse(model.read()),
-  show: (id) => model.list().find((e) => e.id == id),
+  show: (id) => model.all().find((e) => e.id == id),
   search: (prop, value) => model.all().find((user) => user[prop] === value),
   generated: (data) =>
     // Here we generate a new user

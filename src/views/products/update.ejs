@@ -1,11 +1,7 @@
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
     <title>Editar Producto</title>
 </head>
 <body>
@@ -19,10 +15,12 @@
         
 
         <button type="submit">Update</button>
+        </form>
         <form action="/products/<%= product.id %>?m=DELETE" method="post">
             <button type="submit">
              <i class="fas fa-trash tacho"></i>
             </button>
     </form>
+    <%- include('../partials/footer') %> 
 </body>
 </html>

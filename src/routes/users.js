@@ -18,19 +18,15 @@ const upload = multer({
   }),
 });
 
-router.get("/usuarios", [auth], userController.index);
+router.get("/list", [auth], userController.index);
 router.get("/register", userController.register);
 router.get("/login", userController.login);
 router.get("/logout", [access], userController.logout);
 router.get("/suscripciones", userController.suscripciones);
 router.get("/profile", [access], userController.profile);
-router.get("/usuarios/:id", userController.show);
+router.get("/:id", [access], userController.show);
 router.post("/create", [create, upload.any()], userController.create);
 router.post("/access", userController.access);
-router.post(
-  "/upload/avatar",
-  [access, upload.any()],
-  userController.uploadAvatar
-);
+router.post("/update",[access, upload.any()] ,userController.update);
 
 module.exports = router;

@@ -22,7 +22,7 @@ router.post('/',[upload.any()],product.save) // 5 de 7 del listado del Sprint4
 
 router.put('/:id',product.update) // 6 de 7 del listado del Sprint4
 
-router.delete('/:id',product.destroy) // 7 de 7 del listado del Sprint4
+router.delete('/:id',product.destroy)// 7 de 7 del listado del Sprint4
 
 module.exports = router
 

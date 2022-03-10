@@ -1,25 +1,34 @@
+<head>
 <%- include('../partials/head') %>
+<link rel="stylesheet" href="/css/list.css">
 <%- include('../partials/header') %>
+</head>
 <body>
     <main>
-    <h1>Lista de productos</h1> <h3><a href="/products/create">Crear un producto</a></h3>
+    <h1>Lista de productos</h1> 
+    <h3>
+      <form action="/products/create" class="create-product">
+      <button href="/products/create">Crear un producto</button>
+  </form>
+  </h3>
+    <div class="lista-productos">
     <% for (let i = 0; i < products.length; i++) { %>
  <ul class="caja-texto-producto" style="list-style: none"> 
         <% if (products.image) { %>
-         <img src="/images/<%= products[i].image.url %>" width="350"
-         height="350">
+         <img src="/images/<%= products[i].image.url %>">
          <% } %>
-         <i class="fas fa-truck camion"></i>
+
          <div class="preciosYdescuentos">
            <li class=""><%=products[i].name%></li>
            <li class="precios">$ <%=products[i].price%></li>
          </div>
          <li class="descripciones"><%=products[i].description%>
-         <a href="/products/update/<%= products[i].id %>">
+         <a href="/products/update/<%= products[i].id %>"><br>
         <i class="fas fa-pen"></i> </a>
 
     </ul>
-      <% } %>    
+      <% } %>
+    </div>   
     </main>
     <%- include('../partials/footer') %>                   
 </body>

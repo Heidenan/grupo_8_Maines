@@ -1,26 +1,33 @@
 
-
+<head>
 <%- include('../partials/head') %>
+<link rel="stylesheet" href="/css/update.css">
 <%- include('../partials/header') %>
     <title>Editar Producto</title>
 </head>
 <body>
-    <h1> Update Product</h1>
-    <form action="/products/<%= product.id %>?m=PUT" method="post">
-        <label for="name">Nombre</label>
-        <input type="text" name="name" id="name" placeholder="Nombre de Producto" value="<%= product.name %> ">
-        <label for="description">Descripción</label>
-        <input type="text" name="description" id="description" placeholder="Descripción" value="<%= product.description %> ">
-        <input type="text" name="price" id="price" placeholder="Price" value="<%=product.price %>">
+    <main>
+    <h1> Modifica tu producto</h1><br>
+    <form action="/products/<%= product.id %>?m=PUT" method="post" class="update-product">
+        <fieldset class="update-data">
+        <label for="name">Nombre:</label><br>
+        <input type="text" name="name" id="name" placeholder="Nombre de Producto" value="<%= product.name %> "><br>
+        <label for="description">Descripción:</label><br>
+        <input type="text" name="description" id="description" placeholder="Descripción" value="<%= product.description %> "><br>
+        <label for="price">Precio:</label><br>
+        <input type="text" name="price" id="price" placeholder="Price" value="<%=product.price %>"><br>
         
 
-        <button type="submit">Update</button>
+        <button type="submit" class="update-button">Update</button>
+    
         </form>
         <form action="/products/<%= product.id %>?m=DELETE" method="post">
-            <button type="submit">
+            <button type="submit" class="delete-button">
              <i class="fas fa-trash tacho"></i>
             </button>
+        </fieldset>
     </form>
+</main>
     <%- include('../partials/footer') %> 
 </body>
 </html>

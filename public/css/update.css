@@ -1,0 +1,125 @@
+* {
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #FFF9ED;
+    text-align: center;
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+    
+ main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+
+ .update-product{
+     width: 70vw;
+     max-width: 400px;
+     border: 2px solid #A5A1F3;
+     background-color: white;
+     border-radius: 10px;
+     box-shadow: 0 0 5px #FF9B87;
+ }
+    form .update-data {
+    margin-top: 20px;
+    border: none;;
+    font-weight: bold;
+}
+
+.update-data input {
+    width: 60vw;
+    max-width: 200px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #FF9B87;
+    border-radius: 10px;
+}
+
+.update-product button {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.update-button {
+    font-weight: bold;
+    width: 100px;
+    color: white;
+    background-color: #58dab4;
+}
+
+.delete-button, .tacho {
+    background-color: red;
+    color: white;
+    padding: 5px;
+}
+
+
+}
+
+@media (min-width: 768px) {
+    
+    main {
+       padding-top: 50px;
+       padding-bottom: 50px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+    }
+   
+    .update-product{
+        width: 70vw;
+        max-width: 400px;
+        border: 2px solid #A5A1F3;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 0 5px #FF9B87;
+    }
+       form .update-data {
+       margin-top: 20px;
+       border: none;;
+       font-weight: bold;
+   }
+   
+   .update-data input {
+       width: 60vw;
+       max-width: 200px;
+       padding: 10px;
+       margin-top: 20px;
+       margin-bottom: 20px;
+       border: 2px solid #FF9B87;
+       border-radius: 10px;
+   }
+   
+   .update-product button {
+       margin-bottom: 20px;
+       border: none;
+       border-radius: 10px;
+       padding: 10px;
+   }
+   
+   .update-button {
+       font-weight: bold;
+       width: 100px;
+       color: white;
+       background-color: #58dab4;
+   }
+   
+   .delete-button, .tacho {
+       background-color: red;
+       color: white;
+       padding: 5px;
+   }
+   
+   
+   }

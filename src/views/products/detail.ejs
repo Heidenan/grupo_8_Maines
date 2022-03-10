@@ -1,20 +1,38 @@
+<head>
+
 <%- include('../partials/head') %>
+<link rel="stylesheet" href="/css/productDetail.css">
 <%- include('../partials/header') %>
     <title>Detalle de producto</title>
 </head>
 <body>
+    <main>
     <h1> Detalle de producto</h1>
    <% if (product.id) { %>
-    <span>
-        <%= product.name%> 
-    </span> Precio $
-    <%= product.price%> 
-    <span>
-        offert:<%= product.offert%>
-
+    <ul class="product">
+        <li><img src="<%= product.image  %> "></li>
+        <ul class="product-detail">
+            <br>
+        <li class="name"><%= product.name  %> </li>
+        <li class="description">Descripción:<br><%= product.description  %>:</li>
+        <li class="price"><%= product.price  %> $</li>
+        <li class="offert">Oferta: <%if (product.offert == true) { %>
+            Si
+        <%} else { %>
+            No
+        <% } %> </li>
+        <li>Envio sin cargo<br><i class="fas fa-truck"></i></li>
+    </ul>
+    </ul>
     <% } %>
 
-    <a href="/products/update/<%= product.id %>">Modificar producto</a>
+    <form action="/products/update/<%= product.id %>">
+        <button type="submit" class="modify-button">
+            Modificar producto
+        </button>
+    </form>
+
+</main>
 
     <%- include('../partials/footer') %> 
     

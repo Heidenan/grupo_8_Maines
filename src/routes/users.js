@@ -1,9 +1,9 @@
 const express = require("express");
 const userController = require("../controllers/users");
 const router = express.Router();
-const create = require("../middlewares/save");
+const saveUser = require("../middlewares/saveUser");
 const access = require("../middlewares/access");
-const auth = require("../middlewares/access");
+const auth = require("../middlewares/auth");
 const path = require("path");
 const multer = require("multer");
 const upload = multer({
@@ -24,8 +24,8 @@ router.get("/login", userController.login);
 router.get("/logout", [access], userController.logout);
 router.get("/suscripciones", userController.suscripciones);
 router.get("/profile", [access], userController.profile);
-router.post("/create", [save, upload.any()], userController.save);
+router.post("/save", [saveUser, upload.any()], userController.save);
 router.post("/access", userController.access);
-router.post("/update",[access, upload.any()] ,userController.update);
+router.post("/update", [access, upload.any()], userController.update);
 
 module.exports = router;

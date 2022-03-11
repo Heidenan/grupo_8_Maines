@@ -15,7 +15,7 @@ const userController = {
       styles: ["/login"],
     }),
   profile: (req, res) => {
-    res.render("users/profile")
+    res.render("users/profile");
   },
   // show: (req, res) => {
   //   let result = user.show(req.params.id);
@@ -96,80 +96,103 @@ const userController = {
 
   // CRUD
 
-  save: (req, res) => {// Create
-
-    Users.create({
-      name: req.body.name,
-      last_name: req.body.last_name,
-      email: String(req.body.email),
-      userName: req.body.userName,
-      password: bcrypt.hashSync(req.body.password, 10),
-      isAdmin: String(req.body.email).includes("@maines.com"),
-      isActive: true,
-      avatar: req.body.avatar ? req.body.avatar : null,
-    })
-    .then((user) => {
-
-      let errors = validator.validationResult(req);
+  save: (req, res) => {
+    // Create
+    let errors = validator.validationResult(req);
     if (!errors.isEmpty()) {
       return res.render("users/register", {
         errors: errors.mapped(),
-      })
-    }
-
-    let emailExist = Users.findOne({
-      where: {
-        email: req.body.email,
-      }
-    });
-    if (emailExist) {
-      res.render("users/register", {
-        errors: {
-          email: {
-            msg: "El email ya se encuentra registrado",
-          },
-        },
       });
     }
+    Users.findOne({ where: { email: req.body.email } })
+      .then((userFound) => {
+        if (userFound) {
+          res.render("users/register", {
+            errors: {
+              email: {
+                msg: "Ese mail ya está en uso",
+              },
+            },
+          })
+        }.then (() => {
+        Users.create({
+          name: req.body.name,
+          last_name: req.body.last_name,
+          email: String(req.body.email),
+          userName: req.body.userName,
+          password: bcrypt.hashSync(req.body.password, 10),
+          isAdmin: String(req.body.email).includes("@maines.com"),
+          isActive: true,
+          avatar: req.body.avatar ? req.body.avatar : null,
+        });
+  })
+      .then(() => res.redirect("/users/login"))
+      .catch((error) => res.send(error));
 
+    // Users.create({
+    //   name: req.body.name,
+    //   last_name: req.body.last_name,
+    //   email: String(req.body.email),
+    //   userName: req.body.userName,
+    //   password: bcrypt.hashSync(req.body.password, 10),
+    //   isAdmin: String(req.body.email).includes("@maines.com"),
+    //   isActive: true,
+    //   avatar: req.body.avatar ? req.body.avatar : null,
+    // })
+    // .then((user) => {
 
-    })
-      .catch(error => res.send(error))
+    //   let errors = validator.validationResult(req);
+    // if (!errors.isEmpty()) {
+    //   return res.render("users/register", {
+    //     errors: errors.mapped(),
+    //   })
+    // }
 
-
-
-    
-    
-    
-
-    
-    
+    // let emailExist = Users.findOne({
+    //   where: {
+    //     email: req.body.email,
+    //   }
+    // });
+    // if (emailExist) {
+    //   res.render("users/register", {
+    //     errors: {
+    //       email: {
+    //         msg: "El email ya se encuentra registrado",
+    //       },
+    //     },
+    //   });
+    // }
+    // })
+    //   .catch(error => res.send(error))
   },
-  show: (req, res) => { // Read
-     let result = Users.findByPk(req.session.user)
+  show: (req, res) => {
+    // Read
+    let result = Users.findByPk(req.session.user)
       .then(() => {
-         res.send(result)})
-      .catch(error => res.send(error))
-
-  
+        res.send(result);
+      })
+      .catch((error) => res.send(error));
   },
-  
-  update: (req, res) => { //Update
-    Users.update({
-      avatar: req.file,
-    },{
-      where: {
-        id: req.session.user.id
+
+  update: (req, res) => {
+    //Update
+    Users.update(
+      {
+        avatar: req.file,
+      },
+      {
+        where: {
+          id: req.session.user.id,
+        },
       }
-    }).then(() => {
+    ).then(() => {
       res.send(req.body);
-    })
+    });
   },
 
   // delete: (req, res) => { // delete
 
   // }
-
 };
 
 module.exports = userController;

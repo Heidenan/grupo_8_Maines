@@ -126,7 +126,7 @@ const userController = {
           avatar: req.body.avatar ? req.body.avatar : null,
         });
   })
-      //.then(() => res.redirect("/users/login"))
+      .then(() => res.redirect("/users/login"))
       .catch((error) => res.send(error));
 
     // Users.create({

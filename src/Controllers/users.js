@@ -114,7 +114,7 @@ const userController = {
               },
             },
           })
-        }.then (() => {
+        }}) .then (() => {
         Users.create({
           name: req.body.name,
           last_name: req.body.last_name,
@@ -126,7 +126,7 @@ const userController = {
           avatar: req.body.avatar ? req.body.avatar : null,
         });
   })
-      .then(() => res.redirect("/users/login"))
+      //.then(() => res.redirect("/users/login"))
       .catch((error) => res.send(error));
 
     // Users.create({
@@ -164,7 +164,7 @@ const userController = {
     // }
     // })
     //   .catch(error => res.send(error))
-  },
+      },
   show: (req, res) => {
     // Read
     let result = Users.findByPk(req.session.user)

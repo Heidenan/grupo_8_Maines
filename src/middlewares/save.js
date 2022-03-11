@@ -1,16 +1,12 @@
 const validator = require("express-validator");
 const user = require("../models/user");
+const db = require("../database/models")
+const Users = db.User;
 const validations = [
   validator
     .body("email")
     .isEmail()
-    .withMessage("Email invalido")
-    .custom((value) => {
-      // Here we create a custom validation
-      let search = user.search("email", value);
-      return search ? Promise.reject("El email ya existe") : Promise.resolve();
-      // Promise is a method we can use to return something to the validations
-    }),
+    .withMessage("Email invalido"),
   validator
     .body("password")
     .isLength({ min: 5 })

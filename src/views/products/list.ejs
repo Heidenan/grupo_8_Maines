@@ -15,7 +15,7 @@
     <% for (let i = 0; i < products.length; i++) { %>
  <ul class="caja-texto-producto" style="list-style: none"> 
         <% if (products.image) { %>
-         <img src="/images/<%= products[i].image.url %>">
+         <img src="/<%= products[i].image.url %>">
          <% } %>
 
          <div class="preciosYdescuentos">

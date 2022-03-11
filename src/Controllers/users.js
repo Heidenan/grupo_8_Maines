@@ -1,11 +1,11 @@
 const validator = require("express-validator");
 const bcrypt = require("bcrypt");
-const user = require("../models/user");
+const users = require("../models/user");
 const db = require("../database/models");
 
 const Users = db.User;
 const userController = {
-  index: (req, res) => res.send(user.all()),
+  index: (req, res) => res.send(users.all()),
   register: (req, res) =>
     res.render("users/register", {
       styles: ["/register"],
@@ -15,7 +15,7 @@ const userController = {
       styles: ["/login"],
     }),
   profile: (req, res) => {
-    res.render("users/profile");
+    res.render("users/profile")
   },
   // show: (req, res) => {
   //   let result = user.show(req.params.id);
@@ -29,7 +29,7 @@ const userController = {
         errors: errors.mapped(),
       });
     }
-    let exist = user.search("email", req.body.email);
+    let exist = users.search("email", req.body.email);
     if (!exist) {
       return res.render("users/login", {
         errors: {
@@ -56,30 +56,30 @@ const userController = {
     return res.redirect("/users/profile");
     // This is to verify that there is a user in session
   },
-  create: (req, res) => {
-    let errors = validator.validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.render("users/register", {
-        errors: errors.mapped(),
-      });
-    }
-    let exist = user.search("email", req.body.email);
-    if (exist) {
-      return res.render("users/register", {
-        errors: {
-          email: {
-            msg: "El email ya se encuentra registrado",
-          },
-        },
-      });
-    }
+  // create: (req, res) => {
+  //   let errors = validator.validationResult(req);
+  //   if (!errors.isEmpty()) {
+  //     return res.render("users/register", {
+  //       errors: errors.mapped(),
+  //     });
+  //   }
+  //   let exist = users.search("email", req.body.email);
+  //   if (exist) {
+  //     return res.render("users/register", {
+  //       errors: {
+  //         email: {
+  //           msg: "El email ya se encuentra registrado",
+  //         },
+  //       },
+  //     });
+  //   }
 
-    req.body.avatar = req.file ? req.file.filename : null;
-    let userRegistered = user.create(req.body);
-    console.log(userRegistered);
+  //   req.body.avatar = req.file ? req.file.filename : null;
+  //   let userRegistered = users.create(req.body);
+  //   console.log(userRegistered);
 
-    return res.redirect("/users/login");
-  },
+  //   return res.redirect("/users/login");
+  // },
   logout: (req, res) => {
     delete req.session.user;
     res.cookie("user", null, { maxAge: -1 });
@@ -87,7 +87,7 @@ const userController = {
   },
   suscripciones: (req, res) => res.render("users/suscripciones"),
   uploadAvatar: (req, res) => {
-    let update = user.update(req.session.user.id, {
+    let update = users.update(req.session.user.id, {
       avatar: req.files ? req.files[0].filename : null,
     });
     req.session.user = update;
@@ -96,28 +96,7 @@ const userController = {
 
   // CRUD
 
-  create: (req, res) => {// Create
-    let errors = validator.validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.render("users/register", {
-        errors: errors.mapped(),
-      })
-    }
-    
-    // let emailExist = Users.findOne({
-    //   where: {
-    //     email: req.body.email
-    //   }
-    // });
-    // if (emailExist) {
-    //   return res.render("users/register", {
-    //     errors: {
-    //       email: {
-    //         msg: "El email ya se encuentra registrado",
-    //       },
-    //     },
-    //   });
-    // }
+  save: (req, res) => {// Create
 
     Users.create({
       name: req.body.name,
@@ -129,15 +108,48 @@ const userController = {
       isActive: true,
       avatar: req.body.avatar ? req.body.avatar : null,
     })
-    .then(() => res.render("users/login"))
+    .then((user) => {
+
+      let errors = validator.validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.render("users/register", {
+        errors: errors.mapped(),
+      })
+    }
+
+    let emailExist = Users.findOne({
+      where: {
+        email: req.body.email,
+      }
+    });
+    if (emailExist) {
+      res.render("users/register", {
+        errors: {
+          email: {
+            msg: "El email ya se encuentra registrado",
+          },
+        },
+      });
+    }
+
+
+    })
       .catch(error => res.send(error))
+
+
+
+    
+    
+    
+
+    
     
   },
   show: (req, res) => { // Read
-     Users.findByPk(req.params.id)
-     .then((user) => {
-        res.render("users/profile", {user: user})
-      }).catch(error => res.send(error))
+     let result = Users.findByPk(req.session.user)
+      .then(() => {
+         res.send(result)})
+      .catch(error => res.send(error))
 
   
   },

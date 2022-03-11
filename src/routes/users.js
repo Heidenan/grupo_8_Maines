@@ -1,7 +1,7 @@
 const express = require("express");
 const userController = require("../controllers/users");
 const router = express.Router();
-const create = require("../middlewares/create");
+const create = require("../middlewares/save");
 const access = require("../middlewares/access");
 const auth = require("../middlewares/access");
 const path = require("path");
@@ -24,8 +24,7 @@ router.get("/login", userController.login);
 router.get("/logout", [access], userController.logout);
 router.get("/suscripciones", userController.suscripciones);
 router.get("/profile", [access], userController.profile);
-router.get("/:id", [access], userController.show);
-router.post("/create", [create, upload.any()], userController.create);
+router.post("/create", [save, upload.any()], userController.save);
 router.post("/access", userController.access);
 router.post("/update",[access, upload.any()] ,userController.update);
 

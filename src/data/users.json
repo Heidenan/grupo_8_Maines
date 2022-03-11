@@ -7,14 +7,7 @@
     "isActive": true,
     "avatar": "avatar-1645223316892.jpg"
   },
-  {
-    "id": 2,
-    "email": "ignaciomontaldi@gmail.com",
-    "password": "$2b$10$BJ0MV0D/mIKn2S0ZHwdqTeAzJDkvM/Y7aPKSI52bjMxhZOn7ELrS2",
-    "isAdmin": false,
-    "isActive": true,
-    "avatar": "avatar-1646866918492.png"
-  },
+  
   {
     "id": 3,
     "name": "Test",

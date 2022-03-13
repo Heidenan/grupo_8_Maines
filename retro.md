@@ -36,3 +36,41 @@ Less of: En algunas ocasiones es mejor idea pedir ayuda a un compañero/docente 
 
 Stop doing: No dejar más de lado la estética del sitio
 
+
+Retrospectiva Sprint 5:
+
+Start doing: Charlar más con los profesores
+
+More of: Apoyarnos en otros proyectos ya creados para sumar features al proyecto integrador
+
+Keep Doing: Tener llamadas semanales
+
+Less of: Ser desorganizados con nuestro tablero de trabajo
+
+
+
+Retrospectiva Sprint 6:
+
+Start doing: Agregar diseño o implementaciones mas allá de los pedidos del sprint
+
+More of: Continuar con el ritmo de trabajo diario cumpliendo pequeños objetivos
+
+Keep Doing: Tener llamadas todos los días para trabajar juntos en el proyecto
+
+Less of: No ser dependientes de una llamada grupal para trabajar, estableciendo mejores objetivos individuales 
+
+
+
+Retrospectiva Sprint 7:
+
+Start doing: 
+
+More of: 
+
+Keep Doing: 
+
+Less of: 
+
+Stop doing: 
+
+

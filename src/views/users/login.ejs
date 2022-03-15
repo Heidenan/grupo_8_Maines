@@ -12,6 +12,13 @@
         <a href="/"> <img src="/images/LogoMaines.svg" altclass="logo" class="logo-maines"/></a>
       </picture>
 
+    <% if (locals.errors && errors.email) { %>
+    <p class="error-msg">*<%= errors.email.msg %> </p>
+    <% } %>
+    <% if (locals.errors && errors.password) { %>
+    <p class="error-msg">*<%= errors.password.msg %> </p>
+    <% } %>
+    
       <form class="formInicioSesion" action="/users/access" method="post">
         <fieldset>
           <label class="labelLogin" for="email"
@@ -48,13 +55,7 @@
           
         </div>
       </form>
-        <% if (locals.errors && errors.email) { %>
-    <p class="error-msg">*<%= errors.email.msg %> </p>
-    <% } %>
-    <% if (locals.errors && errors.password) { %>
-    <p class="error-msg">*<%= errors.password.msg %> </p>
-    <% } %>
-    
+        
     </main>
 
     <%- include ('../partials/footer') %>

@@ -19,7 +19,13 @@
         </picture>
         
             <p>Registrate para guardar tus pedidos, preferencias y hacer un seguimiento!</p>
-       
+
+    <% if(locals.errors) {%> <% if (errors.email) {%>
+    <p class="error-msg">*<%- errors.email.msg %></p>
+    <% } %> <% if (errors.password) { %>
+    <p class="error-msg"><%- errors.password.msg %></p>
+    <% } %> <% } %>
+    
         <form action="/users/save"  method="POST" class="formulario-registro"  >
             <fieldset>
                 <label for="name" class= "negrita"> Nombre/s </label>
@@ -59,11 +65,7 @@
 
             <button class="botones botonCrearCuenta" type="submit">Crear cuenta</button>
    </form>
-   <% if(locals.errors) {%> <% if (errors.email) {%>
-    <p class="error-msg">*<%- errors.email.msg %></p>
-    <% } %> <% if (errors.password) { %>
-    <p class="error-msg"><%- errors.password.msg %></p>
-    <% } %> <% } %>
+   
             <p></a>¿Ya tenés una cuenta? <a href="/users/login/"><b>Iniciá sesión</b></a></p>
             <button class="botones botonGoogle" type="submit">Registrarse con Google</button>
             <button class="botones botonFacebook" type="submit">Registrarse con Facebook</button>

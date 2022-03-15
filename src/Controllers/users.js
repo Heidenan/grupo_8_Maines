@@ -82,23 +82,30 @@ const userController = {
   },
   access: (req, res) => {
     // Login with DB
-    let errors = validator.validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.render("users/login", {
-        errors: errors.mapped(),
-      });
-    }
-    db.User.findOne({ where: { email: req.body.email } })
+    db.User.findOne({
+      where: {
+        email: req.body.email,
+      },
+    })
       .then((user) => {
+        let errors = validator.validationResult(req);
+
+        if (!errors.isEmpty()) {
+          res.render("users/login", {
+            errors: errors.mapped(),
+          });
+        }
         if (!user) {
           return res.render("users/login", {
             errors: {
               email: {
-                msg: "Email no registrado",
+                msg: "Email sin registrar",
               },
             },
           });
-        } else if (!bcrypt.compareSync(req.body.password, user.password)) {
+        }
+
+        if (!bcrypt.compareSync(req.body.password, user.password)) {
           return res.render("users/login", {
             errors: {
               password: {
@@ -107,17 +114,16 @@ const userController = {
             },
           });
         } else {
+          if (req.body.remember) {
+            res.cookie("email", req.body.email, {
+              maxAge: 1000 * 60 * 60 * 24 * 30,
+            });
+          }
           req.session.user = user;
+          return res.redirect("/users/profile");
         }
       })
-      .then(() => {
-        if (req.body.remember) {
-          res.cookie("email", req.body.email, {
-            maxAge: 1000 * 60 * 60 * 24 * 30,
-          });
-        }
-      })
-      .then(() => res.redirect("/users/profile"))
+
       .catch((error) => res.send(error));
 
     // Login with JSON
@@ -156,9 +162,14 @@ const userController = {
 
     //   req.session.user = exist;
     //   return res.redirect("/users/profile");
+    //   // },
     // },
-  },
 
+    // logout: (req, res) => {
+    //   delete req.session.user;
+    //   res.cookie("user", null, { maxAge: -1 });
+    //   return res.redirect("/");
+  },
   logout: (req, res) => {
     delete req.session.user;
     res.cookie("user", null, { maxAge: -1 });

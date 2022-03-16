@@ -164,11 +164,6 @@ const userController = {
     //   return res.redirect("/users/profile");
     //   // },
     // },
-
-    // logout: (req, res) => {
-    //   delete req.session.user;
-    //   res.cookie("user", null, { maxAge: -1 });
-    //   return res.redirect("/");
   },
   logout: (req, res) => {
     delete req.session.user;

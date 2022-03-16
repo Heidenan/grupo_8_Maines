@@ -18,14 +18,16 @@ const upload = multer({
   }),
 });
 
-router.get("/list", [auth], userController.index);
+router.get("/list", userController.index);
 router.get("/register", userController.register);
 router.get("/login", userController.login);
 router.get("/logout", [access], userController.logout);
-router.get("/suscripciones", userController.suscripciones);
 router.get("/profile", [access], userController.profile);
 router.post("/save", [saveUser, upload.any()], userController.save);
 router.post("/access", userController.access);
-router.post("/update", [access, upload.any()], userController.update);
+
+router.get("/update/:id", userController.show);
+router.put('/:id', userController.update)
+router.delete('/:id', userController.delete)
 
 module.exports = router;

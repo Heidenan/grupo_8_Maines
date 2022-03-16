@@ -6,7 +6,14 @@ const db = require("../database/models");
 const Users = db.User;
 const userController = {
   // Views
-  index: (req, res) => res.send(users.all()),
+  index: (req, res) => {
+    Users.findAll()
+      .then((users) => {
+        res.render("users/list", { users });
+      })
+      .catch((err) => {
+        res.send(err);
+      })},
   register: (req, res) =>
     res.render("users/register", {
       styles: ["/register"],
@@ -181,40 +188,53 @@ const userController = {
 
   // CRUD
 
-  show: (req, res) => {
+  //show: (req, res) => {
     // Read with DB
-    let result = Users.findByPk(req.session.user)
-      .then(() => {
-        res.send(result);
-      })
-      .catch((error) => res.send(error));
+   // let result = Users.findByPk(req.session.user)
+     // .then(() => {
+      //  res.send(result);
+    //  })
+     // .catch((error) => res.send(error));
 
     // With JSON
     // show: (req, res) => {
     //   let result = user.show(req.params.id);
     //   return result ? res.send(result) : res.send("User not found");
     // },
-  },
+  //},
 
   update: (req, res) => {
     //Update
-    Users.update(
-      {
-        avatar: req.file,
-      },
-      {
+      Users.update({
+        ...req.body,
+      },{
         where: {
-          id: req.session.user.id,
-        },
-      }
-    ).then(() => {
-      res.send(req.body);
-    });
+          id: req.params.id
+        }
+      }).then(user => {
+        res.redirect("./list");
+      })
+      .catch((error) => res.send(error));
+    },
+
+    show: (req, res) => {
+      Users.findByPk(req.params.id)
+      .then(user => {
+        res.render("users/update", {user});
+      })
+    },
+
+   delete: (req, res) => { 
+
+    // Tengo que buscar el usuario a borrar.. una vez encontrado el usuario debo borrarlo.//
+     Users.destroy({ where:{id: req.params.id}})
+    .then(() => {
+      res.redirect("./list");
+    })
+    .catch((error) => res.send(error));
+
+
   },
-
-  // delete: (req, res) => { // delete
-
-  // }
 };
 
-module.exports = userController;
+module.exports = userController

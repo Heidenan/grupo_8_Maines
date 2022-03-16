@@ -1,0 +1,45 @@
+
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/update.css">
+    <%- include('../partials/header') %>
+    <title>Editar Producto</title>
+</head>
+<body>
+    <main>
+        <h1> Modificar Usuario</h1><br>
+        <form action="/users/<%= user.id %>?m=PUT" method="post" class="update-product">
+            <fieldset>
+                <label for="name" class= "negrita"> Nombre/s </label>
+                <input class ="input-formulario-registro" type="text" name='name' value="<%= user.name %>" >                
+            </fieldset>
+            <fieldset>
+                <label for="last_name" class= "negrita"> Apellido/s </label>
+                <input class ="input-formulario-registro" type="text" name='last_name' value="<%= user.last_name %>">                
+            </fieldset>
+            <fieldset>
+                <label for="email" class= "negrita">Email</label>
+                <input class ="input-formulario-registro" type="mail" name="email" value="<%= user.email %>">
+            </fieldset>
+            <fieldset>
+                <label for="userName" class= "negrita"> Nombre de Usuario </label>
+                <input class ="input-formulario-registro" type="text" name='userName' value="<%= user.userName %>">                
+            </fieldset>
+            <fieldset>
+                <label for="password" class= "negrita">Contraseña</label>
+                <input class ="input-formulario-registro" type="password" name='password' value="<%= user.password %>">
+            </fieldset>
+
+            <button type="submit" class="update-button">Update</button>
+            
+            </form>
+            <form action="/users/<%= user.id %>?m=DELETE" method="post">
+                <button type="submit" class="delete-button">
+                    <i class="fas fa-trash tacho"></i>
+                </button>
+            </fieldset>
+        </form>
+    </main>
+    <%- include('../partials/footer') %> 
+</body>
+</html>

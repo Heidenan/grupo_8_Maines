@@ -1,0 +1,29 @@
+<head>
+    <%- include('../partials/head') %>
+    <link rel="stylesheet" href="/css/list.css">
+    <%- include('../partials/header') %>
+    </head>
+    <body>
+        <main>
+        <h1>Lista de Usuarios</h1> 
+        <div class="lista-productos">
+            
+        <% for (let i = 0; i < users.length; i++) { %>
+     <ul class="caja-texto-producto" style="list-style: none"> 
+            <% if (users.avatar) { %>
+             <img src="/<%= users[i].avatar.url %>">
+             <% } %>
+    
+             <div>
+               <li><%=users[i].name%></li>
+             </div>
+             <a href="/users/update/<%= users[i].id %>"><br>
+                <i class="fas fa-pen"></i> </a>
+            
+        </ul>
+          <% } %>
+        </div>   
+        </main>
+        <%- include('../partials/footer') %>                   
+    </body>
+    </html>

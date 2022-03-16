@@ -207,6 +207,7 @@ const userController = {
     //Update
       Users.update({
         ...req.body,
+        password: bcrypt.hashSync(req.body.password, 10)
       },{
         where: {
           id: req.params.id
@@ -222,6 +223,7 @@ const userController = {
       .then(user => {
         res.render("users/update", {user});
       })
+      .catch((error) => res.send(error));
     },
 
    delete: (req, res) => { 

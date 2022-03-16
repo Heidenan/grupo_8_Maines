@@ -29,7 +29,9 @@ const controller = {
         .map((p) => Object({ ...p, image: file.search("id", p.image) })),
     }), */
   },
-
+  productDetail: (req, res) => res.render("products/productDetail"),
+  carrito: (req, res) => res.render("products/productCart"),
+  compras: (req,res) => res.render('products/compras'),
   create: (req, res) =>
     Categories.findAll()
       .then(function (categories) {
@@ -66,41 +68,40 @@ const controller = {
     return res.redirect("/products/" + created.id); */
   },
   show: (req, res) => {
-    Products.findByPk(req.params.id)
-    .then(product => {
-      res.render("products/detail", {product: product});
-    })
+    Products.findByPk(req.params.id).then((product) => {
+      res.render("products/detail", { product: product });
+    });
   },
-    update: (req, res) => {
-    Products.update({
-      ...req.body,
-    },{
-      where: {
-        id: req.params.id
+  update: (req, res) => {
+    Products.update(
+      {
+        ...req.body,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
       }
-    }).then(() => {
+    ).then(() => {
       res.redirect("/products/" + req.params.id);
-    })
+    });
   },
   destroy: (req, res) => {
     Products.destroy({
       where: {
-        id: req.params.id
-      }
+        id: req.params.id,
+      },
     })
-    .then(() => {
-      res.redirect("/products/")
-    })
-    .catch(error => res.send(error))
-  
-
+      .then(() => {
+        res.redirect("/products/");
+      })
+      .catch((error) => res.send(error));
   },
-  edit : (req, res) => {
-    Products.findByPk(req.params.id)
-    .then(product => {
-      res.render("products/update", {product: product});
-    })
-  }
+  edit: (req, res) => {
+    Products.findByPk(req.params.id).then((product) => {
+      res.render("products/update", { product: product });
+    });
+  },
   // Codigo para la base de datos ///
 
   // detail: (req, res) => {
@@ -109,8 +110,6 @@ const controller = {
   //     res.render("/:id", {product})
   //   })
   // },
-
-
 
   // delete: (req, res) => {
 

@@ -12,9 +12,9 @@
         </ul>
         <p><a href="/users/logout">Logout</a></p>
         <h2>Foto de perfil</h2>
-      <% if (user.avatar != null) { %>
+      <% if (user.avatar.url != null) { %>
       <figure>
-        <img src="<%= user.avatar %>"/>
+        <img src="<%= user.avatar.url %>"/>
       </figure>
       <% } else { %>
       <figure>

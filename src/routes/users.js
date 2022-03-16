@@ -6,28 +6,29 @@ const access = require("../middlewares/access");
 const auth = require("../middlewares/auth");
 const path = require("path");
 const multer = require("multer");
-const upload = multer({
-  storage: multer.diskStorage({
-    destination: (req, file, cb) =>
-      cb(null, path.resolve(__dirname, "../../uploads/avatars")),
-    filename: (req, file, cb) =>
-      cb(
-        null,
-        file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-      ),
-  }),
-});
 
-router.get("/list",[auth], userController.index);
+const storage = multer.diskStorage({
+  destination: (req, file, cb) =>
+    cb(null, path.join(__dirname, "../../uploads", "avatars")),
+  filename: (req, file, cb) =>
+    cb(
+      null,
+      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+    ),
+});
+const upload = multer({ storage: storage });
+
+router.get("/list", [auth], userController.index);
 router.get("/register", userController.register);
 router.get("/login", userController.login);
 router.get("/logout", [access], userController.logout);
 router.get("/profile", [access], userController.profile);
+router.get("/update/:id", [auth], userController.show);
+
 router.post("/save", [saveUser, upload.any()], userController.save);
 router.post("/access", userController.access);
 
-router.get("/update/:id",[auth], userController.show);
-router.put('/:id',[auth, saveUser], userController.update)
-router.delete('/:id',[auth], userController.delete)
+router.put("/:id", [auth, upload.any()], userController.update);
+router.delete("/:id", [auth], userController.delete);
 
 module.exports = router;

@@ -24,11 +24,8 @@ app.use(method("m")); // ?_m=PUT || ?_m=DELETE --> Forms
 
 //Routes
 
-app.use(require("./routes/carrito"));
 app.use(require("./routes/entregas"));
-app.use(require("./routes/compras"));
 app.use(require("./routes/ayuda"));
-app.use(require("./routes/productDetail"));
 
 const mainRoutes = require("./routes/main");
 app.use(mainRoutes);

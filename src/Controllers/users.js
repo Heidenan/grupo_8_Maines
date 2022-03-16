@@ -13,7 +13,8 @@ const userController = {
       })
       .catch((err) => {
         res.send(err);
-      })},
+      });
+  },
   register: (req, res) =>
     res.render("users/register", {
       styles: ["/register"],
@@ -23,7 +24,14 @@ const userController = {
       styles: ["/login"],
     }),
   profile: (req, res) => {
-    res.render("users/profile");
+    //res.render("users/profile");
+    Users.findByPk(req.session.user.id)
+      .then((user) => {
+        res.render("users/profile", {
+          user: user,
+        });
+      })
+      .catch((error) => res.send(error));
   },
   suscripciones: (req, res) => res.render("users/suscripciones"),
 
@@ -47,7 +55,7 @@ const userController = {
             password: bcrypt.hashSync(req.body.password, 10),
             isAdmin: String(req.body.email).includes("@maines.com"),
             isActive: true,
-            avatar: req.body.avatar ? req.body.avatar : null,
+            avatar: req.body.avatar,
           }).then(() => res.render("users/login"));
         } else {
           res.render("users/register", {
@@ -189,54 +197,55 @@ const userController = {
   // CRUD
 
   //show: (req, res) => {
-    // Read with DB
-   // let result = Users.findByPk(req.session.user)
-     // .then(() => {
-      //  res.send(result);
-    //  })
-     // .catch((error) => res.send(error));
+  // Read with DB
+  // let result = Users.findByPk(req.session.user)
+  // .then(() => {
+  //  res.send(result);
+  //  })
+  // .catch((error) => res.send(error));
 
-    // With JSON
-    // show: (req, res) => {
-    //   let result = user.show(req.params.id);
-    //   return result ? res.send(result) : res.send("User not found");
-    // },
+  // With JSON
+  // show: (req, res) => {
+  //   let result = user.show(req.params.id);
+  //   return result ? res.send(result) : res.send("User not found");
+  // },
   //},
 
   update: (req, res) => {
     //Update
-      Users.update({
+    Users.update(
+      {
         ...req.body,
-        password: bcrypt.hashSync(req.body.password, 10)
-      },{
+        password: bcrypt.hashSync(req.body.password, 10),
+      },
+      {
         where: {
-          id: req.params.id
-        }
-      }).then(user => {
+          id: req.params.id,
+        },
+      }
+    )
+      .then((user) => {
         res.redirect("./list");
       })
       .catch((error) => res.send(error));
-    },
+  },
 
-    show: (req, res) => {
-      Users.findByPk(req.params.id)
-      .then(user => {
-        res.render("users/update", {user});
+  show: (req, res) => {
+    Users.findByPk(req.params.id)
+      .then((user) => {
+        res.render("users/update", { user });
       })
       .catch((error) => res.send(error));
-    },
+  },
 
-   delete: (req, res) => { 
-
+  delete: (req, res) => {
     // Tengo que buscar el usuario a borrar.. una vez encontrado el usuario debo borrarlo.//
-     Users.destroy({ where:{id: req.params.id}})
-    .then(() => {
-      res.redirect("./list");
-    })
-    .catch((error) => res.send(error));
-
-
+    Users.destroy({ where: { id: req.params.id } })
+      .then(() => {
+        res.redirect("./list");
+      })
+      .catch((error) => res.send(error));
   },
 };
 
-module.exports = userController
+module.exports = userController;

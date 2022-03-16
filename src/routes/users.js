@@ -18,7 +18,7 @@ const upload = multer({
   }),
 });
 
-router.get("/list", userController.index);
+router.get("/list",[auth], userController.index);
 router.get("/register", userController.register);
 router.get("/login", userController.login);
 router.get("/logout", [access], userController.logout);
@@ -26,8 +26,8 @@ router.get("/profile", [access], userController.profile);
 router.post("/save", [saveUser, upload.any()], userController.save);
 router.post("/access", userController.access);
 
-router.get("/update/:id", userController.show);
-router.put('/:id', userController.update)
-router.delete('/:id', userController.delete)
+router.get("/update/:id",[auth], userController.show);
+router.put('/:id',[auth, saveUser], userController.update)
+router.delete('/:id',[auth], userController.delete)
 
 module.exports = router;

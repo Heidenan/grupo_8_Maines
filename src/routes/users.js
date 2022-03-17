@@ -25,7 +25,7 @@ router.get("/logout", [access], userController.logout);
 router.get("/profile", [access], userController.profile);
 router.get("/update/:id", [auth], userController.show);
 
-router.post("/save", [saveUser, upload.any()], userController.save);
+router.post("/save", [upload.any(), saveUser], userController.save);
 router.post("/access", userController.access);
 
 router.put("/:id", [auth, upload.any()], userController.update);

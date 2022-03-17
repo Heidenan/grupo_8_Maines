@@ -21,12 +21,12 @@
             <p>Registrate para guardar tus pedidos, preferencias y hacer un seguimiento!</p>
 
     <% if(locals.errors) {%> <% if (errors.email) {%>
-    <p class="error-msg">*<%- errors.email.msg %></p>
+    <p class="error-msg"><%- errors.email.msg %></p>
     <% } %> <% if (errors.password) { %>
     <p class="error-msg"><%- errors.password.msg %></p>
     <% } %> <% } %>
     
-        <form action="/users/save"  method="POST" class="formulario-registro"  >
+        <form action="/users/save"  method="POST" class="formulario-registro" enctype="multipart/form-data" >
             <fieldset>
                 <label for="name" class= "negrita"> Nombre/s </label>
                 <input class ="input-formulario-registro" type="text" name='name'>                
@@ -58,10 +58,10 @@
                         <input type="checkbox" name="category" id="category"> Vendedor <br></label>
                     </fieldset>
 -->
-            <fieldset>
+            <!-- <fieldset>
                 <label for="terminos y condiciones">
                 <input type="checkbox" name="TyC"required> He leido y acepto los terminos y condiciones del sitio </label>
-            </fieldset>
+            </fieldset> -->
 
             <button class="botones botonCrearCuenta" type="submit">Crear cuenta</button>
    </form>

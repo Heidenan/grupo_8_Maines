@@ -55,7 +55,7 @@ const userController = {
             password: bcrypt.hashSync(req.body.password, 10),
             isAdmin: String(req.body.email).includes("@maines.com"),
             isActive: true,
-            avatar: req.body.avatar,
+            avatar: req.files[0].filename,
           }).then(() => res.render("users/login"));
         } else {
           res.render("users/register", {

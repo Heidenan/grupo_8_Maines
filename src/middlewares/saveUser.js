@@ -12,11 +12,10 @@ const validations = [
     }) */
   validator
     .body("password")
-    .isLength({ min: 6 })
-    .withMessage("La contraseña debe tener 6 caracteres mínimo")
+    .isLength({ min: 8 })
+    .withMessage("La contraseña debe tener 8 caracteres mínimo")
     .matches(/^.*(?=.{6,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/)
     .withMessage("La contraseña debe incluir una letra y un caracter especial"),
-
   // Here we make the validations in order to create a new user
 ];
 

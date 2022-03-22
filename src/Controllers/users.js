@@ -69,7 +69,7 @@ const userController = {
       })
       .catch((error) => res.send(error));
 
-    // With JSON
+    // Save user with JSON
     // save: (req, res) => {
     //   let errors = validator.validationResult(req);
     //   if (!errors.isEmpty()) {

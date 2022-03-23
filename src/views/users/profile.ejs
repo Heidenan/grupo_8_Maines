@@ -10,14 +10,16 @@
           <li>Nombre de Usuario: <%= user.userName %> </li>
           <li>Email: <%= user.email  %> </li>  
         </ul>
-        <p><a href="/users/logout">Logout</a></p>
+        <p><a href="/users/logout">
+          <button class="logout-button">Logout</button>
+        </a></p>
         <h2>Foto de perfil</h2>
       <% if (user.avatar != null) { %>
-      <figure>
+      <figure class="avatar-img">
         <img src="/avatars/<%= user.avatar %>"/>
       </figure>
       <% } else { %>
-      <figure>
+      <figure class="avatar-img">
         <img src="/assets/avatar.png" alt="<%= user.email %>" />
       </figure>
       <% } %>
@@ -27,7 +29,7 @@
         method="POST"
       >
         <label for="avatar">Cambiar imagen de perfil</label><br>
-        <input type="file" name="avatar" id="avatar"><br>
+        <input type="file" name="avatar" id="avatar" class="img-input"><br>
         <button type="submit">Update Avatar</button>
       </form>
     </main>

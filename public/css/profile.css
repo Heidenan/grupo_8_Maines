@@ -13,6 +13,9 @@ main{
     font-family: "Roboto", sans-serif;
 }
 
+@media (min-width:320px) and (max-width: 768px){
+
+
 main h1{
     font-size: 28px;
     font-weight: bold;
@@ -25,29 +28,24 @@ main h1{
 }
 
 main .user-detail{
+    width: 280px;
     list-style: none;
     font-weight: bold;
     text-align: left;
-    font-size: 20px;
+    font-size: 16px;
     padding: 0px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-    main p{
-        margin-bottom: 30px;
-        border: 2px solid #444444;
-        border-radius: 10px;
-        background-color: #FF9B87;
-        padding: 5px;
-    }
-
-    main p a{
+main .logout-button{
+    padding: 10px;
     font-size: 22px;
-    font-weight: bold;
-    text-decoration: none;
-    color: black;
-    }
+    border: 2px solid #444444;
+    background-color: #FF9B87;
+    color: #444444;
+    border-radius: 10px;
+}
 
     main h2{
     font-weight: bold;
@@ -62,6 +60,8 @@ main .user-detail{
         border: 2px solid black;
         border-radius: 20px;
         margin-bottom: 40px;
+        width: 150px;
+        height: 130px;
     }
 
     main form input{
@@ -75,6 +75,10 @@ main .user-detail{
         font-size: 20px;
     }
 
+    main .img-input{
+        width: 200px;
+    }
+
     main form button{
         padding: 10px;
         margin-bottom: 80px;
@@ -82,4 +86,78 @@ main .user-detail{
         background-color: #444444;
         color: white;
         border-radius: 20px;
+    }
+
+}
+
+@media (min-width:768px) {
+
+
+    main h1{
+        font-size: 28px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background-color: #FF9B87;
+        border: 2px solid #444444;
+        padding: 5px;
+        border-radius: 10px;
+    }
+    
+    main .user-detail{
+        list-style: none;
+        font-weight: bold;
+        text-align: left;
+        font-size: 20px;
+        padding: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    main .logout-button{
+        padding: 10px;
+        font-size: 22px;
+        border: 2px solid #444444;
+        background-color: #FF9B87;
+        color: #444444;
+        border-radius: 10px;
+    }
+    
+        main h2{
+        font-weight: bold;
+        text-align: left;
+        font-size: 30px;
+        padding: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        }
+    
+        main figure img{
+            border: 2px solid black;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            width: 200px;
+            height: 180px;
+        }
+    
+        main form input{
+            font-size: 18px ;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    
+        main form label{
+            font-weight: bold;
+            font-size: 20px;
+        }
+    
+        main form button{
+            padding: 10px;
+            margin-bottom: 80px;
+            border: none;
+            background-color: #444444;
+            color: white;
+            border-radius: 20px;
+        }
+    
     }

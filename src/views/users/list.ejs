@@ -6,24 +6,24 @@
     <body>
         <main>
         <h1>Lista de Usuarios</h1> 
-        <div class="lista-productos">
+        <div class="lista-usuarios">
             
         <% for (let i = 0; i < users.length; i++) { %>
-     <ul class="caja-texto-producto" style="list-style: none"> 
+     <ul class="caja-texto-usuario" style="list-style: none"> 
             <% if (user.avatar) { %>
-               <figure></figure>
-             <img src="/avatars/<%= users[i].avatar %>"/>
+               <figure >
+             <img class="avatar-img" src="/avatars/<%= users[i].avatar %>"/>
              </figure>
               <% } else { %>
-           <figure>
-           <img src="/assets/avatar.png" alt="<%= user.email %>" />
+           <figure >
+           <img class="avatar-img" src="/assets/avatar.png" alt="<%= user.email %>" />
            </figure>
            <% } %>
              <div>
                <li><%=users[i].name%></li>
              </div>
              <a href="/users/update/<%= users[i].id %>"><br>
-                <i class="fas fa-pen"></i> </a>
+                <i class="fas fa-pen edit-user"><p class="edit-text">Editar</p></i> </a>
             
         </ul>
           <% } %>

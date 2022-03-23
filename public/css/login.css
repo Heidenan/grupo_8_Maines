@@ -1,4 +1,8 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 main {
   width: 100%;
@@ -8,105 +12,114 @@ main {
   background-color: #fff9ed;
   font-family: "Roboto", sans-serif;
 }
+
+input.error {
+  background-color: rgb(226, 143, 143);
+}
+
+input.success {
+  background-color: rgb(111, 228, 121);
+}
+input.focus {
+  background-color: #ccc;
+}
+
 @media (min-width: 320px) and (max-width: 768px) {
-  
+  .logo {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    width: 50vw;
+    align-items: center;
+  }
 
-.logo {
-  margin-top: 50px;
-  margin-bottom: 20px;
-  width: 50vw;
-  align-items: center;
-}
+  .formInicioSesion {
+    width: 80vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px lightgrey;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-.formInicioSesion {
-  width: 80vw;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: solid 1px lightgrey;
-  border-radius: 10px;
-  padding: 10px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
-fieldset {
-  border: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
+  .labelLogin {
+    width: 200px;
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 18px;
+  }
 
-.labelLogin {
-  width: 200px;
-  font-weight: bold;
-  margin-top: 30px;
-  font-size: 18px;
-}
+  .inputLogin {
+    width: 200px;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
 
-.inputLogin {
-  width: 200px;
-  padding: 12px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
+  .olvidasteContra {
+    color: black;
+    margin-right: 210px;
+  }
 
-.olvidasteContra {
-  color: black;
-  margin-right: 210px;
-}
+  .botonLogin {
+    width: 150px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 40px;
+    background-color: #3483fa;
+    border-color: transparent;
+    border-radius: 8px;
+    color: #fff;
+    transition: all 200ms;
+  }
 
-.botonLogin {
-  width: 150px;
-  padding: 10px;
-  margin-bottom: 20px;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 40px;
-  background-color: #3483fa;
-  border-color: transparent;
-  border-radius: 8px;
-  color: #fff;
-  transition: all 200ms;
-}
+  .botonLogin:hover {
+    background-color: #06439e;
+  }
 
-.botonLogin:hover {
-  background-color: #06439e;
-}
+  .crearCuenta {
+    display: flex;
+    color: black;
+    margin-top: 10px;
+  }
 
-.crearCuenta {
-  display: flex;
-  color: black;
-  margin-top: 10px;
-}
+  .error-msg {
+    font-size: 16px;
+    color: #ff9b87;
+    font-weight: bold;
+  }
 
-.error-msg{
-  font-size: 16px;
-  color: #FF9B87;
-  font-weight: bold;
-}
+  #remember {
+    margin-right: 10px;
+  }
 
-#remember{
-  margin-right: 10px;
-}
-
-.remember-box{
-  font-weight: bold;
-}
+  .remember-box {
+    font-weight: bold;
+  }
 }
 
 @media (min-width: 768px) {
-  
   .logo-maines {
     margin-top: 50px;
     margin-bottom: 20px;
     width: 50vw;
     align-items: center;
   }
-  
+
   .formInicioSesion {
     width: 60vw;
     background-color: white;
@@ -126,14 +139,14 @@ fieldset {
     align-items: center;
     text-align: center;
   }
-  
+
   .labelLogin {
     width: 200px;
     font-weight: bold;
     margin-top: 30px;
     font-size: 18px;
   }
-  
+
   .inputLogin {
     width: 300px;
     padding: 12px;
@@ -142,12 +155,12 @@ fieldset {
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
-  
+
   .olvidasteContra {
     color: black;
     margin-right: 210px;
   }
-  
+
   .botonLogin {
     width: 150px;
     padding: 10px;
@@ -161,29 +174,28 @@ fieldset {
     color: #fff;
     transition: all 200ms;
   }
-  
+
   .botonLogin:hover {
     background-color: #06439e;
   }
-  
+
   .crearCuenta {
     display: flex;
     color: black;
     margin-top: 10px;
   }
-  
-  .error-msg{
+
+  .error-msg {
     font-size: 16px;
-    color: #FF9B87;
-    font-weight: bold;
-  }
-  
-  #remember{
-    margin-right: 10px;
-  }
-  
-  .remember-box{
+    color: #ff9b87;
     font-weight: bold;
   }
 
+  #remember {
+    margin-right: 10px;
+  }
+
+  .remember-box {
+    font-weight: bold;
+  }
 }

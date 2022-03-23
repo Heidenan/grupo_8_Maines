@@ -13,13 +13,13 @@
       </picture>
 
     <% if (locals.errors && errors.email) { %>
-    <p class="error-msg">*<%= errors.email.msg %> </p>
+    <p class="error-msg"><%= errors.email.msg %> </p>
     <% } %>
     <% if (locals.errors && errors.password) { %>
-    <p class="error-msg">*<%= errors.password.msg %> </p>
+    <p class="error-msg"><%= errors.password.msg %> </p>
     <% } %>
     
-      <form class="formInicioSesion" action="/users/access" method="post">
+      <form class="formInicioSesion" action="/users/access" method="post" id="login">
         <fieldset>
           <label class="labelLogin" for="email"
             >Mail registrado</label
@@ -59,6 +59,6 @@
     </main>
 
     <%- include ('../partials/footer') %>
-
+<script src="../js/validateLogin.js"></script>
   </body>
 </html>

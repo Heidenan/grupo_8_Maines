@@ -26,10 +26,8 @@ const userController = {
   profile: (req, res) => {
     //res.render("users/profile");
     Users.findByPk(req.session.user.id)
-      .then((user) => {
-        res.render("users/profile", {
-          user: user,
-        });
+      .then(() => {
+        res.render("users/profile");
       })
       .catch((error) => res.send(error));
   },

@@ -1,6 +1,7 @@
 const loginForm = document.forms.login;
 const fieldEmail = loginForm.email;
 const fieldPassword = loginForm.password;
+const submitButton = loginForm.submit;
 
 fieldEmail.addEventListener("focus", () => {
   fieldEmail.classList.remove("error");
@@ -16,7 +17,7 @@ fieldEmail.addEventListener("keyup", (event) => {
   let feed = fieldset.querySelector(".feedback");
 
   if (value.length < 1) {
-    evento.target.classList.add("error");
+    event.target.classList.add("error");
   }
   let regex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;

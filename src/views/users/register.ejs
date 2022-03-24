@@ -26,7 +26,7 @@
     <p class="error-msg"><%- errors.password.msg %></p>
     <% } %> <% } %>
     
-        <form action="/users/save"  method="POST" class="formulario-registro" enctype="multipart/form-data" >
+        <form action="/users/save" id="register"  method="POST" class="formulario-registro" enctype="multipart/form-data" >
             <fieldset>
                 <label for="name" class= "negrita"> Nombre/s </label>
                 <input class ="input-formulario-registro" type="text" name='name'>                
@@ -72,6 +72,8 @@
   
         </main>
         <%- include ('../partials/footer') %>
+       
       
 </body>
+<script src="../js/validateRegister.js"></script>
 </html>

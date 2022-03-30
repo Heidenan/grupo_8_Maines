@@ -19,8 +19,7 @@ fieldEmail.addEventListener("keyup", (event) => {
   if (value.length < 1) {
     event.target.classList.add("error");
   }
-  let regex =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
     feed.classList.add("error");

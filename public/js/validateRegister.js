@@ -24,8 +24,7 @@ fieldEmail.addEventListener("keypress", (event) => {
   if (value.length < 1) {
     event.target.classList.add("error");
   }
-  let regex =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
     feed.classList.add("error");
@@ -98,7 +97,7 @@ fieldName.addEventListener("keyup", (event) => {
     feed.classList.add("error");
     feed.innerHTML = "Name is required";
   }
-  let regex = /^[a-zA-Z]{1,20}[^0-9]$/;
+  let regex = /(^[a-z ,.'-]{2,})+$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
     feed.classList.add("error");
@@ -130,8 +129,7 @@ fieldLastName.addEventListener("keyup", (event) => {
   if (value.length < 1) {
     event.target.classList.add("error");
   }
-  let regex =
-  /^[a-zA-Z]{1,20}[^0-9]$/;
+  let regex = /(^[a-z ,.'-]{2,})+$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
     feed.classList.add("error");

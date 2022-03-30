@@ -97,7 +97,7 @@ fieldName.addEventListener("keyup", (event) => {
     feed.classList.add("error");
     feed.innerHTML = "Name is required";
   }
-  let regex = /(^[a-z ,.'-]{2,})+$/;
+  let regex = /(^[A-z ,.'-]{2,})+$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
     feed.classList.add("error");
@@ -129,7 +129,7 @@ fieldLastName.addEventListener("keyup", (event) => {
   if (value.length < 1) {
     event.target.classList.add("error");
   }
-  let regex = /(^[a-z ,.'-]{2,})+$/;
+  let regex = /(^[A-z ,.'-]{2,})+$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
     feed.classList.add("error");

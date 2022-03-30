@@ -1,155 +1,160 @@
-*{
-    margin: auto;
-    padding: auto;
-    box-sizing: border-box;
+* {
+  margin: auto;
+  padding: auto;
+  box-sizing: border-box;
 }
-
-
 
 body {
-    font-family: "Roboto", sans-serif;
-    background-color: #fff9ed;
-  }
-
-@media (min-width: 320px) and (max-width: 768px) {
-    body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-     h1{
-        font-weight: bold;
-        font-size: 22px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .nuevoProducto fieldset {
-        border: none;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    .nuevoProducto{
-        width: 250px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border: 1px solid black;
-        border-radius: 20px;
-        padding: 10px;
-        margin-bottom: 30px;
-    }
-
-    .nuevoProducto label{
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    .nuevoProducto input{
-        margin-top:10px;
-        margin-bottom: 10px;
-        border: 2px solid #FF9B87;
-        border-radius: 5px;
-        padding: 5px;
-        background-color: white;
-    }
-
-    .nuevoProducto .input-img{
-        width: 112px;
-        border: none;
-        background-color: white;
-    }
-
-    .nuevoProducto button{
-        width: 120px;
-        font-family: "Roboto", sans-serif;
-        font-weight: bold;
-        font-size: 16px;
-        color: white;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 10px;
-        background-color: #3483fa;
-        border: none;
-        border-radius: 5px;
-    }
-
-
-
-}
-
-@media (min-width: 769px) {
-
-
-     h1{
-         text-align: center;
-        font-weight: bold;
-        font-size: 22px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .nuevoProducto fieldset {
-        border: none;
-        margin-bottom: 10px;
-        text-align: center;
-    }
-    .nuevoProducto{
-        width: 500px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border: 1px solid black;
-        border-radius: 20px;
-        padding: 10px;
-        margin-bottom: 30px;
-    }
-
-    .nuevoProducto label{
-        font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    .nuevoProducto input{
-        margin-top:10px;
-        margin-bottom: 10px;
-        border: 2px solid #FF9B87;
-        border-radius: 5px;
-        padding: 5px;
-    }
-
-    .nuevoProducto .input-img{
-        width: 112px;
-        border: none;
-        background-color: white;
-    }
-
-    .nuevoProducto button{
-        width: 120px;
-        font-family: "Roboto", sans-serif;
-        font-weight: bold;
-        font-size: 16px;
-        color: white;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 10px;
-        background-color: #3483fa;
-        border: none;
-        border-radius: 5px;
-    }
-
-
-
+  font-family: "Roboto", sans-serif;
+  background-color: #fff9ed;
 }
 
 input.error {
-    background-color: rgb(226, 143, 143);
-  }
-  
+  background-color: rgb(226, 143, 143);
+}
+
 input.success {
-    background-color: rgb(111, 228, 121);
-  }
+  background-color: rgb(111, 228, 121);
+}
 input.focus {
-    background-color: rgb(243, 213, 231);
+  background-color: #ccc;
+  border: 1px solid #8f8987;
+}
+.feedback {
+  padding: 1rem 0.25rem;
+  font-size: 1.25rem;
+  margin: 0.25rem 0.5rem;
+  text-decoration: solid;
+}
+
+.feedback.error {
+  color: rgb(226, 143, 143);
+}
+
+.feedback.success {
+  color: rgb(111, 228, 121);
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
+
+  h1 {
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .nuevoProducto fieldset {
+    border: none;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .nuevoProducto {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+
+  .nuevoProducto label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .nuevoProducto input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ff9b87;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+  }
+
+  .nuevoProducto .input-img {
+    width: 112px;
+    border: none;
+    background-color: white;
+  }
+
+  .nuevoProducto button {
+    width: 120px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #3483fa;
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+@media (min-width: 769px) {
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .nuevoProducto fieldset {
+    border: none;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .nuevoProducto {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+
+  .nuevoProducto label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .nuevoProducto input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ff9b87;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .nuevoProducto .input-img {
+    width: 112px;
+    border: none;
+    background-color: white;
+  }
+
+  .nuevoProducto button {
+    width: 120px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #3483fa;
+    border: none;
+    border-radius: 5px;
+  }
+}

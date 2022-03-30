@@ -13,7 +13,32 @@ main {
   font-family: "Roboto", sans-serif;
 }
 
+input.error {
+  background-color: rgb(226, 143, 143);
+}
 
+input.success {
+  background-color: rgb(111, 228, 121);
+}
+input.focus {
+  background-color: #ccc;
+  border: 1px solid #8f8987;
+}
+
+.feedback {
+  padding: 1rem 0.25rem;
+  font-size: 1.25rem;
+  margin: 0.25rem 0.5rem;
+  text-decoration: solid;
+}
+
+.feedback.error {
+  color: rgb(226, 143, 143);
+}
+
+.feedback.success {
+  color: rgb(111, 228, 121);
+}
 
 @media (min-width: 320px) and (max-width: 768px) {
   .logo {
@@ -189,16 +214,4 @@ main {
   .remember-box {
     font-weight: bold;
   }
-}
-
-
-input.error {
-  background-color: rgb(226, 143, 143);
-}
-
-input.success {
-  background-color: rgb(111, 228, 121);
-}
-input.focus {
-  background-color: #ccc;
 }

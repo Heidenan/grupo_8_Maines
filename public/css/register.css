@@ -6,19 +6,17 @@ body {
   background-color: #fff9ed;
 }
 
-
-
 .logo {
   width: 200px;
-  margin-top:20px
+  margin-top: 20px;
 }
 
 p {
   margin: 3em;
 }
 
-.error-msg{
-  color: #FF9B87;
+.error-msg {
+  color: #ff9b87;
   font-size: 16px;
   font-weight: bold;
 }
@@ -31,7 +29,7 @@ p {
   flex-direction: column;
   justify-content: center;
 }
-.input-formulario-registro{
+.input-formulario-registro {
   width: 250px;
   padding: 12px 20px;
   margin: 8px 0;
@@ -45,12 +43,11 @@ p {
 .checkboxAlign {
   display: flex;
   align-items: center;
-  width: 100%
+  width: 100%;
 }
 
-
-.categoria input{
-   margin-top: 1.3em;
+.categoria input {
+  margin-top: 1.3em;
 }
 
 .botonInicio {
@@ -65,11 +62,10 @@ label {
   font-weight: bold;
 }
 
-.foto-perfil{
+.foto-perfil {
   width: 250px;
   margin-top: 1.5em;
 }
-
 
 a:hover {
   font-size: 105%;
@@ -117,7 +113,6 @@ main {
 .legend {
   margin-left: 14px;
 }
-
 
 .botones {
   border-color: transparent;
@@ -250,6 +245,6 @@ input.success {
   background-color: rgb(111, 228, 121);
 }
 input.focus {
-  background-color: white;
-  border: 1px solid #FF9B87;
+  background-color: #ccc;
+  border: 1px solid #8f8987;
 }

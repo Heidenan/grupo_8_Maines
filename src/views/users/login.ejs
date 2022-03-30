@@ -21,37 +21,21 @@
     
       <form class="formInicioSesion" action="/users/access" method="post" id="login">
         <fieldset>
-          <label class="labelLogin" for="email"
-            >Mail registrado</label
-          >
-          <input
-            class="inputLogin"
-            type="text"
-            name="email"
-            id="email"
-            required
-          />
+          <label class="labelLogin" for="email">Mail registrado</label>
+          <input class="inputLogin" type="text" name="email" id="email" required/>
+          <p class="feedback"></p>
         </fieldset>
 
         <fieldset>
           <label class="labelLogin" for="password">Contraseña</label>
-          <input
-            class="inputLogin"
-            type="password"
-            name="password"
-            id="password"
-            required
-          />
+          <input class="inputLogin" type="password" name="password" id="password" required/>
+          <p class="feedback"></p>
         </fieldset>
 <p class="remember-box"><input type="checkbox" name="remember" id="remember" />Recordar usuario</p>
-        <!--<div class="olvidasteContra">
-          <a href="#" target="_blank">¿Olivdaste tu contraseña?</a>
-        </div>
-      -->
         <button class="botonLogin" type="submit">Iniciar Sesión</button>
 
         <div class="crearCuenta">
-           <a href="/users/register">¿No tenes cuenta? </a>
+           <a href="/users/register">¿No tenes cuenta?</a>
           
         </div>
       </form>

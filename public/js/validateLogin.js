@@ -18,17 +18,20 @@ fieldEmail.addEventListener("keyup", (event) => {
 
   if (value.length < 1) {
     event.target.classList.add("error");
+    feed.classList.add("error");
+    feed.innerHTML = "Ingrese un email por favor";
   }
-  let regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  let regex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
     feed.classList.add("error");
-    feed.innerHTML = "Email is not valid";
+    feed.innerHTML = "El email no es valido";
   } else {
     event.target.classList.add("success");
     feed.classList.remove("error");
     feed.classList.add("success");
-    feed.innerHTML = "Email is valid";
+    feed.innerHTML = "¡Email valido!";
   }
 });
 
@@ -45,23 +48,22 @@ fieldPassword.addEventListener("keyup", (event) => {
   let value = event.target.value;
   let fieldset = event.target.parentElement;
   let feed = fieldset.querySelector(".feedback");
-  console.log(event.target.value);
 
   if (value.length < 1) {
     event.target.classList.add("error");
     feed.classList.add("error");
-    feed.innerHTML = "Password is required";
+    feed.innerHTML = "Ingrese una contraseña por favor";
   }
   let regex = /^.*(?=.{6,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
     feed.classList.add("error");
     feed.innerHTML =
-      "La contraseña debe incluir una mayuscula, un caracter especial y contener 6 caracteres mínimo";
+      "La contraseña debe incluir una mayuscula, un caracter especial y debe ser de 8 caracteres mínimo";
   } else {
     event.target.classList.add("success");
     feed.classList.remove("error");
     feed.classList.add("success");
-    feed.innerHTML = "Password is valid";
+    feed.innerHTML = "¡La contraseña es segura!";
   }
 });

@@ -6,9 +6,6 @@ const fieldAvatar = productForm.file;
 
 
 // Name field
-productForm.addEventListener("submit", (e) => {
-  e.preventDefault()
-})
 
 fieldName.addEventListener("focus", () => {
   fieldName.classList.remove("error");
@@ -35,7 +32,7 @@ fieldName.addEventListener("keyup", (event) => {
     feed.classList.add("error");
     feed.innerHTML = "Name is required";
   }
-  let regex = /(^[a-z ,.'-]{5,})+$/;
+  let regex = /(^[A-z ,.'-]{5,})+$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
     feed.classList.add("error");
@@ -102,6 +99,10 @@ fieldAvatar.addEventListener('change', (evento) => {
     target.classList.add('error');
     feed.classList.add('error');
     feed.innerHTML ="El archivo no es una imagen"
+  }else {
+    evento.target.classList.add("success");
+    feed.classList.remove("error");
+    feed.classList.add("success");
+    feed.innerHTML = "El archivo es una imagen";
   }
-
 })

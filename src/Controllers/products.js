@@ -29,7 +29,7 @@ const controller = {
         .map((p) => Object({ ...p, image: file.search("id", p.image) })),
     }), */
   },
-  productDetail: (req, res) => res.render("products/productDetail"),
+  productDetail: (req, res) => res.render("products/productDetail",),
   carrito: (req, res) => res.render("products/productCart"),
   compras: (req,res) => res.render('products/compras'),
   create: (req, res) =>
@@ -69,7 +69,7 @@ const controller = {
   },
   show: (req, res) => {
     Products.findByPk(req.params.id).then((product) => {
-      res.render("products/detail", { product: product });
+      res.render("products/detail", { product });
     });
   },
   update: (req, res) => {

@@ -12,10 +12,10 @@
   </form>
   </h3>
     <div class="lista-productos">
-    <% for (let i = 0; i < products.length; i++) { %>
+    <% for (let i = 0; i < products.length; i++) { %> 
  <ul class="caja-texto-producto" style="list-style: none"> 
-        <% if (products.image) { %>
-         <img src="/<%= products[i].image.url %>">
+        <% if (products[i].image) { %>
+          <img src="<%= products[i].image  %> " class="avatar-img">
          <% } %>
 
          <div class="preciosYdescuentos">

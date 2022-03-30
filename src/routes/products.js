@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const router = Router();
+const saveProduct = require("../middlewares/saveProduct");
 const product = require("../Controllers/products");
 const path = require("path");
 const multer = require("multer");
@@ -22,11 +23,10 @@ router.get("/", product.index); // 1 de 7 del listado del Sprint4
 router.get("/create", product.create); // 2 de 7 del listado del Sprint4
 router.get("/:id", product.show); // 3 de 7 del listado del Sprint4
 router.get("/update/:id", product.edit); // 4 de 7 del listado del Sprint4 O sea este es /edit en ese formulario
-router.get("/detalleProducto", product.productDetail);
 router.get("/carrito", product.carrito);
-router.get("/compras", product.compras);
+router.get("/compras", product.compras); 
 
-router.post("/", [upload.any()], product.save); // 5 de 7 del listado del Sprint4
+router.post("/", [upload.any()], product.save);
 
 router.put("/:id", product.update); // 6 de 7 del listado del Sprint4
 

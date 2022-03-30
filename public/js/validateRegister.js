@@ -4,7 +4,7 @@ const fieldLastName = registerForm.last_name;
 const fieldEmail = registerForm.email;
 const fieldUserName = registerForm.userName;
 const fieldPassword = registerForm.password;
-
+const fieldAvatar = registerForm.avatar
 
 // Email field
 
@@ -148,4 +148,24 @@ fieldUserName.addEventListener("focus", () => {
   fieldUserName.classList.remove("error");
   fieldUserName.classList.remove("success");
   fieldUserName.classList.add("focus");
+})
+
+fieldAvatar.addEventListener('change', (evento) => {
+
+  let target = evento.target;
+  let value= target.files;
+  let fieldset = evento.target.parentElement;
+  let feed= fieldset.querySelector (".feedback");
+
+  let regex = /^image\//;
+  if(!regex.test(value[0].type)){
+    target.classList.add('error');
+    feed.classList.add('error');
+    feed.innerHTML ="El archivo no es una imagen"
+} else {
+  evento.target.classList.add("success");
+  feed.classList.remove("error");
+  feed.classList.add("success");
+  feed.innerHTML = "El archivo es una imagen";
+}
 })

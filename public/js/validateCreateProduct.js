@@ -1,10 +1,14 @@
-const productForm = document.forms.product;
-const fieldName = createForm.name
-const fieldDescription = createForm.description;
-const fieldPrice = createForm.price;
+const productForm = document.forms.createProduct;
+const fieldName = productForm.name;
+const fieldDescription = productForm.description;
+const fieldPrice = productForm.price;
+const fieldAvatar = productForm.file;
 
 
 // Name field
+productForm.addEventListener("submit", (e) => {
+  e.preventDefault()
+})
 
 fieldName.addEventListener("focus", () => {
   fieldName.classList.remove("error");
@@ -12,7 +16,52 @@ fieldName.addEventListener("focus", () => {
   fieldName.classList.add("focus");
 })
 
+fieldName.addEventListener("blur", () => {
+  fieldName.classList.remove("error");
+  fieldName.classList.remove("success");
+  fieldName.classList.remove("focus");
+})
 fieldName.addEventListener("keyup", (event) => {
+  event.target.classList.remove("error");
+  event.target.classList.remove("focus");
+  event.target.classList.remove("success");
+  let value = event.target.value;
+  let fieldset = event.target.parentElement;
+  let feed = fieldset.querySelector(".feedback");
+  console.log(value);
+
+  if (value.length < 1) {
+    event.target.classList.add("error");
+    feed.classList.add("error");
+    feed.innerHTML = "Name is required";
+  }
+  let regex = /^[a-zA-Z]{4}[^0-9]$/;
+  if (!regex.test(value)) {
+    event.target.classList.add("error");
+    feed.classList.add("error");
+    feed.innerHTML =
+      "El nombre debe tener 5 caracteres mínimo y no puede tener caracteres especiales ni numeros";
+  } else {
+    event.target.classList.remove("error");
+    event.target.classList.add("success");
+    feed.classList.remove("error");
+    feed.classList.add("success");
+    feed.innerHTML = "Name is valid";
+  }
+})
+
+fieldDescription.addEventListener("focus", () => {
+  fieldDescription.classList.remove("error");
+  fieldDescription.classList.remove("success");
+  fieldDescription.classList.add("focus");
+})
+
+fieldDescription.addEventListener("blur", () => {
+  fieldDescription.classList.remove("error");
+  fieldDescription.classList.remove("success");
+  fieldDescription.classList.remove("focus");
+})
+fieldDescription.addEventListener("keyup", (event) => {
   event.target.classList.remove("error");
   event.target.classList.remove("focus");
   event.target.classList.remove("success");
@@ -24,27 +73,35 @@ fieldName.addEventListener("keyup", (event) => {
   if (value.length < 1) {
     event.target.classList.add("error");
     feed.classList.add("error");
-    feed.innerHTML = "Name is required";
+    feed.innerHTML = "Descripcion is required";
   }
-  let regex = /^.*(?=.{6,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/;
+  let regex =/^[a-zA-Z0-9]{20,100}$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
     feed.classList.add("error");
     feed.innerHTML =
-      "El nombre no puede contener caracteres especiales, números y 6 caracteres mínimo";
+      "La descripcion debe tener como minimo 20 caraceteres.";
   } else {
+    event.target.classList.remove("error");
     event.target.classList.add("success");
     feed.classList.remove("error");
     feed.classList.add("success");
-    feed.innerHTML = "Name is valid";
+    feed.innerHTML = "Descripción Válida";
   }
 })
 
+fieldAvatar.addEventListener('change', (evento) => {
 
-// User Name field
+  let target = evento.target;
+  let value= target.files;
+  let fieldset = evento.target.parentElement;
+  let feed= fieldset.querySelector (".feedback");
 
-fieldUserName.addEventListener("focus", () => {
-  fieldUserName.classList.remove("error");
-  fieldUserName.classList.remove("success");
-  fieldUserName.classList.add("focus");
+  let regex = /^image\//;
+  if(!regex.test(value[0].type)){
+    target.classList.add('error');
+    feed.classList.add('error');
+    feed.innerHTML ="El archivo no es una imagen"
+  }
+
 })

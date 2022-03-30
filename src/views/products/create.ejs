@@ -5,30 +5,35 @@
 <%- include('../partials/header') %>
 <body>
     <h1> Nuevo Producto</h1>
-    <form action="/products/" method="post" enctype="multipart/form-data" class="new-product">
+    <form action="/products/" method="post" id="createProduct" enctype="multipart/form-data" class="nuevoProducto">
         <fieldset>
             <label for="name">Nombre del producto:</label> 
-            <input type="text" name="name" id="name">
+            <input type="text" class="" name="name" id="name">
+            <p class="feedback"></p>
         </fieldset>
         <fieldset>
             <label for="description">Descripción:</label>
              <input type="text" name="description" id="description">
+             <p class="feedback"></p>
         </fieldset>
         <fieldset>
             <label for="price">Precio:</label><br>
             <input type="number" name="price" id="price">
+            <p class="feedback"></p>
         </fieldset>
         <fieldset>
             <label for="offert">¿Está en oferta?</label>
             <input type="text" name="offert" id="offert">
             <label for="discount">Descuento:</label>   
             <input type="text" name="discount" id="discount" max="100" step="10" value="0">
+            <p class="feedback"></p>
             <label for="discount">Valor con descuento:</label>  
             <input type="text" name="discountValue" id="discountValue" value="0">
         </fieldset>
         <fieldset>
             <label for="file">Subir imagen del producto</label>
             <input type="file" name="file" id="file" multiple class="input-img">
+            <p class="feedback"></p>
         </fieldset>
         <fieldset>
             <label for="category">Seleccione la categoria del producto</label>
@@ -41,5 +46,7 @@
         <button type="submit">Guardar</button>
     </form>
         <%- include ('../partials/footer') %>
+    <script src="../js/validateCreateProduct.js"></script>
+
 </body>
 </html>

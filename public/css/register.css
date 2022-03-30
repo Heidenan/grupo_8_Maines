@@ -6,17 +6,7 @@ body {
   background-color: #fff9ed;
 }
 
-input.error {
-  background-color: rgb(226, 143, 143);
-}
 
-input.success {
-  background-color: rgb(111, 228, 121);
-}
-input.focus {
-  background-color: white;
-  border: 1px solid #FF9B87;
-}
 
 .logo {
   width: 200px;
@@ -250,4 +240,16 @@ main {
     text-align: center;
     align-content: center;
   }
+}
+
+input.error {
+  background-color: rgb(226, 143, 143);
+}
+
+input.success {
+  background-color: rgb(111, 228, 121);
+}
+input.focus {
+  background-color: white;
+  border: 1px solid #FF9B87;
 }

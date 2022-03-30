@@ -13,16 +13,7 @@ main {
   font-family: "Roboto", sans-serif;
 }
 
-input.error {
-  background-color: rgb(226, 143, 143);
-}
 
-input.success {
-  background-color: rgb(111, 228, 121);
-}
-input.focus {
-  background-color: #ccc;
-}
 
 @media (min-width: 320px) and (max-width: 768px) {
   .logo {
@@ -198,4 +189,16 @@ input.focus {
   .remember-box {
     font-weight: bold;
   }
+}
+
+
+input.error {
+  background-color: rgb(226, 143, 143);
+}
+
+input.success {
+  background-color: rgb(111, 228, 121);
+}
+input.focus {
+  background-color: #ccc;
 }

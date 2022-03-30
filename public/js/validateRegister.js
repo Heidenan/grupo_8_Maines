@@ -13,7 +13,7 @@ fieldEmail.addEventListener("focus", () => {
   fieldEmail.classList.remove("success");
   fieldEmail.classList.add("focus");
 });
-fieldEmail.addEventListener("keyup", (event) => {
+fieldEmail.addEventListener("keypress", (event) => {
   event.target.classList.remove("error");
   event.target.classList.remove("focus");
   event.target.classList.remove("success");
@@ -98,7 +98,7 @@ fieldName.addEventListener("keyup", (event) => {
     feed.classList.add("error");
     feed.innerHTML = "Name is required";
   }
-  let regex = /^.*(?=.{6,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/;
+  let regex = /^[a-zA-Z]{1,20}[^0-9]$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
     feed.classList.add("error");
@@ -131,7 +131,7 @@ fieldLastName.addEventListener("keyup", (event) => {
     event.target.classList.add("error");
   }
   let regex =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  /^[a-zA-Z]{1,20}[^0-9]$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
     feed.classList.add("error");

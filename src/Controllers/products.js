@@ -3,6 +3,7 @@ const file = require("../models/file");
 const db = require("../database/models");
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const validator = require("express-validator");
 
 // Tables ///
 
@@ -45,12 +46,19 @@ const controller = {
         res.send(err);
       }),
   save: (req, res) => {
+    const errors = validator.validationResult(req);
+    console.log(errors);
+    if (!errors.isEmpty()) {
+      return res.render("products/create", {
+        errors: errors.mapped(),
+      });
+    }
     Products.create({
       name: req.body.name,
       description: req.body.description,
       price: req.body.price,
       offert: req.body.offert,
-      image: req.body.image,
+      image: req.files[0].filename,
       discount: req.body.discount,
       discountValue: req.body.discountValue,
       category_id: parseInt(req.body.category_id),

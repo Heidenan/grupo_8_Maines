@@ -3,7 +3,6 @@ const file = require("../models/file");
 const db = require("../database/models");
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
-const validator = require("express-validator");
 
 // Tables ///
 
@@ -30,9 +29,9 @@ const controller = {
         .map((p) => Object({ ...p, image: file.search("id", p.image) })),
     }), */
   },
-  productDetail: (req, res) => res.render("products/productDetail"),
+  productDetail: (req, res) => res.render("products/productDetail",),
   carrito: (req, res) => res.render("products/productCart"),
-  compras: (req, res) => res.render("products/compras"),
+  compras: (req,res) => res.render('products/compras'),
   create: (req, res) =>
     Categories.findAll()
       .then(function (categories) {
@@ -46,19 +45,12 @@ const controller = {
         res.send(err);
       }),
   save: (req, res) => {
-    const errors = validator.validationResult(req);
-    console.log(errors);
-    if (!errors.isEmpty()) {
-      return res.render("users/register", {
-        errors: errors.mapped(),
-      });
-    }
     Products.create({
       name: req.body.name,
       description: req.body.description,
       price: req.body.price,
       offert: req.body.offert,
-      image: req.files[0].filename,
+      image: req.body.image,
       discount: req.body.discount,
       discountValue: req.body.discountValue,
       category_id: parseInt(req.body.category_id),

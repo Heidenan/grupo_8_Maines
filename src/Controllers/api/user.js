@@ -49,7 +49,7 @@ module.exports = {
           Email: user.email,
           Administrador: user.admin,
           urlAvatar: "http://localhost:3000/uploads/avatars/" + user.avatar.Url,
-          urlUser: `/api/users/${user.id}`,
+          urlUser: `http://localhost:3000/api/users/${user.id}`,
         },
 
         status: 200,

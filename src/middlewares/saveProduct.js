@@ -10,9 +10,8 @@ const validations = [
     .body("description")
     .isLength({ min: 20 })
     .withMessage("La descripcion debe tener mínimo 20 caracteres"),
-
   validator
-    .check("avatar")
+    .check("image")
     .custom((value, { req }) => {
       if (req.files.some((file) => mimeTypes.includes(file.mimetype))) {
         return "Imagen";

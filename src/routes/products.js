@@ -24,9 +24,9 @@ router.get("/create", product.create); // 2 de 7 del listado del Sprint4
 router.get("/:id", product.show); // 3 de 7 del listado del Sprint4
 router.get("/update/:id", product.edit); // 4 de 7 del listado del Sprint4 O sea este es /edit en ese formulario
 router.get("/carrito", product.carrito);
-router.get("/compras", product.compras); 
+router.get("/compras", product.compras);
 
-router.post("/", [upload.any()], product.save);
+router.post("/", [upload.any(), saveProduct], product.save);
 
 router.put("/:id", product.update); // 6 de 7 del listado del Sprint4
 

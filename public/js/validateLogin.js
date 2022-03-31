@@ -3,6 +3,8 @@ const fieldEmail = loginForm.email;
 const fieldPassword = loginForm.password;
 const submitButton = loginForm.submit;
 
+// Email field
+
 fieldEmail.addEventListener("focus", () => {
   fieldEmail.classList.remove("error");
   fieldEmail.classList.remove("success");
@@ -35,6 +37,8 @@ fieldEmail.addEventListener("keyup", (event) => {
   }
 });
 
+// Password field
+
 fieldPassword.addEventListener("focus", () => {
   fieldEmail.classList.remove("error");
   fieldEmail.classList.remove("success");
@@ -54,7 +58,7 @@ fieldPassword.addEventListener("keyup", (event) => {
     feed.classList.add("error");
     feed.innerHTML = "Ingrese una contraseña por favor";
   }
-  let regex = /^.*(?=.{6,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/;
+  let regex = /^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
     feed.classList.add("error");

@@ -62,7 +62,7 @@ fieldPassword.addEventListener("keyup", (event) => {
     feed.classList.add("error");
     feed.innerHTML = "Ingrese una contraseña por favor";
   }
-  let regex = /^.*(?=.{6,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/;
+  let regex = /^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
     feed.classList.add("error");

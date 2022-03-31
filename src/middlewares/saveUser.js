@@ -29,6 +29,7 @@ const validations = [
       }
     })
     .withMessage("Seleccionar unicamente una imagen"),
+  // Agregar una validación para que el user suba si o si una imágen de perfil
 ];
 
 module.exports = validations;

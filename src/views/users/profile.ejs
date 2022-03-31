@@ -23,11 +23,7 @@
         <img src="/assets/avatar.png" alt="<%= user.email %>" />
       </figure>
       <% } %>
-      <form
-        action="/users/update"
-        enctype="multipart/form-data"
-        method="POST"
-      >
+      <form action="/users/update" enctype="multipart/form-data" method="POST">
         <label for="avatar">Cambiar imagen de perfil</label><br>
         <input type="file" name="avatar" id="avatar" class="img-input"><br>
         <button type="submit">Update Avatar</button>

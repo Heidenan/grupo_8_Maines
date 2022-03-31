@@ -27,6 +27,11 @@ router.get("/update/:id", [auth], userController.show);
 
 router.post("/save", [upload.any(), saveUser], userController.save);
 router.post("/access", userController.access);
+router.post(
+  "/upload/avatar",
+  [upload.any(), access],
+  userController.uploadAvatar
+);
 
 router.put("/:id", [auth, upload.any()], userController.update);
 router.delete("/:id", [auth], userController.delete);

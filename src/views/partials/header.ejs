@@ -11,7 +11,16 @@
       />
       <button><i class="fa-solid fa-magnifying-glass" id="lupa"></i></button>
     </form>
+    <% if (!user) { %>
     <a href="/users/login" class="login">Iniciar Sesion</a>
+    <a href="/users/register" class="login">Registrarse</a>
+    <% } else { %>
+    <p>
+      <a href="/users/logout">
+        <button class="logout-button">Logout</button>
+      </a>
+    </p>
+    <% } %>
   </div>
 
   <!-- <h2 class="frase-header"> <i class="fas fa-hand-holding-usd">

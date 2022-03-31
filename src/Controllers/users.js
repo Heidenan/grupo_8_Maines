@@ -37,7 +37,7 @@ const userController = {
   save: (req, res) => {
     // Create user with DB
     const errors = validator.validationResult(req);
-    console.log(errors)
+    console.log(errors);
     if (!errors.isEmpty()) {
       return res.render("users/register", {
         errors: errors.mapped(),

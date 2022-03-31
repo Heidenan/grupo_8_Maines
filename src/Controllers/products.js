@@ -49,7 +49,7 @@ const controller = {
     const errors = validator.validationResult(req);
     console.log(errors);
     if (!errors.isEmpty()) {
-      return res.render("users/register", {
+      return res.render("products/create", {
         errors: errors.mapped(),
       });
     }

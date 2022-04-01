@@ -1,5 +1,9 @@
+<link rel="stylesheet" href="/css/header.css" />
+<link rel="stylesheet" href="/css/footer.css" />
+
 <% if (locals.styles) { %>
 <!--ponemos locals porque cuando se pasa info a la vista "casi que viene de una variable que se llama  locals" dijo edu-->
 <% styles.forEach(style => { %>
-<link rel="stylesheet" href="/css/<%= style %>.css" />
-<% }) %> <% } %>
+<link rel="stylesheet" href="/css<%= style %>.css" />
+<% }) %>
+ <% } %>

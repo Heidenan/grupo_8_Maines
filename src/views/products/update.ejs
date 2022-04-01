@@ -1,11 +1,12 @@
 
-<head>
+
 <%- include('../partials/head') %>
-<link rel="stylesheet" href="/css/update.css">
-<%- include('../partials/header') %>
-    <title>Editar Producto</title>
-</head>
+
+
+
+
 <body>
+    <%- include('../partials/header') %>
     <main>
     <h1> Modifica tu producto</h1><br>
     <form action="/products/<%= product.id %>?m=PUT" method="post" class="update-product">

@@ -1,0 +1,58 @@
+<%- include ('./partials/head') %>
+
+
+<body>
+     <%- include ('./partials/header') %>
+        <h2>Lorem ipsum</h2>
+        <article class="container">
+          <article class="video-conocenos">
+            <h3 class="conocenos">Conocenos!</h3>
+            <video width="500" height="500" controls>
+              <source src="/images/video-maines.mp4" type="video/mp4" />
+            </video>
+          </article>
+          <article class="frase-producto-regalo">
+            <div class="probá-maines">
+              <i class="fas fa-gift icono-regalo"></i>¡Probá Maines
+              <span class="gratis">gratis</span>!
+            </div>
+            <div class="pedí-acá">
+              Pedí aca tu primer producto de regalo y sin costo de envío
+            </div>
+          </article>
+          
+          <article class="sumate-a-maines">
+            <h3 class="sumate-a-maines-texto">
+              <i class="fas fa-door-open icono-puerta"></i>¡Sumate a Maines! Trabaja
+              junto a nosotros
+            </h3>
+            <ul class="dejar-cv"> 
+              <i class="far fa-file icono-cv"></i>
+              Quiero dejar mi CV
+              <div>
+                <input type="file" name="cv" id="cv" class="seleccionarArchivo">
+              </div>
+            </ul>
+            <ul class="vender-productos">
+              <i class="fas fa-dollar-sign icono-dinero"></i
+                >Quiero vender productos Maines
+              </ul>
+            </article>
+            
+            <article class="adquirí-nuestros-productos">
+              <h3 class="adquirí-texto">
+                <i class="fas fa-shopping-cart carrito"></i>¡Adquirí nuestros
+                productos!
+              </h3>
+              <h4 class="buscá-tu-local">
+                <i class="fas fa-store-alt local"></i>Buscá tu local mas cercano
+              </h4>
+              <h4 class="comprá-online">
+                <i class="fas fa-credit-card tarjeta"></i>Comprá online
+              </h4>
+            </article>
+ <footer>
+            <%- include ('./partials/footer') %>
+          </footer>
+</body>
+</html>

@@ -38,7 +38,7 @@ const controller = {
       .then(function (categories) {
         return res.render("products/create", {
           categories: categories,
-          styles: ["products/create"],
+          styles: ["/create"],
           title: "Nuevo Producto",
         });
       })

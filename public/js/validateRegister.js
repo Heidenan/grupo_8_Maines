@@ -174,3 +174,23 @@ fieldAvatar.addEventListener("change", (evento) => {
     feed.innerHTML = "¡El archivo es una imagen!";
   }
 });
+
+registerForm.addEventListener("submit", (evento) => {
+  evento.preventDefault();
+  let target = evento.target;
+  let allInputs = target.querySelectorAll("input");
+  let inputsValids = 0;
+  allInputs.forEach((input) => {
+    if (
+      !input.getAttribute("disabled") &&
+      input.classList.contains("success")
+    ) {
+      inputsValids++;
+    }
+  });
+  if (inputsValids == allInputs.length) {
+    target.submit();
+  } else {
+    alert("Debes completar todos los campos");
+  }
+});

@@ -3,12 +3,32 @@
 
 <body>
      <%- include ('./partials/header') %>
+     <main>
         <h2>Deja tus datos para contactarnos:</h2>
-        <form>
-            <fieldset>
-                <legend>Email:</legend>
+        <form class="contact-form">
+            <fieldset class="contact-data">
+                <label for="name">Nombre:</label><br>
+                <input type="text" name="name" id="name">
             </fieldset>
+
+            <fieldset class="contact-data">
+                <label for="last_name">Apellido:</label><br>
+                <input type="text" name="last_name" id="last_name">
+            </fieldset>
+
+            <fieldset class="contact-data">
+                <label for="email">Email:</label><br>
+                <input type="email" name="email" id="email">
+            </fieldset>
+
+            <fieldset class="contact-data">
+                <label for="phone">Telefono:</label><br>
+                <input type="number" name="phone" id="phone">
+            </fieldset>
+
+            <button type="submit">Enviar</button>
         </form>
+    </main>
  <footer>
             <%- include ('./partials/footer') %>
           </footer>

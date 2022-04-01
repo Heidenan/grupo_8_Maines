@@ -175,22 +175,19 @@ fieldAvatar.addEventListener("change", (evento) => {
   }
 });
 
-registerForm.addEventListener("submit", (evento) => {
-  evento.preventDefault();
-  let target = evento.target;
-  let allInputs = target.querySelectorAll("input");
-  let inputsValids = 0;
-  allInputs.forEach((input) => {
-    if (
-      !input.getAttribute("disabled") &&
-      input.classList.contains("success")
-    ) {
-      inputsValids++;
+registerForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let target = event.target;
+  let allFeeds = target.querySelectorAll(".feedback");
+  let feedsValids = 0;
+  allFeeds.forEach((feed) => {
+    if (feed.classList.contains("success")) {
+      feedsValids++;
     }
   });
-  if (inputsValids == allInputs.length) {
+  if (feedsValids == allFeeds.length) {
     target.submit();
   } else {
-    alert("Debes completar todos los campos");
+    alert("Por favor revisa los campos incorrectos");
   }
 });

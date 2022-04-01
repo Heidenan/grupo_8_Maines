@@ -20,6 +20,7 @@ fieldEmail.addEventListener("keyup", (event) => {
 
   if (value.length < 1) {
     event.target.classList.add("error");
+    feed.classList.remove("success");
     feed.classList.add("error");
     feed.innerHTML = "Ingrese un email por favor";
   }
@@ -27,6 +28,7 @@ fieldEmail.addEventListener("keyup", (event) => {
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
+    feed.classList.remove("success");
     feed.classList.add("error");
     feed.innerHTML = "El email no es valido";
   } else {
@@ -55,12 +57,14 @@ fieldPassword.addEventListener("keyup", (event) => {
 
   if (value.length < 1) {
     event.target.classList.add("error");
+    feed.classList.remove("success");
     feed.classList.add("error");
     feed.innerHTML = "Ingrese una contraseña por favor";
   }
   let regex = /^.*(?=.{8,})(?=.*[a-zA-Z])(?=.*\d)(?=.*[!#$%&? "]).*$/;
   if (!regex.test(value)) {
     event.target.classList.add("error");
+    feed.classList.remove("success");
     feed.classList.add("error");
     feed.innerHTML =
       "La contraseña debe incluir una mayuscula, un caracter especial y debe ser de 8 caracteres mínimo";
@@ -72,22 +76,19 @@ fieldPassword.addEventListener("keyup", (event) => {
   }
 });
 
-loginForm.addEventListener("submit", (evento) => {
-  evento.preventDefault();
-  let target = evento.target;
-  let allInputs = target.querySelectorAll("input");
-  let inputsValids = 0;
-  allInputs.forEach((input) => {
-    if (
-      !input.getAttribute("disabled") &&
-      input.classList.contains("success")
-    ) {
-      inputsValids++;
+loginForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let target = event.target;
+  let allFeeds = target.querySelectorAll(".feedback");
+  let feedsValids = 0;
+  allFeeds.forEach((feed) => {
+    if (feed.classList.contains("success")) {
+      feedsValids++;
     }
   });
-  if (inputsValids == allInputs.length) {
+  if (feedsValids == allFeeds.length) {
     target.submit();
   } else {
-    alert("Debes completar todos los campos");
+    alert("Por favor revisa los campos incorrectos");
   }
 });

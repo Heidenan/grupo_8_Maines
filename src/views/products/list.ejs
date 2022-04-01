@@ -4,28 +4,36 @@
 <body>
   <%- include('../partials/header') %>
     <main>
-    <h1>Lista de productos</h1> 
+    <h1>Lista de productos</h1>
+    <h2>Para ir directamente al producto haga click en la imagen</h2> 
     <h3>
-      <form action="/products/create" class="create-product">
-      <button href="/products/create">Crear un producto</button>
-  </form>
+      <% if (user && user.isAdmin) { %>
+
+        <form action="/products/create" class="create-product">
+          <button href="/products/create">Crear un producto</button>
+      </form>
+
+      <% } %>
   </h3>
     <div class="lista-productos">
     <% for (let i = 0; i < products.length; i++) { %> 
- <ul class="caja-texto-producto" style="list-style: none"> 
+ <ul class="caja-texto-producto" style="list-style: none">
+  <a href="/products/<%= products[i].id %>">
         <% if (products[i].image) { %>
-          <img src="<%= products[i].image  %> " class="avatar-img">
+          <img src="<%= products[i].image  %> " class="product-img">
          <% } %>
-
-         <div class="preciosYdescuentos">
-           <li class=""><%=products[i].name%></li>
-           <li class="precios">$ <%=products[i].price%></li>
-         </div>
-         <li class="descripciones"><%=products[i].description%>
-         <a href="/products/update/<%= products[i].id %>"><br>
-        <i class="fas fa-pen"></i> </a>
-
+        </a>
+        <div class="product-detail">
+           <li class="name"><%=products[i].name%></li>
+           <li class="precio">Precio: <%=products[i].price%>$</li>
+           <li class="descripciones"><%=products[i].description%></li>
+          </div>
+          <% if (user && user.isAdmin) { %>
+            <a href="/products/update/<%= products[i].id %>"><br>
+              <i class="fas fa-pen"></i> </a>
+          <% } %>
     </ul>
+  
       <% } %>
     </div>   
     </main>

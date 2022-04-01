@@ -16,7 +16,7 @@ const controller = {
       include: [{ association: "category" }],
     })
       .then((products) => {
-        res.render("products/list", { products });
+        res.render("products/list", { products, styles: ["/productList"] });
       })
       .catch((err) => {
         res.send(err);
@@ -77,7 +77,7 @@ const controller = {
   },
   show: (req, res) => {
     Products.findByPk(req.params.id).then((product) => {
-      res.render("products/detail", { product });
+      res.render("products/detail", { product, styles: ["/productDetail"] });
     });
   },
   update: (req, res) => {

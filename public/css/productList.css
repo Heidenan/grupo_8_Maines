@@ -1,0 +1,161 @@
+*{
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #fff9ed;
+    width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 768px){
+    
+    main{
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    main h1, main h2{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        padding: 0 10px 0 10px;
+    }
+
+    main h3 button{
+        margin-bottom: 30px;
+        border: none;
+        border-radius: 15px;
+        color: white;
+        font-size: 18px;
+        background-color: #A5A1F3;
+        padding: 10px;
+    }
+
+    main .lista-productos{
+        margin: 0 10px 0 0;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main .caja-texto-producto{
+        width: 250px;
+        min-height: 450px ;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 2px solid #FF9B87;
+        background-color: white;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    main .caja-texto-producto li{
+        margin-bottom: 8px;
+    }
+
+    main .caja-texto-producto .product-detail{
+        width: 170px;
+        height: fit-content;
+        padding: 5px;
+        border: 2px solid #A5A1F3;
+        border-radius: 10px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    main .lista-productos img{
+        margin: 10px 0 20px 0;
+        width: 200px;
+        height: 200px;
+        border: 2px solid #FF9B87;
+        border-radius: 10px;
+    }
+
+    main .lista-productos i{
+        margin: 20px 0 20px 0 ;
+        padding: 10px;
+        border-radius: 10px;
+        color: #fff9ed;
+        background-color: #A5A1F3;
+    }
+
+}
+
+@media (min-width: 768px){
+    main{
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    main h1, main h2{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: center;
+        padding: 0 10px 0 10px;
+    }
+
+    main h3 button{
+        margin-bottom: 30px;
+        border: none;
+        border-radius: 15px;
+        color: white;
+        font-size: 18px;
+        background-color: #A5A1F3;
+        padding: 10px;
+    }
+
+    main .lista-productos{
+        margin: 0 10px 0 0;
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main .caja-texto-producto{
+        width: 250px;
+        min-height: 450px ;
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 2px solid #FF9B87;
+        background-color: white;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    main .caja-texto-producto li{
+        margin-bottom: 8px;
+    }
+
+    main .caja-texto-producto .product-detail{
+        width: 170px;
+        height: fit-content;
+        padding: 5px;
+        border: 2px solid #A5A1F3;
+        border-radius: 10px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    main .lista-productos img{
+        margin: 10px 0 20px 0;
+        width: 200px;
+        height: 200px;
+        border: 2px solid #FF9B87;
+        border-radius: 10px;
+    }
+
+    main .lista-productos i{
+        margin: 20px 0 20px 0 ;
+        padding: 10px;
+        border-radius: 10px;
+        color: #fff9ed;
+        background-color: #A5A1F3;
+    }
+}

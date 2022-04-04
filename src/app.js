@@ -5,6 +5,7 @@ const app = express();
 const cookie = require("cookie-parser");
 const session = require("express-session");
 const user = require("./middlewares/user");
+const cors = require("cors");
 
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -14,6 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookie());
 app.use(session({ secret: "secret", saveUninitialized: true, resave: false }));
 app.use(user);
+app.use(cors);
 
 //Server
 app.set("port", process.env.PORT || 3000);

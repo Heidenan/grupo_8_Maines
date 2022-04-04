@@ -12,19 +12,17 @@ module.exports = {
               status: 200,
               totalUsers: users.length,
             },
-            data: [],
-            //data: users
+            data: users,
           };
           users.forEach((user) => {
             response.data.push({
               id: user.id,
-              Nombre: user.nombre,
-              Apellido: user.apellido,
+              Nombre: user.name,
+              Apellido: user.last_name,
               Email: user.email,
-              urlUser: `/api/users/${user.id}`,
+              User: `/api/users/${user.id}`,
             });
           });
-
           return res.status(200).json(response);
         } else {
           return res.status(404).json({
@@ -39,7 +37,7 @@ module.exports = {
       });
   },
   // user's id
-  showUser: (req, res) => {
+  show: (req, res) => {
     db.User.findByPk(req.params.id).then((user) => {
       return res.status(200).json({
         data: {
@@ -48,12 +46,13 @@ module.exports = {
           Apellido: user.last_name,
           Email: user.email,
           Administrador: user.admin,
-          urlAvatar: "http://localhost:3000/uploads/avatars/" + user.avatar.Url,
-          urlUser: `http://localhost:3000/api/users/${user.id}`,
+          Avatar: "http://localhost:3000/uploads/avatars/" + user.avatar.url,
+          User: `http://localhost:3000/api/users/${user.id}`,
         },
-
         status: 200,
       });
     });
   },
+
+  lastUser: (req, res) => {},
 };

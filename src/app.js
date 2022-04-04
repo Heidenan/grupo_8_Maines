@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookie());
 app.use(session({ secret: "secret", saveUninitialized: true, resave: false }));
 app.use(user);
-app.use(cors);
+app.use(cors());
 
 //Server
 app.set("port", process.env.PORT || 3000);

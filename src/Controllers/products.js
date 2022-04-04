@@ -31,7 +31,7 @@ const controller = {
     }), */
   },
   productDetail: (req, res) => res.render("products/productDetail",),
-  carrito: (req, res) => res.render("products/productCart"),
+  carrito: (req, res) => res.render("products/carrito", {styles: ["/productCart"]}),
   compras: (req,res) => res.render('products/compras'),
   create: (req, res) =>
     Categories.findAll()

@@ -18,10 +18,10 @@ const upload = multer({
 
 router.get("/", product.index);
 router.get("/create", product.create);
-router.get("/:id", product.show);
 router.get("/update/:id", product.edit);
-router.get("/carrito", product.carrito);
+router.get("/cart", product.carrito);
 router.get("/compras", product.compras);
+router.get("/:id", product.show);
 
 router.post("/", [upload.any(), saveProduct], product.save);
 

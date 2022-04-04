@@ -12,29 +12,28 @@
       <button><i class="fa-solid fa-magnifying-glass" id="lupa"></i></button>
     </form>
     <% if (!user) { %>
-      <a href="/users/login" class="login">Iniciar Sesion |</a>
-      <a href="/users/register" class="login">Registrarse</a>
-      <% } else if (user && user.isAdmin) { %>
-        <a href="/users/profile">
-          <button class="userName">¡Hola <%=user.name %>!</button>
-        </a>
+    <a href="/users/login" class="login">Iniciar Sesion |</a>
+    <a href="/users/register" class="login">Registrarse</a>
+    <% } else if (user && user.isAdmin) { %>
+    <a href="/users/profile">
+      <button class="userName">¡Hola <%=user.name %>!</button>
+    </a>
 
-      <a href="/users/list">
-        <button class="header-users-list">All Users</button>
-        </a>
-    
+    <a href="/users/list">
+      <button class="header-users-list">All Users</button>
+    </a>
 
-      <a href="/users/logout">
-        <button class="logout-button">Logout</button>
-      </a>
-      <% } else { %>
-        <a href="/users/profile">
-          <button class="userName">¡Hola <%=user.name %>!</button>
-        </a>
-      <a href="/users/logout">
-        <button class="logout-button">Logout</button>
-      </a>
-      <% } %>
+    <a href="/users/logout">
+      <button class="logout-button">Logout</button>
+    </a>
+    <% } else { %>
+    <a href="/users/profile">
+      <button class="userName">¡Hola <%=user.name %>!</button>
+    </a>
+    <a href="/users/logout">
+      <button class="logout-button">Logout</button>
+    </a>
+    <% } %>
   </div>
 
   <!-- <h2 class="frase-header"> <i class="fas fa-hand-holding-usd">
@@ -44,8 +43,8 @@
   <nav>
     <ul class="palabras-header">
       <li><a href="/products/">Productos</a></li>
-      <li><a href="/users/suscripciones">Nosotros</a></li>
-      <li><a href="/users/suscripciones">Vision</a></li>
+      <li><a href="/about">Nosotros</a></li>
+      <li><a href="/contact">Contacto</a></li>
     </ul>
   </nav>
 

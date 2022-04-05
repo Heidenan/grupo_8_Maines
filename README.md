@@ -20,7 +20,7 @@ Lucas Goñi: Desarrollador Fullstack, entusiasta de la tecnologías, las finanza
 <br>
 <br>
 <br>
-Ignacio Montaldi: 
+Ignacio Montaldi: 23 años, ex estudiante de Geología que cambio el campo y las rocas por la computadora. Curioso, creativo y original en todo aspecto de la vida. Ahora con muchas ganas de aprender lo que puede ofrecer el mundo de la programación.
 <br>
 <br>
 <br>

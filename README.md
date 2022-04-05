@@ -16,13 +16,11 @@ Emprendedor, polimata, curioso, observador y detallista. Aprovecho mi facilidad 
 <br>
 <br>
 <br>
-Agustin Garcia Maggi:
-Cansado un poco del "depende" tipico de la ciencia economica y de las ciencias sociales en general, ahora buscando nuevos horizontes en una disciplina de unos y ceros.
+Lucas Goñi: Desarrollador Fullstack, entusiasta de la tecnologías, las finanzas y los productos digitales. Alta tolerancia a la frustración y foco en la resolución de resultados. 24 años.
 <br>
 <br>
 <br>
-Taiel Cabrera:
-Encontrando un rumbo en el camino de la vida. Me gusta superar obstaculos y aprender todo tipo de cosas nuevas. Soy completamente inexperto en el ambito de la programacion, pero ya le voy a ir agarrando la mano. 
+Ignacio Montaldi: 
 <br>
 <br>
 <br>

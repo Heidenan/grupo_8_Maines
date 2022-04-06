@@ -1,19 +1,17 @@
 <header>
   <div class="fila-1">
     <a href="/"><i class="fa-solid fa-bars" id="burger"></i></a>
+    <div class="home-banner">
     <a href="/"> <img src="/images/maines-logo.jpg" class="logo-header" /> </a>
-    <form action="/buscar-producto" method="POST" class="formulario">
-      <input
-        type="text"
-        name="Barra Búsqueda"
-        placeholder="Buscar productos"
-        class="input-barra"
-      />
-      <button><i class="fa-solid fa-magnifying-glass" id="lupa"></i></button>
-    </form>
+  </div>
+  <h1>¡Comidas 100% saludables y sin conservantes!</h1>
     <% if (!user) { %>
-    <a href="/users/login" class="login">Iniciar Sesion |</a>
-    <a href="/users/register" class="login">Registrarse</a>
+      <div class="login-register">
+    <a href="/users/login"><button class="login-btn">Iniciar Sesion</button></a>
+    <a href="/users/register">
+      <button class="register-btn"> Registrarse</button>
+    </a>
+  </div>
     <% } else if (user && user.isAdmin) { %>
     <a href="/users/profile">
       <button class="userName">¡Hola <%=user.name %>!</button>

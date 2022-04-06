@@ -1,11 +1,7 @@
 * {
-    margin: auto;
-    padding: auto;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-  }
-
-  @media (min-width: 320px) and (max-width: 768px) {
-    
   }
 
   header{
@@ -14,24 +10,116 @@
     background-color: #58DAB4;
   }
 
+  @media (min-width: 320px) and (max-width: 768px) {
+    
+    header .fila-1{
+      padding: 10px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    header h1{
+      display: none;
+    }
+
+    header .fila-1 #burger{
+      margin: 10px 10px 0 0;
+      font-size: 22px;
+      color: white;
+      padding: 5px;
+    }
+  
+    header .fila-1 .home-banner .logo-header{
+      margin: 0;
+      width:50px;
+      height: 50px;
+  }
+  
+  header .userName, header .logout-button, header .header-users-list {
+    text-decoration: underline;
+    background-color: #58DAB4; 
+    border: none;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  
+  header .fila-1 .login-register button{
+    border: none;
+    background-color: #58DAB4;
+    margin: 15px 0 15px 15px;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+  }
+
+  
+    .links{
+        display: none;
+    }
+    
+    .input-barra{
+      border-radius: 8px;
+      height:30px;
+    }
+  
+    .frase-header{
+      margin:15px
+    }
+  
+    .palabras-header{
+      width: 100%;
+      padding: 0px;
+      display: flex;
+      list-style: none;
+      justify-content: space-around;    
+    }
+  
+  
+    .palabras-header li{
+      font-weight: bold;
+      border: 1px solid #444444;
+      border-left: none;
+      width: 100%;
+      background-color: #FF9B87;
+      padding: 10px;
+      text-align: center;
+      font-size: 15px;
+    }
+  
+    .palabras-header li a{
+      text-decoration: none;
+      color: #444444;
+    }
+
+
+  }
+
+
+@media (min-width: 769px) and (max-width:1023px){
+
   header .fila-1{
     padding: 10px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
   }
 
-  header .fila-1 #burger{
-    font-size: 22px;
+  header h1{
     color: white;
-    padding: 5px;
-    border-radius: 5px;
+    font-size: 18px;
+    margin: 15px;
+  }
+
+  header .fila-1 #burger{
+    display: none;
   }
 
   header .fila-1 .logo-header{
     width:50px;
     height: 50px;
-    margin: auto;
-    align-content: center;
 }
 
 header .userName, header .logout-button, header .header-users-list {
@@ -43,37 +131,14 @@ header .userName, header .logout-button, header .header-users-list {
   font-weight: bold;
 }
 
-
-
-  header .formulario{
-    display: none;
-    position: relative;
-    margin: auto;
-    padding: auto;
-    width: fit-content;
-    background-color: white; 
-    border: 2px solid #FF9B87;
-    border-radius: 10px;
-
-  }
-
-
-  header .fila-1 .formulario input{
-    display: none;
+  header .fila-1 .login-register button{
     border: none;
-    padding: 5px;
-    width: 190px;
-  }
-
-  header .fila-1 .formulario button{
-    display: none;
-  }
-
-  header .fila-1 .login{
+    background-color: #58DAB4;
+    margin: 15px 10px;
     font-weight: bold;
     color: white;
-    text-decoration: none;
     font-size: 14px;
+
   }
 
 
@@ -116,85 +181,87 @@ header .userName, header .logout-button, header .header-users-list {
     color: #444444;
   }
 
-
-@media (min-width: 769px) and (max-width:1023px){
-
-  header .fila-1 #burger{
-    margin: 0 200px 0 0;
-
-  }
-
-  header .formulario{
-    display: flex;
-    position: relative;
-    margin-right: 20px;
-    padding: auto;
-    width: fit-content;
-    background-color: white; 
-    border: 2px solid #FF9B87;
-    border-radius: 10px;
-
-  }
-
-  header .fila-1 .formulario input{
-    display: flex;
-  }
-
-  header .fila-1 .formulario button {
-    display: flex;
-    border-radius: 10px;
-    background-color: white;
-    font-size: 16px;
-    border: none;
-    color:#444444;
-    padding: 5px;
-  }
-
-  header .fila-1  .login{
-    margin: 20px 3px 10px 0;
-    padding: 0px;
-  }
-
-
-
 }
 
 @media (min-width:1024px) {
   
   header .fila-1 #burger{
-    margin: 0 200px 0 0;
-
+    display: none;
   }
+    
+    header .fila-1{
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
 
-  header .formulario{
-    display: flex;
-    position: relative;
-    margin-right: 20px;
-    padding: auto;
-    width: fit-content;
-    background-color: white; 
-    border: 2px solid #FF9B87;
-    border-radius: 10px;
+    header h1{
+      color: white;
+      font-size: 18px;
+      margin: 15px;
+    }
 
+  
+    header .fila-1 .logo-header{
+      width:50px;
+      height: 50px;
   }
-
-  header .fila-1 .formulario input{
-    display: flex;
-    width: 250px;
-  }
-
-  header .fila-1 .formulario button {
-    display: flex;
-    border-radius: 10px;
-    background-color: white;
-    font-size: 16px;
+  
+  header .userName, header .logout-button, header .header-users-list {
+    text-decoration: underline;
+    background-color: #58DAB4; 
     border: none;
-    color:#444444;
-    padding: 5px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
   }
+  
+  header .fila-1 .login-register button{
+    border: none;
+    background-color: #58DAB4;
+    margin: 15px 10px;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
 
-  header .fila-1  .login{
-    margin: 20px 3px 10px 0;
-    padding: 0px;
   }
+  
+  
+    .links{
+        display: none;
+    }
+    
+    .input-barra{
+      border-radius: 8px;
+      height:30px;
+    }
+  
+    .frase-header{
+      margin:15px
+    }
+  
+    .palabras-header{
+      width: 100%;
+      padding: 0px;
+      display: flex;
+      list-style: none;
+      justify-content: space-around;    
+    }
+  
+  
+    .palabras-header li{
+      font-weight: bold;
+      border: 1px solid #444444;
+      border-left: none;
+      width: 100%;
+      background-color: #FF9B87;
+      padding: 10px;
+      text-align: center;
+      font-size: 15px;
+    }
+  
+    .palabras-header li a{
+      text-decoration: none;
+      color: #444444;
+    }
 }

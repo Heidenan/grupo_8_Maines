@@ -10,13 +10,13 @@
     <h1> Detalle de producto</h1>
    <% if (product.id) { %>
     <ul class="product">
-        <li><img src="<%= product.image  %> "></li>
+        <li><img src="/<%= product.image  %> "></li>
         <ul class="product-detail">
             <br>
-        <li class="name"><%= product.name  %> </li>
-        <li class="description">Descripción:<br><%= product.description  %>:</li>
-        <li class="price"><%= product.price  %> $</li>
-        <li class="offert">Oferta: <%if (product.offert == true) { %>
+        <li class="name">Nombre: <%= product.name  %> </li>
+        <li class="description">Descripción: <br><%= product.description  %>:</li>
+        <li class="price">Precio: <%= product.price  %> $</li>
+        <li class="offert">¿Esta en oferta? <%if (product.offert == true) { %>
             Si
         <%} else { %>
             No

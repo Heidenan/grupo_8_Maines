@@ -30,9 +30,10 @@ const controller = {
         .map((p) => Object({ ...p, image: file.search("id", p.image) })),
     }), */
   },
-  productDetail: (req, res) => res.render("products/productDetail",),
-  carrito: (req, res) => res.render("products/carrito", {styles: ["/productCart"]}),
-  compras: (req,res) => res.render('products/compras'),
+  productDetail: (req, res) => res.render("products/productDetail"),
+  carrito: (req, res) =>
+    res.render("products/carrito", { styles: ["/productCart"] }),
+  compras: (req, res) => res.render("products/compras"),
   create: (req, res) =>
     Categories.findAll()
       .then(function (categories) {
@@ -51,6 +52,7 @@ const controller = {
     if (!errors.isEmpty()) {
       return res.render("products/create", {
         errors: errors.mapped(),
+        styles: ["/create"],
       });
     }
     Products.create({
@@ -107,7 +109,9 @@ const controller = {
   },
   edit: (req, res) => {
     Products.findByPk(req.params.id).then((product) => {
-      res.render("products/update", { product: product });
+      res.render("products/update", {
+        product: product,
+      });
     });
   },
   // Codigo para la base de datos ///

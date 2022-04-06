@@ -55,7 +55,9 @@ const userController = {
             isAdmin: String(req.body.email).includes("@maines.com"),
             isActive: true,
             avatar: req.files[0].filename,
-          }).then(() => res.render("users/login"));
+          }).then(() => res.render("users/login"), {
+            styles: ["/login"],
+          });
         } else {
           res.render("users/register", {
             errors: {
@@ -121,6 +123,7 @@ const userController = {
 
         if (!bcrypt.compareSync(req.body.password, user.password)) {
           return res.render("users/login", {
+            styles: ["/login"],
             errors: {
               password: {
                 msg: "Contraseña invalida",

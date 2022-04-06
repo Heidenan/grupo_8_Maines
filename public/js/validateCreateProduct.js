@@ -103,20 +103,3 @@ fieldAvatar.addEventListener("change", (evento) => {
     feed.innerHTML = "El archivo es una imagen";
   }
 });
-
-productForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  let target = event.target;
-  let allFeeds = target.querySelectorAll(".feedback");
-  let feedsValids = 0;
-  allFeeds.forEach((feed) => {
-    if (feed.classList.contains("success")) {
-      feedsValids++;
-    }
-  });
-  if (feedsValids == allFeeds.length) {
-    target.submit();
-  } else {
-    alert("Por favor revisa los campos incorrectos");
-  }
-});

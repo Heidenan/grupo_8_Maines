@@ -153,6 +153,33 @@ fieldUserName.addEventListener("focus", () => {
   fieldUserName.classList.remove("success");
   fieldUserName.classList.add("focus");
 });
+fieldUserName.addEventListener("keyup", (event) => {
+  event.target.classList.remove("error");
+  event.target.classList.remove("focus");
+  event.target.classList.remove("success");
+  let value = event.target.value;
+  let fieldset = event.target.parentElement;
+  let feed = fieldset.querySelector(".feedback");
+  console.log(event.target.value);
+
+  if (value.length < 1) {
+    event.target.classList.add("error");
+    feed.classList.add("error");
+    feed.innerHTML = "Ingrese un nombre de usuario valido por favor";
+  }
+  let regex = /(^[A-z ,.'-]{2,})+$/;
+  if (!regex.test(value)) {
+    event.target.classList.add("error");
+    feed.classList.add("error");
+    feed.innerHTML =
+      "El nombre de usuario debe contener al menos dos caracteres y no se admiten caracteres especiales o números";
+  } else {
+    event.target.classList.add("success");
+    feed.classList.remove("error");
+    feed.classList.add("success");
+    feed.innerHTML = "¡El nombre de usuario es valido!";
+  }
+});
 
 // Avatar field
 fieldAvatar.addEventListener("change", (evento) => {

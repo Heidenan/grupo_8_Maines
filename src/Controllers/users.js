@@ -55,9 +55,9 @@ const userController = {
             isAdmin: String(req.body.email).includes("@maines.com"),
             isActive: true,
             avatar: req.files[0].filename,
-          }).then(() => res.render("users/login"), {
-            styles: ["/login"],
-          });
+          }).then(() => res.render("users/login",{
+            styles: ["/login"]
+          }))
         } else {
           res.render("users/register", {
             errors: {
@@ -70,31 +70,6 @@ const userController = {
       })
       .catch((error) => res.send(error));
 
-    // Save user with JSON
-    // save: (req, res) => {
-    //   let errors = validator.validationResult(req);
-    //   if (!errors.isEmpty()) {
-    //     return res.render("users/register", {
-    //       errors: errors.mapped(),
-    //     });
-    //   }
-    //   let exist = users.search("email", req.body.email);
-    //   if (exist) {
-    //     return res.render("users/register", {
-    //       errors: {
-    //         email: {
-    //           msg: "El email ya se encuentra registrado",
-    //         },
-    //       },
-    //     });
-    //   }
-
-    //   req.body.avatar = req.file ? req.file.filename : null;
-    //   let userRegistered = users.create(req.body);
-    //   console.log(userRegistered);
-
-    //   return res.redirect("/users/login");
-    // },
   },
   access: (req, res) => {
     // Login with DB
@@ -113,6 +88,7 @@ const userController = {
         }
         if (!user) {
           return res.render("users/login", {
+            styles: ["/login"],
             errors: {
               email: {
                 msg: "Email sin registrar",
@@ -143,75 +119,13 @@ const userController = {
 
       .catch((error) => res.send(error));
 
-    // Login with JSON
-    //   let errors = validator.validationResult(req);
-    //   if (!errors.isEmpty()) {
-    //     return res.render("users/login", {
-    //       errors: errors.mapped(),
-    //     });
-    //   }
-
-    //   let exist = users.search("email", req.body.email);
-    //   if (!exist) {
-    //     return res.render("users/login", {
-    //       errors: {
-    //         email: {
-    //           msg: "El email no esta registrado",
-    //         },
-    //       },
-    //     });
-    //   }
-
-    //   if (!bcrypt.compareSync(req.body.password, exist.password)) {
-    //     return res.render("users/login", {
-    //       errors: {
-    //         password: {
-    //           msg: "Contraseña invalida",
-    //         },
-    //       },
-    //     });
-    //   }
-
-    //   if (req.body.remember) {
-    //     res.cookie("user", req.body.email, { maxAge: 1000 * 60 * 60 * 24 * 30 });
-    //     // This cookie expires in 1 month --> Every cookie is calculated in milliseconds
-    //   }
-
-    //   req.session.user = exist;
-    //   return res.redirect("/users/profile");
-    //   // },
-    // },
+ 
   },
   logout: (req, res) => {
     delete req.session.user;
     res.cookie("user", null, { maxAge: -1 });
     return res.redirect("/");
   },
-
-  uploadAvatar: (req, res) => {
-    let update = users.update(req.session.user.id, {
-      avatar: req.files ? req.files[0].filename : null,
-    });
-    req.session.user = update;
-    return res.redirect("/users/profile");
-  },
-
-  // CRUD
-
-  //show: (req, res) => {
-  // Read with DB
-  // let result = Users.findByPk(req.session.user)
-  // .then(() => {
-  //  res.send(result);
-  //  })
-  // .catch((error) => res.send(error));
-
-  // With JSON
-  // show: (req, res) => {
-  //   let result = user.show(req.params.id);
-  //   return result ? res.send(result) : res.send("User not found");
-  // },
-  //},
 
   update: (req, res) => {
     //Update
@@ -248,6 +162,26 @@ const userController = {
       })
       .catch((error) => res.send(error));
   },
+
+  updateAvatar: (req,res) => {
+
+      Users.update(
+
+        {
+          avatar: req.files[0].filename
+        },
+        {
+          where: {
+            id: req.params.id,
+          },
+        }
+      )
+        .then((user) => {
+          res.redirect("/profile", {styles: ["/profile"]});
+        })
+        .catch((error) => res.send(error));
+    },
 };
+
 
 module.exports = userController;

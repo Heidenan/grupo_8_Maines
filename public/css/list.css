@@ -49,8 +49,8 @@ body {
     }
 
     main .avatar-img{
-        width: 140px;
-        height: 120px;
+        width: 20rem;
+        height: 20rem;
         border: 2px solid #A5A1F3;
         border-radius: 10px;
     }
@@ -121,9 +121,9 @@ body {
     }
 
 
-    main .avatar-img{
-        width: 140px;
-        height: 120px;
+    .avatar-img{
+        width: 20rem;
+        height: 20rem;
         border: 2px solid #A5A1F3;
         border-radius: 10px;
     }

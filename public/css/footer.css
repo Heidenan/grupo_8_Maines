@@ -1,11 +1,11 @@
 footer {
   width: 100vw;
-  background-color: #A5A1F3;
+  background-color: #58DAB4;
   border: 5px solid rgba(100, 100, 100, 0.15);
 }
 
 .logo{
-  width:20vw;
+  width:10vw;
   border-radius: 200px;
   margin-top: 30px;
   margin-bottom: 10px;
@@ -58,7 +58,9 @@ footer {
   margin: 0.5em;
 }
 
-
+.textos{
+  color: #ffffff
+}
 .contacto p {
   color: #fff;
   font-size: 1.2em;
@@ -96,7 +98,7 @@ footer {
   }
 
   .logo{
-    width:20vw;
+    width:10vw;
     border-radius: 200px;
     margin-top: 20px;
   }

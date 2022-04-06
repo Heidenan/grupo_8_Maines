@@ -47,3 +47,89 @@ const model = {
 };
 
 module.exports = model;
+
+
+   // Login with JSON
+    //   let errors = validator.validationResult(req);
+    //   if (!errors.isEmpty()) {
+    //     return res.render("users/login", {
+    //       errors: errors.mapped(),
+    //     });
+    //   }
+
+    //   let exist = users.search("email", req.body.email);
+    //   if (!exist) {
+    //     return res.render("users/login", {
+    //       errors: {
+    //         email: {
+    //           msg: "El email no esta registrado",
+    //         },
+    //       },
+    //     });
+    //   }
+
+    //   if (!bcrypt.compareSync(req.body.password, exist.password)) {
+    //     return res.render("users/login", {
+    //       errors: {
+    //         password: {
+    //           msg: "Contraseña invalida",
+    //         },
+    //       },
+    //     });
+    //   }
+
+    //   if (req.body.remember) {
+    //     res.cookie("user", req.body.email, { maxAge: 1000 * 60 * 60 * 24 * 30 });
+    //     // This cookie expires in 1 month --> Every cookie is calculated in milliseconds
+    //   }
+
+    //   req.session.user = exist;
+    //   return res.redirect("/users/profile");
+    //   // },
+    // },
+
+
+    
+  // CRUD
+
+  //show: (req, res) => {
+  // Read with DB
+  // let result = Users.findByPk(req.session.user)
+  // .then(() => {
+  //  res.send(result);
+  //  })
+  // .catch((error) => res.send(error));
+
+  // With JSON
+  // show: (req, res) => {
+  //   let result = user.show(req.params.id);
+  //   return result ? res.send(result) : res.send("User not found");
+  // },
+  //},
+
+  
+    // Save user with JSON
+    // save: (req, res) => {
+    //   let errors = validator.validationResult(req);
+    //   if (!errors.isEmpty()) {
+    //     return res.render("users/register", {
+    //       errors: errors.mapped(),
+    //     });
+    //   }
+    //   let exist = users.search("email", req.body.email);
+    //   if (exist) {
+    //     return res.render("users/register", {
+    //       errors: {
+    //         email: {
+    //           msg: "El email ya se encuentra registrado",
+    //         },
+    //       },
+    //     });
+    //   }
+
+    //   req.body.avatar = req.file ? req.file.filename : null;
+    //   let userRegistered = users.create(req.body);
+    //   console.log(userRegistered);
+
+    //   return res.redirect("/users/login");
+    // },

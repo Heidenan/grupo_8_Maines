@@ -1,6 +1,6 @@
 
     <%- include('../partials/head') %>
-  
+    <link rel="stylesheet" href="/css/list.css">
 
     <body>
       <%- include('../partials/header') %>
@@ -11,7 +11,7 @@
         <% for (let i = 0; i < users.length; i++) { %>
      <ul class="caja-texto-usuario" style="list-style: none"> 
             <% if (user.avatar) { %>
-               <figure >
+               <figure  >
              <img class="avatar-img" src="/avatars/<%= users[i].avatar %>"/>
              </figure>
               <% } else { %>

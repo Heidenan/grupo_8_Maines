@@ -51,8 +51,12 @@ input.focus {
 
   .nuevoProducto fieldset {
     border: none;
+    display: flex;
     margin-bottom: 10px;
     text-align: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
   }
   .nuevoProducto {
     width: 250px;
@@ -77,6 +81,7 @@ input.focus {
     border-radius: 5px;
     padding: 5px;
     background-color: white;
+    width: 100%;
   }
 
   .nuevoProducto .input-img {
@@ -108,11 +113,20 @@ input.focus {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .nuevoProducto fieldset {
     border: none;
+    display: flex;
     margin-bottom: 10px;
     text-align: center;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
   }
   .nuevoProducto {
     width: 500px;
@@ -136,6 +150,7 @@ input.focus {
     border: 2px solid #ff9b87;
     border-radius: 5px;
     padding: 5px;
+    width: 100%;
   }
 
   .nuevoProducto .input-img {

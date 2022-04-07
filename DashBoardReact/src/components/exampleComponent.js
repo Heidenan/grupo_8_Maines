@@ -1,6 +1,5 @@
 import react, { Component } from "react";
 import "./App.css";
-import cors from "cors";
 
 class App extends Component {
   // A class component must have its constructor --> allows to receive props (sate)

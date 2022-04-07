@@ -1,10 +1,7 @@
-
 import React, { Component } from "react";
 import "./App.css";
-import cors from "cors";
-/* import {} from "@mui/material"; */
 
-class Products extends Component {
+class LastProduct extends Component {
     // A class component must have its constructor --> allows to receive props (sate)
   
     constructor(props) {
@@ -17,7 +14,7 @@ class Products extends Component {
     }
   
     componentDidMount() {
-      fetch("http://localhost:3000/api/products/:id")
+      fetch("http://localhost:3000/api/lastProduct")
         .then((response) => response.json())
         .then((response) => this.setState({ products: response.products, count: response.count }));
     }
@@ -32,7 +29,6 @@ class Products extends Component {
             {this.state.products &&
               this.state.products.map((product) => (
                 <li key={product.id}>
-                <img src={product.image} alt={product.name}></img>
                   <p>{product.name}</p>
                   <p>{product.id}</p>
                   <p>{product.description}</p>
@@ -46,4 +42,7 @@ class Products extends Component {
     }
   }
 
-  export default Products;
+  export default LastProduct;
+
+
+  

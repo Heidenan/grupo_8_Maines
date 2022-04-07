@@ -64,4 +64,26 @@ module.exports = {
           res.send(err);
         });
     },
+    lastUser:(req,res) =>{
+      Users.findOne({
+          order: [['id', 'DESC']]
+      })
+      .then((user) => {
+          return res.status(200).json({
+              data: {
+                      id: user.id,
+                      name: user.name,
+                      email: user.email,
+                      admin : user.admin,
+                      avatar: "http://localhost:3000/avatars/" + user.avatar,
+                      User: `http://localhost:3000/api/users/${user.id}`,
+                    },
+                   status: 200,
+          })
+          })
+          .catch(err => {
+              return res.status(404).json( {
+                  error: 'No existe el usuario' } );;
+                   })
+       }
 };

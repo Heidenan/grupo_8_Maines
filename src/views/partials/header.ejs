@@ -4,7 +4,12 @@
     <div class="home-banner">
     <a href="/"> <img src="/images/maines.png" class="logo-header" /> </a>
   </div>
-  <h1>¡Comidas 100% saludables y sin conservantes!</h1>
+  <div class="barra-busqueda">
+    <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
+    <span class="input-group-text border-0" id="search-addon">
+      <i class="fas fa-search"></i>
+    </span>
+  </div>
     <% if (!user) { %>
       <section class="login-register">
         <div class="login-div">

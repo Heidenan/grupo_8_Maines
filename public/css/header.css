@@ -12,6 +12,10 @@
 
   @media (min-width: 320px) and (max-width: 768px) {
     
+ header .barra-busqueda{
+   display: none;
+ }
+
     header .fila-1{
       padding: 10px;
       display: flex;
@@ -75,6 +79,22 @@
 
 @media (min-width: 769px) and (max-width:1023px){
 
+
+  header .barra-busqueda{
+    display: show;
+    margin: 2rem 0 0 0;
+  }
+
+  header .barra-busqueda input{
+    border: none;
+    padding: .3rem;
+    border-radius: 1rem;
+  }
+
+  header .barra-busqueda i{
+    color: white;
+  }
+
   header .fila-1{
     padding: 10px;
     display: flex;
@@ -126,6 +146,22 @@ header .userName, header .logout-button, header .header-users-list {
 }
 
 @media (min-width:1024px) {
+
+
+  header .barra-busqueda{
+    margin: 1rem 0 0 0;
+  }
+
+  header .barra-busqueda input{
+    border: none;
+    padding: .3rem;
+    border-radius: 1rem;
+  }
+
+  header .barra-busqueda i{
+    color: white;
+  }
+
   
   header .fila-1 #burger{
     display: none;

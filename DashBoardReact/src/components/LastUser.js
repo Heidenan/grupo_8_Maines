@@ -16,7 +16,7 @@ class LastUser extends Component {
   componentDidMount() {
     fetch("http://localhost:3000/api/lastUser")
       .then((response) => response.json())
-      .then((response) => this.setState({ user: response.user }));
+      .then((response) => this.setState({ user: response.data }));
   }
 
   componentDidUpdate() {}
@@ -25,6 +25,15 @@ class LastUser extends Component {
     return (
       <>
         <h1> Ultimo usuario creado: </h1>
+        <ol className="description-user">
+            <li key={this.state.user.id}>
+                <p>Nombre: {this.state.user.name}</p>
+                <p>Id: {this.state.user.id}</p>
+                <p>Descripción: {this.state.user.description}</p>
+                <p>Detalle: {this.state.user.detailURL}</p>
+                <p>Categoria: {this.state.user.category}</p>
+              </li>
+        </ol>
       </>
     );
   }

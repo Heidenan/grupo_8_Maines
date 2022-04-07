@@ -2,6 +2,7 @@ import { useState } from "react";
 import Products from "./Products.js";
 import Users from "./Users.js";
 import "./App.css";
+import LastUser from "./LastUser.js";
 
 function Tabs() {
   const [toggleState, setToggleState] = useState(1);
@@ -39,9 +40,9 @@ function Tabs() {
         >
           <h2>Seguimiento de productos</h2>
           <hr />
-          <p>
-            <Products />
-          </p>
+      
+            <Products/>
+      
         </div>
 
         <div
@@ -49,9 +50,7 @@ function Tabs() {
         >
           <h2>Seguimiento de usuarios</h2>
           <hr />
-          <p>
             <Users />
-          </p>
         </div>
 
         <div
@@ -59,9 +58,7 @@ function Tabs() {
         >
           <h2>Seguimiento de nuevos ingresos</h2>
           <hr />
-          <p>
-            <Users />
-          </p>
+            <LastUser/>
         </div>
       </div>
     </div>

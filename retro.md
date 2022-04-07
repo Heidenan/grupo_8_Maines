@@ -63,14 +63,14 @@ Less of: No ser dependientes de una llamada grupal para trabajar, estableciendo 
 
 Retrospectiva Sprint 7:
 
-Start doing: 
+Start doing: Sumar funcionalidades propias más allá de los requerimientos
 
-More of: 
+More of: Comunicarnos de manera constante
 
-Keep Doing: 
+Keep Doing: Apoyarnos en el contenido visto en clase para tener nuestra base solida e iterar mejoras constantes
 
-Less of: 
+Less of: No apoyarnos y evacuar dudas entre compañeros
 
-Stop doing: 
+Stop doing: No utilizar al máximo nuestro tablero de Trello
 
 

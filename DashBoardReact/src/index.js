@@ -4,11 +4,14 @@ import "./index.css";
 import "./components/App.css";
 import App from "./components/App";
 import reportWebVitals from "./reportWebVitals";
+import Products from "./components/Products"
+import Users from "./components/Users"
 
 ReactDOM.render(
   <React.StrictMode>
     <App title="Maines Back Office" />
-  </React.StrictMode>,
+{/*     <Products/>
+ */}  </React.StrictMode>,
   document.getElementById("root")
 );
 

@@ -35,8 +35,11 @@ app.use("/products", productRoutes);
 const userRoutes = require("./routes/users");
 app.use("/users", userRoutes);
 
-const filesRoutes = require("./routes/files");
-app.use("/files", filesRoutes);
+const uploadsRoutes = require("./routes/files");
+app.use("/uploads", uploadsRoutes);
 
 const userApiRoutes = require ("./routes/api/user");
 app.use("/api", userApiRoutes);
+
+const productApiRoutes = require ("./routes/api/product");
+app.use("/api", productApiRoutes);

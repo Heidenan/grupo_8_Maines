@@ -25,12 +25,13 @@
     </ul>
     </ul>
     <% } %>
-
+    <% if (user && user.isAdmin) { %>
     <form action="/products/update/<%= product.id %>">
         <button type="submit" class="modify-button">
             Modificar producto
         </button>
     </form>
+    <% } %>
 
 </main>
 

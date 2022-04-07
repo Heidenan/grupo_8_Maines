@@ -180,6 +180,16 @@ const userController = {
         })
         .catch((error) => res.send(error));
     },
+  showAvatar: (req,res) => {
+    Users.findAll()
+      .then((users) => {
+        res.send("files/avatar",{ users: users });
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  },
+  
 };
 
 

@@ -4,6 +4,6 @@ const user = require("../../controllers/api/user");
 
 /* router.get("/users", user.list);
 router.get("/users/:id", user.show); */
-router.get("/users/last", user.allUsers);
+router.get("/users", user.list);
 
 module.exports = router;

@@ -20,7 +20,7 @@ const upload = multer({
 router.get("/", product.index);
 router.get("/create", [auth], product.create);
 router.get("/update/:id",[auth], product.edit);
-router.get("/cart", product.carrito);
+router.get("/carrito", product.carrito);
 router.get("/compras", product.compras);
 router.get("/:id", product.show);
 router.get("/carrito/:id", product.carrito);

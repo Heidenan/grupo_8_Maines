@@ -4,123 +4,188 @@
       <body>
         <%-include ("../partials/header") %>
         <main>
-
-            <h1>Tú carrito:</h1>
-            <section class="cart-list">
-        <section class="producto">
-          <div class="imgInfo">
-            <img class="img" src="/images/comida-saludable.png" />
-    
-            <div class="infoProducto">
-              <h2 class="nombreProducto">Producto</h2>
-              <p class="descripcion">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-    
-              </p>
+          <h1>Tu carrito</h1>
+          <section class="productos">
+          <section class="producto">
+            <div class="imgInfo">
+              <img class="img" src="/images/pan-negro.jpeg" alt="producto" />
+      
+              <div class="infoProducto">
+                <h2 class="nombreProducto">Producto</h2>
+                <p class="descripcion">
+                  Pan negro
+                </p>
+              </div>
             </div>
-          </div>
-
-          <button name="delete" type="submit" class="delete-btn">
-            <i class="fas fa-times"></i>
-          </button>
+      
+            <fieldset class="fieldsetCantidad">
+              <label for="cantidad">Cantidad:</label>
+              <input
+                class="inputCantidad"
+                name="cantidad"
+                id="cantidad"
+                type="number"
+                min="1"
+                max="10"
+                placeholder=""
+                required
+              />
+            </fieldset>
+      
+            <div class="precio">
+              <p class="textoPrecio">$160</p>
+            </div>
+      
+            <button name="cantidad" type="reset" class="botonEliminar">
+              <i class="fas fa-times"></i>
+            </button>
+          </section>
+      
+          <section class="producto">
+            <div class="imgInfo">
+              <img class="img" src="/images/pan-negro.jpeg" alt="producto" />
+      
+              <div class="infoProducto">
+                <h2 class="nombreProducto">Producto</h2>
+                <p class="descripcion">
+                  Pan negro
+                </p>
+              </div>
+            </div>
+      
+            <fieldset class="fieldsetCantidad">
+              <label for="cantidad">Cantidad:</label>
+              <input
+                class="inputCantidad"
+                name="cantidad"
+                id="cantidad"
+                type="number"
+                min="1"
+                max="10"
+                placeholder=""
+                required
+              />
+            </fieldset>
+      
+            <div class="precio">
+              <p class="textoPrecio">$160</p>
+            </div>
+      
+            <button name="cantidad" type="reset" class="botonEliminar">
+              <i class="fas fa-times"></i>
+            </button>
           </section>
           <section class="producto">
-          <div class="imgInfo">
-            <img class="img" src="/images/comida-saludable.png" />
-    
-            <div class="infoProducto">
-              <h2 class="nombreProducto">Producto</h2>
-              <p class="descripcion">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-              </p>
+            <div class="imgInfo">
+              <img class="img" src="/images/pan-negro.jpeg" alt="producto" />
+      
+              <div class="infoProducto">
+                <h2 class="nombreProducto">Producto</h2>
+                <p class="descripcion">
+                  Pan negro
+                </p>
+              </div>
             </div>
-          </div>
-          <button name="delete" type="submit" class="delete-btn">
-            <i class="fas fa-times"></i>
-          </button>
-        </section>
-        <section class="producto">
-          <div class="imgInfo">
-            <img class="img" src="/images/comida-saludable.png"/>
-    
-            <div class="infoProducto">
-              <h2 class="nombreProducto">Producto</h2>
-              <p class="descripcion">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-              </p>
+      
+            <fieldset class="fieldsetCantidad">
+              <label for="cantidad">Cantidad:</label>
+              <input
+                class="inputCantidad"
+                name="cantidad"
+                id="cantidad"
+                type="number"
+                min="1"
+                max="10"
+                placeholder=""
+                required
+              />
+            </fieldset>
+      
+            <div class="precio">
+              <p class="textoPrecio">$160</p>
             </div>
-          </div>
-          <button name="delete" type="submit" class="delete-btn">
-            <i class="fas fa-times"></i>
-          </button>
-        </section>
-        <section class="producto">
-          <div class="imgInfo">
-            <img class="img" src="/images/comida-saludable.png"/>
-    
-            <div class="infoProducto">
-              <h2 class="nombreProducto">Producto</h2>
-              <p class="descripcion">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-              </p>
-            </div>
-            <button name="delete" type="submit" class="delete-btn">
-                <i class="fas fa-times"></i>
-              </button>
-          </div>
+      
+            <button name="cantidad" type="reset" class="botonEliminar">
+              <i class="fas fa-times"></i>
+            </button>
           </section>
         </section>
-    
-          <div class="total">
-            <p class="envioTotal">Total: 400 $</p>
+      
+          <!-- finalizar pedido -->
+      
+          <section class="sectionFinal">
+            <div class="tituloFinal">
+              <h2 class="tituloFinalTexto">Total del carrito</h2>
+            </div>
+      
+            <article class="envio">
+              <p class="envioTotal">Envio:</p>
+      
+              <form action="/">
+                <fieldset class="fieldset">
+                  <legend class="none">Selecciona un Pais/Region</legend>
+                  <label for="provincia"></label>
+                  <select class="input" id="provincia" name="provincia">
+                    <option value="seleccion">Selecciona un Pais/Region</option>
+                    <option value="buenosAires">Buenos Aires</option>
+                    <option value="caba">Capital Federal</option>
+                    <option value="mendoza">Mendoza</option>
+                  </select>
+                </fieldset>
+      
+                <fieldset class="fieldset">
+                  <label for="localidad/ciudad"></label>
+                  <input
+                    class="input"
+                    name="localidad/ciudad"
+                    id="localidad/ciudad"
+                    type="text"
+                    placeholder="Localidad/Ciudad"
+                  />
+                </fieldset>
+      
+                <fieldset class="fieldset">
+                  <label for="codigoPostal"></label>
+                  <input
+                    class="input"
+                    name="codigoPostal"
+                    id="codigoPostal"
+                    type="text"
+                    placeholder="Codigo Postal"
+                  />
+                </fieldset>
+      
+                <fieldset class="fieldset">
+                  <button class="botonActualizar" type="submit">Actualizar</button>
+                </fieldset>
+              </form>
+            </article>
+      
+            <div class="total">
+              <p class="envioTotal">Total:</p>
+              <p class="precioTotal">$400</p>
+            </div>
+            <div class="finalButtons">
+            <button class="botonSeguir" type="submit">Seguir Comprando</button>
+            <button class="botonFinal" type="submit">Finalizar Compra</button>
           </div>
-
-          <h2>Te podría interesar:</h2>
-          <section class="zona-productoRecomendado">
-          <article class="productoRecomendado">
-            <p class="nombreRecomendado"><strong>Pan de salvado</strong></p>
-            <img class="imgRecomendado" src="/images/pan-negro.jpeg" />
-            <div class="infoRecomendado">
-              <p class="precioRecomendado">$6.770</p>
-              <p class="descuento">20% off</p>
-            </div>
+          </section>
+      
+          <section class="recomendado">
+            <h2 class="tituloRecomendado">Tambien te puede interesar...</h2>
+      
+            <section class="productoRecomendado">
+              <img class="imgRecomendado" src="/images/pan-negro.jpeg" />
+              <div class="infoRecomendado">
+                <p class="nombreRecomendado"><strong>Pan de salvado</strong></p>
+                <p class="precioRecomendado">$6.770</p>
+                <p class="descuento">20% off</p>
+              </div>
+            </section>
+      
             <button class="botonAgregar" type="submit">Agregar al Carrito</button>
-        </article>
-
-        <article class="productoRecomendado">
-            <p class="nombreRecomendado"><strong>Pan de salvado</strong></p>
-            <img class="imgRecomendado" src="/images/pan-negro.jpeg" />
-            <div class="infoRecomendado">
-              <p class="precioRecomendado">$6.770</p>
-              <p class="descuento">20% off</p>
-            </div>
-            <button class="botonAgregar" type="submit">Agregar al Carrito</button>
-        </article> 
-        
-        <article class="productoRecomendado">
-            <p class="nombreRecomendado"><strong>Pan de salvado</strong></p>
-            <img class="imgRecomendado" src="/images/pan-negro.jpeg" />
-            <div class="infoRecomendado">
-              <p class="precioRecomendado">$6.770</p>
-              <p class="descuento">20% off</p>
-            </div>
-            <button class="botonAgregar" type="submit">Agregar al Carrito</button>
-        </article>
-
-        <article class="productoRecomendado">
-            <p class="nombreRecomendado"><strong>Pan de salvado</strong></p>
-            <img class="imgRecomendado" src="/images/pan-negro.jpeg" />
-            <div class="infoRecomendado">
-              <p class="precioRecomendado">$6.770</p>
-              <p class="descuento">20% off</p>
-            </div>
-            <button class="botonAgregar" type="submit">Agregar al Carrito</button>
-        </article>
-        </section>
-    
-    
-        </section>
-      </main>
+          </section>
+        </main>
     
         <%- include ('../partials/footer') %>
     

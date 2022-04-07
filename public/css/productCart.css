@@ -1,6 +1,6 @@
 * {
-    margin: auto;
-    padding: auto;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -8,205 +8,277 @@ body{
     background-color: #FFF9ED;
     font-family: 'Roboto', sans-serif;
 }
+@media (min-width: 320px) {
+ main{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+ }
 
-@media (min-width: 320px) and (max-width: 768px){
-    main {
-        text-align: center;
-        font-size: 18px;
-        font-weight: bolder;
-    }
+ main .producto{
+     width: 15rem;
+    border: .2rem solid #444444;
+    margin: auto;
+    margin-bottom: 3rem;
+    border-radius: 2rem;
+ }
 
-    main h1{
-        margin: 10px 0 10px 0;
-    }
+ main .producto img{
+     width: 10rem;
+     margin: 1rem;
+     border: .2rem solid #444444;
+ }
 
-    main .producto{
-        display: flex;
-        flex-direction: column;
-        width: 250px;
-        border: 3px solid #A5A1F3;
-        background-color: white;
-        border-radius: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding: 10px;
-    }
+ main .producto .infoProducto{
+     border-top: .2rem solid #444444;
+ }
 
-    main .producto img{
-        width: 150px;
-        height: 100px;
-        border: 2px solid #444444;
-        border-radius: 10px;
-    }
+ main .producto p{
+     font-size: 18px;
+     font-weight: bolder;
+ }
 
-    main .infoProducto {
-        width: 150px;
-        margin-top: 20px;
-        border: 2px solid #FF9B87;
-        border-radius: 10px;
-        padding: 10px;
-        font-size: 14px;
-        font-weight: bold;   
-    }
+ main fieldset {
+     border: none;
+ }
 
-    main .delete-btn {
-        border: none;
-        border-radius: 10px;
-        font-size: 20px;
-        background-color: #3483fa;
-        color: white;
-        width: 50px;
-        margin-top: 20px;
-        padding: 5px;
-    }
+ main fieldset label{
+     font-weight: bolder;
+     font-size: 16px;
+ }
 
-    main .total{
-        width: 200px;
-        display: block;
-        background-color: white;
-        border: 2px solid #FF9B87;
-        border-radius: 10px;
-        padding: 10px;
-        font-size: 30px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+ main .producto input{
+    width: 3rem;
+ }
 
+ main .producto button{
+     width: 4rem;
+     border: none;
+     padding: .6rem;
+     background-color: #FF9B87;
+     border-radius: .5rem;
+     font-size: 25px;
+     margin: 2rem 0 2rem 0;
+ }
 
-    main .zona-productoRecomendado{
-        display: flex;
-        flex-direction: column;
-    }
+ main .sectionFinal{
+     width: 15rem;
+     margin: auto;
+     display: flex;
+     flex-direction: column;
+     border: .2rem solid #A5A1F3;
+     font-weight: bolder;
+ }
 
-    main .productoRecomendado{
-        width: 200px;
-        margin-top: 20px;
-        margin-bottom: 40px;
-        border: 2px solid #FF9B87;
-        border-radius: 10px;
-        padding: 10px;
-        background-color: white;
-    }
-    main .productoRecomendado img{
-        width: 150px;
-        border: 2px solid #444444;
-        border-radius: 10px;
-    }
+ main .sectionFinal .envio p{
+     margin: 1rem;
+     font-size: 20px;
+ }
+ main .sectionFinal form fieldset, main .sectionFinal legend{
+     margin-bottom: 1rem;
+ }
 
-    main .productoRecomendado button {
-        width: 100px;
-        margin-top: 10px;
-        font-weight: bold;
-        font-size: 12px;
-        border: none;
-        border-radius: 10px;
-        background-color: #FF9B87;
-        padding: 10px;
-        color: white;
-    }
+ main .sectionFinal .botonActualizar{
+     width: 7rem;
+     border: none;
+     padding: .3rem;
+     background-color: #FF9B87;
+     font-size: 16px;
+     color: white;
+ }
+
+ main .sectionFinal .total{
+     font-weight: bolder;
+     font-size: 20px;
+     margin: 1rem 0 2rem 0;
+ }
+
+ main .sectionFinal .finalButtons{
+     margin: auto;
+ }
+
+ main .sectionFinal .botonSeguir, main .sectionFinal .botonFinal{
+    width: 8rem;
+    border: none;
+    padding: .3rem;
+    margin-bottom: 1rem;
+    background-color: #FF9B87;
+    color:white;
+    
+ }
+
+ main .recomendado{
+     margin: auto;
+     margin-top: 3rem;
+     margin-bottom: 5rem;
+     width: 15rem;
+ }
+
+ main .recomendado .productoRecomendado{
+     width: 15rem;
+     margin: auto;
+     margin-top: 3rem;
+     border: .2rem solid #FF9B87;
+     font-weight: bolder;
+ }
+
+ main .recomendado img{
+     width: 10rem;
+     margin: 1rem 0 0 0;
+ }
+
+ main .recomendado .infoRecomendado{
+     margin-top: 1rem;
+     border-top: .2rem solid #FF9B87;
+     padding: 1rem
+ }
+
+ main .recomendado .botonAgregar{
+     width: 10rem;
+     border: none;
+     margin-top: 2rem;
+     padding: .6rem;
+     background-color: #A5A1F3;
+     color: white;
+ }
+
 }
 
-@media (min-width: 769px) {
-    main {
-        text-align: center;
-        font-size: 18px;
-        font-weight: bolder;
-        padding: 0 20px 0 20px
-    }
 
-    main h1{
-        margin: 20px 0 10px 0;
-    }
-
-    main .cart-list{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin-top: 30px;
-    }
-
-    main .producto{
-        width: 250px;
-        border: 3px solid #A5A1F3;
-        background-color: white;
-        border-radius: 10px;
-        margin: 5px;
-        padding: 10px;
-    }
-
-    main .producto img{
-        width: 150px;
-        height: 100px;
-        border: 2px solid #444444;
-        border-radius: 10px;
-    }
-
-    main .infoProducto {
-        width: 150px;
-        margin-top: 20px;
-        border: 2px solid #FF9B87;
-        border-radius: 10px;
-        padding: 10px;
-        font-size: 14px;
-        font-weight: bold;   
-    }
-
-    main .delete-btn {
-        border: none;
-        border-radius: 10px;
-        font-size: 20px;
-        background-color: #3483fa;
-        color: white;
-        width: 50px;
-        margin-top: 20px;
-        padding: 5px;
-    }
-
-    main .total{
-        display: inline-block;
-        background-color: white;
-        border: 2px solid #FF9B87;
-        border-radius: 10px;
-        padding: 10px;
-        font-size: 30px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-
-    main .zona-productoRecomendado{
+@media (min-width: 768px) {
+    main .productos{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: 5px;
+        text-align: center;
     }
-
-    main .productoRecomendado{
-        width: 200px;
-        margin-top: 20px;
-        margin-bottom: 40px;
-        border: 2px solid #FF9B87;
-        border-radius: 10px;
-        padding: 10px;
-        background-color: white;
+   
+    main .producto{
+       border: .2rem solid #444444;
+       margin: 2rem 1rem;
     }
-    main .productoRecomendado img{
-        width: 150px;
-        border: 2px solid #444444;
-        border-radius: 10px;
+   
+    main .producto img{
+        width: 10rem;
+        margin: 1rem;
+        border: .2rem solid #444444;
     }
-
-    main .productoRecomendado button {
-        width: 100px;
-        margin-top: 10px;
-        font-weight: bold;
-        font-size: 12px;
+   
+    main .producto .infoProducto{
+        border-top: .2rem solid #444444;
+    }
+   
+    main .producto p{
+        font-size: 18px;
+        font-weight: bolder;
+    }
+   
+    main fieldset {
         border: none;
-        border-radius: 10px;
+    }
+   
+    main fieldset label{
+        font-weight: bolder;
+        font-size: 16px;
+    }
+   
+    main .producto input{
+       width: 3rem;
+    }
+   
+    main .producto button{
+        width: 4rem;
+        border: none;
+        padding: .6rem;
         background-color: #FF9B87;
-        padding: 10px;
+        border-radius: .5rem;
+        font-size: 25px;
+        margin: 2rem 0 2rem 0;
+    }
+   
+    main .sectionFinal{
+        width: 15rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        border: .2rem solid #A5A1F3;
+        font-weight: bolder;
+    }
+   
+    main .sectionFinal .envio p{
+        margin: 1rem;
+        font-size: 20px;
+    }
+    main .sectionFinal form fieldset, main .sectionFinal legend{
+        margin-bottom: 1rem;
+    }
+   
+    main .sectionFinal .botonActualizar{
+        width: 7rem;
+        border: none;
+        padding: .3rem;
+        background-color: #FF9B87;
+        font-size: 16px;
+        color: white;
+    }
+   
+    main .sectionFinal .total{
+        font-weight: bolder;
+        font-size: 20px;
+        margin: 1rem 0 2rem 0;
+    }
+   
+    main .sectionFinal .finalButtons{
+        margin: auto;
+    }
+   
+    main .sectionFinal .botonSeguir, main .sectionFinal .botonFinal{
+       width: 8rem;
+       border: none;
+       padding: .3rem;
+       margin-bottom: 1rem;
+       background-color: #FF9B87;
+       color:white;
+       
+    }
+   
+    main .recomendado{
+        margin: auto;
+        margin-top: 3rem;
+        margin-bottom: 5rem;
+        width: 15rem;
+    }
+   
+    main .recomendado .productoRecomendado{
+        width: 15rem;
+        margin: auto;
+        margin-top: 3rem;
+        border: .2rem solid #FF9B87;
+        font-weight: bolder;
+    }
+   
+    main .recomendado img{
+        width: 10rem;
+        margin: 1rem 0 0 0;
+    }
+   
+    main .recomendado .infoRecomendado{
+        margin-top: 1rem;
+        border-top: .2rem solid #FF9B87;
+        padding: 1rem
+    }
+   
+    main .recomendado .botonAgregar{
+        width: 10rem;
+        border: none;
+        margin-top: 2rem;
+        padding: .6rem;
+        background-color: #A5A1F3;
         color: white;
     }
 }
+
+
+

@@ -1,6 +1,6 @@
 *{
-    margin: auto;
-    padding: auto;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -112,16 +112,16 @@ body {
     }
 
     main .lista-productos{
-        margin: 0 10px 0 0;
         padding: 10px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 
     main .caja-texto-producto{
         width: 250px;
-        min-height: 450px ;
-        margin-bottom: 20px;
+        margin: auto;
+        height: fit-content;
         padding: 10px;
         border: 2px solid #FF9B87;
         background-color: white;
@@ -136,6 +136,7 @@ body {
     main .caja-texto-producto .product-detail{
         width: 170px;
         height: fit-content;
+        margin: auto;
         padding: 5px;
         border: 2px solid #A5A1F3;
         border-radius: 10px;

@@ -3,6 +3,7 @@ const router = Router();
 const saveProduct = require("../middlewares/saveProduct");
 const product = require("../Controllers/products");
 const path = require("path");
+const auth = require("../middlewares/auth");
 const multer = require("multer");
 const upload = multer({
   storage: multer.diskStorage({
@@ -17,12 +18,12 @@ const upload = multer({
 });
 
 router.get("/", product.index);
-router.get("/create", product.create);
-router.get("/update/:id", product.edit);
+router.get("/create", [auth], product.create);
+router.get("/update/:id",[auth], product.edit);
 router.get("/cart", product.carrito);
 router.get("/compras", product.compras);
 router.get("/:id", product.show);
-
+router.get("/carrito/:id", product.carrito);
 router.post("/", [upload.any(), saveProduct], product.save);
 
 router.put("/:id", product.update);

@@ -1,54 +1,45 @@
 const db = require("../../database/models");
 
 module.exports = {
-  list: function (req, res) {
-    db.Product.findAll({ include: ["categories"] })
-      .then((products) => {
-        if (products.length > 0) {
-          let response = {
-            meta: {
-              status: 200,
-              total: products.length,
-            },
-            data: products,
-          };
-          products.forEach((product) => {
-            response.data.push({
-              id: product.id,
-              Nombre: product.name,
-              Descripción: product.description,
-              Precio: product.price,
-              //imagen: `http://localhost:3000/uploads/${product.images.url}`,
-              Producto: "http://localhost:3000" + `/api/products/${product.id}`,
-            });
-          });
-          //     meta: {status: 200},
-          //     count: products.length,
-          //     // categoryById: categories.foreach(category => {
-          //     //         return {
-          //     //         name: category.name,
-          //     //         categoryById: category.length
-          //     //         }
-          //     //     }
-          //     // ),
-          //     products: products,
-          // }
-          return res.status(200).json(response);
-        } else {
-          return res.status(404).json({
-            error: "No se encontraron productos",
-          });
-        }
+  list: (req,res) => {
+    db.Product.findAll({
+        include: [{ association: "category" }]
       })
-      .catch((err) => {
-        return res.status(500).json({
-          error: "No se pudo conectar a la base",
-        });
-      });
-  },
+    .then(allProducts => {
+        let result ={
+            count:  allProducts.length,
+            products: [],
+            meta: {
+                status: 200,
+                url: 'api/products'
+            },
+        }
+        allProducts.forEach(product =>{
+            result.products.push({
+                id: product.id,
+                name: product.name,
+                description: product.description,
+                category: product.category.name,
+                detailURL: "http://localhost:3000/api/products/" + product.id
+            })
+        })
+       return res.json(result)
+        
+    })
+    .catch(err => {
+        let result ={
+            err,
+            meta: {
+                status: 404,
+                url: 'api/products'
+            },
+        }
+        res.json(result)
+    })
+},
   show: function (req, res) {
     db.Product.findByPk(req.params.id, {
-      include: ["categories"],
+      include: [{ association: "category" }]
     })
       .then((product) => {
         if (product) {
@@ -58,6 +49,8 @@ module.exports = {
             Descripción: product.description,
             Precio: product.price,
             Descuento: product.discount,
+            category: product.category.name,
+            image: "http://localhost:3000/" + product.image,
             Producto: "http://localhost:3000/api/products/" + product.id,
           });
         } else {

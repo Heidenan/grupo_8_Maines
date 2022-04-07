@@ -70,8 +70,8 @@ body {
 
     main .lista-productos img{
         margin: 10px 0 20px 0;
-        width: 200px;
-        height: 200px;
+        width: 15vw;
+        height: 15vw;
         border: 2px solid #FF9B87;
         border-radius: 10px;
     }
@@ -145,8 +145,8 @@ body {
 
     main .lista-productos img{
         margin: 10px 0 20px 0;
-        width: 200px;
-        height: 200px;
+        width: 15vw;
+        height: 15vw;
         border: 2px solid #FF9B87;
         border-radius: 10px;
     }

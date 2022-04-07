@@ -65,4 +65,23 @@ module.exports = {
         });
       });
   },
+  lastProduct:(req,res) =>{
+    db.Product.findOne({
+        order: [['id', 'DESC']]
+    })
+    .then((product) => {
+        return res.status(200).json({
+            data: {
+                    id: product.id,
+                    name: product.name,
+                    image: "http://localhost:3000/avatars/" + product.image,
+                  },
+                 status: 200,
+        })
+        })
+        .catch(err => {
+            return res.status(404).json( {
+                error: 'No existe el producto' } );;
+                 })
+     }
 };

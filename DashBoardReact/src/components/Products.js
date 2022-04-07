@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import cors from "cors";
-/* import {} from "@mui/material"; */
+import {} from "@mui/material";
 
 class Products extends Component {
     // A class component must have its constructor --> allows to receive props (sate)
@@ -45,3 +44,6 @@ class Products extends Component {
   }
 
   export default Products;
+
+
+  

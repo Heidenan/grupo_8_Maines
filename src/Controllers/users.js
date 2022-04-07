@@ -148,7 +148,8 @@ const userController = {
   show: (req, res) => {
     Users.findByPk(req.params.id)
       .then((user) => {
-        res.render("users/update", { user });
+        res.render("users/update", { user,
+        styles: ['/updateUser']});
       })
       .catch((error) => res.send(error));
   },

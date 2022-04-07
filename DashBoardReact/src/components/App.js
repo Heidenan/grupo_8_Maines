@@ -1,7 +1,7 @@
-import react, { Component } from "react";
+import React, { Component } from "react";
 import "./App.css";
 import cors from "cors";
-import {} from "@mui/material";
+/* import {} from "@mui/material"; */
 
 /* function App() {
   return (
@@ -36,17 +36,20 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("http://localhost:3000/api/users")
+    fetch("http://localhost:3000/api/users/last")
       .then((response) => response.json())
-      .then((users) => this.setState({ users: users }));
+      .then((response) => this.setState({ users: response.users}));
   }
 
   componentDidUpdate() {}
 
   render() {
+    if(!this.state.users.length > 0) return null;
+    console.log(this.state.users)
     return (
       <>
         <h1>{this.props.title}</h1>;
+        {this.state.users.map(user => <h1 key={user.id}>{user.name}</h1>)}
       </>
     );
   }

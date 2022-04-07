@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const user = require("../../controllers/api/product");
+const products = require("../../controllers/api/product");
 
-router.get("/", user.list);
-router.get("/:id", user.show);
+router.get("/", products.list);
+router.get("/:id", products.show);
 
 module.exports = router;

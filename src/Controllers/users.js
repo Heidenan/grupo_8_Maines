@@ -1,6 +1,5 @@
 const validator = require("express-validator");
 const bcrypt = require("bcrypt");
-const users = require("../models/user");
 const db = require("../database/models");
 
 const Users = db.User;
@@ -9,7 +8,7 @@ const userController = {
   index: (req, res) => {
     Users.findAll()
       .then((users) => {
-        res.render("users/list", { users });
+        res.render("users/list",{ users });
       })
       .catch((err) => {
         res.send(err);

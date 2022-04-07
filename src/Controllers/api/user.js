@@ -1,10 +1,11 @@
 const db = require("../../database/models");
 const Op = db.Sequelize.Op;
 
+const Users = db.User;
 module.exports = {
   // user's list
-  list: (req, res) => {
-    db.User.findAll({ attributes: ["id", "nombre", "apellido", "email"] })
+  /* list: (req, res) => { */
+    /* Users.findAll({ attributes: ["id", "nombre", "apellido", "email"] })
       .then((users) => {
         if (users.length > 0) {
           let response = {
@@ -35,9 +36,9 @@ module.exports = {
           error: "No se pudo conectar a la base",
         });
       });
-  },
+  }, */
   // user's id
-  show: (req, res) => {
+  /* show: (req, res) => {
     db.User.findByPk(req.params.id).then((user) => {
       return res.status(200).json({
         data: {
@@ -52,7 +53,15 @@ module.exports = {
         status: 200,
       });
     });
-  },
+  }, */
 
-  lastUser: (req, res) => {},
+  allUsers:(req, res) => {
+      Users.findAll()
+        .then((users) => {
+          res.send({ users });
+        })
+        .catch((err) => {
+          res.send(err);
+        });
+    },
 };

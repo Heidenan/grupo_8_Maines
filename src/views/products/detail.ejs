@@ -7,23 +7,39 @@
 <body>
     <%- include('../partials/header') %>
     <main>
-    <h1> Detalle de producto</h1>
+        <h2 class="back-list"><a href="/products" style="text-decoration: none; color: black;"><i class="fa-solid fa-angle-left" style="color: black;"></i>Volver a la tienda</a></h2>
+        <section class="detalles">
    <% if (product.id) { %>
-    <ul class="product">
-        <li><img src="/<%= product.image  %> "></li>
+    <section class="product-img">
+        <img src="<%= product.image  %> ">
+    </section>
+    <section class="product-info">
+        <h3>Detalles del producto</h3>
         <ul class="product-detail">
             <br>
         <li class="name">Nombre: <%= product.name  %> </li>
         <li class="description">Descripción: <br><%= product.description  %>:</li>
-        <li class="price">Precio:$<%= product.price  %></li>
         <li class="offert">¿Esta en oferta? <%if (product.offert == true) { %>
             Si
         <%} else { %>
             No
         <% } %> </li>
-        <li>Envio sin cargo<br><i class="fas fa-truck"></i></li>
+        <li class="price">Precio:$<%= product.price  %></li>
     </ul>
-    </ul>
+    <section class="cantidad-agregar">
+        <div class="cantidad">
+        <label for="cantidad">Cantidad:</label>
+        <select name="cantidad" id="cantidad">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+    </div>
+    <div class="agregar">
+        <button type="submit">Añadir al carrito</button>
+    </div>
+    </section>
+</section>
     <% } %>
     <% if (user && user.isAdmin) { %>
     <form action="/products/update/<%= product.id %>">
@@ -32,7 +48,7 @@
         </button>
     </form>
     <% } %>
-
+</section>
 </main>
 
     <%- include('../partials/footer') %> 

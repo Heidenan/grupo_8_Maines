@@ -7,6 +7,9 @@ const controller = {
     }),
     contact: (req, res) => res.render("contact", {
         styles: ["/contact"]
+    }),
+    talleres: (req, res) => res.render("talleres", {
+        styles: ["/talleres"]
     })
 }
 

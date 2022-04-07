@@ -189,10 +189,11 @@ main .productos{
     justify-content: space-between;
     margin-top: 3rem;
     margin-bottom: 5rem;
+    background-color: rgba(255, 155, 135, 0.8);
+    border: .1rem solid #444444;
   }
 
   main .brands div{
-    background-color: rgba(255, 155, 135, 0.8);
     text-align: center;
     margin: auto;
   }

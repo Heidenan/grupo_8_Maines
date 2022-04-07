@@ -7,16 +7,16 @@
         <main>
         <h1>Lista de Usuarios</h1> 
         <div class="lista-usuarios">
-            
+         
         <% for (let i = 0; i < users.length; i++) { %>
-     <ul class="caja-texto-usuario" style="list-style: none"> 
-            <% if (user.avatar) { %>
-               <figure  >
+     <ul class="caja-texto-usuario" style="list-style: none">  
+            <% if (users[i].avatar) { %>
+               <figure>
              <img class="avatar-img" src="/avatars/<%= users[i].avatar %>"/>
              </figure>
               <% } else { %>
            <figure >
-           <img class="avatar-img" src="/assets/avatar.png" alt="<%= user.email %>" />
+           <img class="avatar-img" src="/assets/avatar.png" alt="<%= users.email %>" />
            </figure>
            <% } %>
              <div>

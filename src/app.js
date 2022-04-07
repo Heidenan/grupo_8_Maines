@@ -37,3 +37,6 @@ app.use("/users", userRoutes);
 
 const filesRoutes = require("./routes/files");
 app.use("/files", filesRoutes);
+
+const userApiRoutes = require ("./routes/api/user");
+app.use("/api", userApiRoutes);

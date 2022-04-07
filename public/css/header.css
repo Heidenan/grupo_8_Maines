@@ -24,7 +24,7 @@
     }
 
     header .fila-1 #burger{
-      margin: 10px 10px 0 0;
+      margin: 15px 10px 0 0;
       font-size: 22px;
       color: white;
       padding: 5px;
@@ -32,15 +32,19 @@
   
     header .fila-1 .home-banner .logo-header{
       margin: 0;
-      width:10vw;
-      height: 10vw;
+      width:4em;
+      height: 4em;
+  }
+
+  header .userName{
+    display: none;
   }
   
   header .userName, header .logout-button, header .header-users-list {
     text-decoration: underline;
     background-color: #58DAB4; 
     border: none;
-    font-size: 18px;
+    font-size: 14px;
     color: white;
     font-weight: bold;
   }
@@ -49,10 +53,10 @@
   header .fila-1 .login-register button{
     border: none;
     background-color: #58DAB4;
-    margin: 15px 0 15px 15px;
+    margin: 25px 0 15px 0px;
     font-weight: bold;
     color: white;
-    font-size: 14px;
+    font-size: 11px;
   }
 
   
@@ -109,8 +113,8 @@
 
   header h1{
     color: white;
-    font-size: 18px;
-    margin: 15px;
+    font-size: 16px;
+    margin: 28px 0 0 0;
   }
 
   header .fila-1 #burger{
@@ -118,15 +122,15 @@
   }
 
   header .fila-1 .logo-header{
-    width:10vw;
-    height: 10vw;
+    width: 70px;
+    height: 70px;
 }
 
 header .userName, header .logout-button, header .header-users-list {
   text-decoration: underline;
   background-color: #58DAB4; 
   border: none;
-  font-size: 18px;
+  font-size: 15px;
   color: white;
   font-weight: bold;
 }
@@ -134,7 +138,7 @@ header .userName, header .logout-button, header .header-users-list {
   header .fila-1 .login-register button{
     border: none;
     background-color: #58DAB4;
-    margin: 15px 10px;
+    margin: 30px 10px;
     font-weight: bold;
     color: white;
     font-size: 14px;
@@ -198,13 +202,13 @@ header .userName, header .logout-button, header .header-users-list {
     header h1{
       color: white;
       font-size: 18px;
-      margin: 15px;
+      margin-top: 25px;
     }
 
   
     header .fila-1 .logo-header{
-      width:10vw;
-      height: 10vw;
+      width:70px;
+      height: 70px;
   }
   
   header .userName, header .logout-button, header .header-users-list {
@@ -219,7 +223,7 @@ header .userName, header .logout-button, header .header-users-list {
   header .fila-1 .login-register button{
     border: none;
     background-color: #58DAB4;
-    margin: 15px 10px;
+    margin: 28px 10px;
     font-weight: bold;
     color: white;
     font-size: 14px;

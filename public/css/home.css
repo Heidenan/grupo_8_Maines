@@ -22,12 +22,7 @@ main {
   margin: 50px 0 100px 0;
 }
 
-main .banner {
-  width: 150px;
-  margin: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+
 
 main .welcome {
   text-align: center;
@@ -89,16 +84,10 @@ main .gracias{
     padding: 0 10px 0 10px;
   }
   
-  main .banner {
-    width: 150px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
   
   main .welcome {
     text-align: center;
-    margin-bottom: 10px;
+    margin: 50px 0 10px 0;
     font-size: 25px;
     text-decoration: underline;
   }
@@ -111,8 +100,7 @@ main .img-product-with-text{
   margin: 15px;
 }
 main .img-product-with-text h3{
-  margin: auto;
-  margin: 73px 60px 73px 20px;
+  margin-top: 30px;
   font-size: 22px;
 }
   main .img-product-with-text picture{
@@ -122,8 +110,6 @@ main .img-product-with-text h3{
   main .img-product-with-text img {
     width: 200px;
     width: 200px;
-    margin-top: 20px;
-    margin-bottom: 10px;
     border: 1px solid #FF9B87;
     border-radius: 10px;
   }
@@ -131,7 +117,7 @@ main .img-product-with-text h3{
   main .about , .about-products, .contact{
     text-align: left;
     font-size: 20px;
-    margin: 30px 30px 30px 30px;
+    margin: 15px 20px 20px 15px;
     display: flex;
     justify-content: space-between;
   }

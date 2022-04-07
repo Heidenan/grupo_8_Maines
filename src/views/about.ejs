@@ -3,56 +3,48 @@
 
 <body>
      <%- include ('./partials/header') %>
-        <h2>Lorem ipsum</h2>
+     <main>
+        <h2>Te contaremos un poco de nosotros y de nuestra vision</h2>
         <article class="container">
           <article class="video-conocenos">
-            <h3 class="conocenos">Conocenos!</h3>
+            <h3 class="conocenos">¡Aqui un video para que nos conozcas mejor!</h3>
             <video width="500" height="500" controls>
               <source src="/images/video-maines.mp4" type="video/mp4" />
             </video>
           </article>
+          <section class="more-info">
           <article class="frase-producto-regalo">
-            <div class="probá-maines">
-              <i class="fas fa-gift icono-regalo"></i>¡Probá Maines
-              <span class="gratis">gratis</span>!
-            </div>
-            <div class="pedí-acá">
-              Pedí aca tu primer producto de regalo y sin costo de envío
-            </div>
+              <i class="fas fa-gift icono-regalo"></i>
+              <h3>¡Probá Maines
+              gratis!
+              Pedí aca tu primer producto de regalo y sin costo de envío.
+            </h3>
+            <i class="fa-solid fa-info"></i>
+            <h3>Realizamos talleres y concientización sobre una dieta saludable</h3>
           </article>
           
           <article class="sumate-a-maines">
-            <h3 class="sumate-a-maines-texto">
-              <i class="fas fa-door-open icono-puerta"></i>¡Sumate a Maines! Trabaja
-              junto a nosotros
-            </h3>
-            <ul class="dejar-cv"> 
-              <i class="far fa-file icono-cv"></i>
-              Quiero dejar mi CV
-              <div>
+          <div>
+            <i class="far fa-file icono-cv"></i>
+                <h3>Dejanos tu CV si quieres trabajar con nosotros.</h3>
                 <input type="file" name="cv" id="cv" class="seleccionarArchivo">
               </div>
-            </ul>
-            <ul class="vender-productos">
-              <i class="fas fa-dollar-sign icono-dinero"></i
-                >Quiero vender productos Maines
-              </ul>
+              <i class="fas fa-dollar-sign icono-dinero"></i>
+              <h3>Si quieres vender tus productos en Maines, haz click <a href="/contact">aquí</a> y coloca tus datos.</h3>
             </article>
             
             <article class="adquirí-nuestros-productos">
+              <i class="fas fa-shopping-cart carrito"></i>
               <h3 class="adquirí-texto">
-                <i class="fas fa-shopping-cart carrito"></i>¡Adquirí nuestros
-                productos!
+              Revisa nuestros productos haciendo click <a href="/products">aquí</a>.
               </h3>
-              <h4 class="buscá-tu-local">
-                <i class="fas fa-store-alt local"></i>Buscá tu local mas cercano
-              </h4>
-              <h4 class="comprá-online">
-                <i class="fas fa-credit-card tarjeta"></i>Comprá online
-              </h4>
+              <i class="fas fa-credit-card tarjeta"></i>
+              <h3 class="comprá-online">Comprá online nuestros productos con cualquier tarjeta de credito o debito.
+              </h3>
             </article>
- <footer>
+          </section>
+          </main>
+
             <%- include ('./partials/footer') %>
-          </footer>
 </body>
 </html>

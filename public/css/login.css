@@ -15,10 +15,12 @@ main {
 
 input.error {
   background-color: rgb(226, 143, 143);
+  font-weight: bolder;
 }
 
 input.success {
   background-color: rgb(111, 228, 121);
+  font-weight: bolder;
 }
 input.focus {
   background-color: #ccc;
@@ -34,11 +36,14 @@ input.focus {
 
 .feedback.error {
   color: rgb(226, 143, 143);
+  font-weight: bolder;
 }
 
 .feedback.success {
   color: rgb(111, 228, 121);
+  font-weight: bolder;
 }
+
 
 @media (min-width: 320px) and (max-width: 768px) {
   .logo {

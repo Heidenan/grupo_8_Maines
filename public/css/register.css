@@ -18,7 +18,7 @@ p {
 .error-msg {
   color: #ff9b87;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .formulario-registro {
